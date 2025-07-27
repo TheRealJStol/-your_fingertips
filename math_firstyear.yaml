@@ -1,0 +1,5941 @@
+nodes:
+- id: ackermann_function
+  type: Topic
+  title: Ackermann function
+  summary: total non-primitive-recursive computable function
+  difficulty: advanced
+- id: composite_number
+  type: Topic
+  title: Composite number
+  summary: positive integer that has at least one positive divisor other than 1 or
+    itself
+  difficulty: intermediate
+- id: number
+  type: Topic
+  title: Number
+  summary: mathematical object used to count, label, and measure
+  difficulty: beginner
+- id: 279_number
+  type: Topic
+  title: 279 (number)
+  summary: natural number
+  difficulty: advanced
+- id: atomic_number
+  type: Topic
+  title: Atomic number
+  summary: number of protons found in the nucleus of an atom
+  difficulty: beginner
+- id: even_number
+  type: Topic
+  title: Even number
+  summary: integer divisible by two
+  difficulty: advanced
+- id: hyperreal_number
+  type: Topic
+  title: Hyperreal number
+  summary: element of a nonstandard model of the reals, which can be infinite or infinitesimal
+  difficulty: advanced
+- id: illegal_number
+  type: Topic
+  title: Illegal number
+  summary: a number that represents information which is illegal in some legal jurisdiction
+  difficulty: advanced
+- id: names_of_large_numbers
+  type: Topic
+  title: Names of large numbers
+  summary: Wikimedia list article
+  difficulty: advanced
+- id: negative_number
+  type: Topic
+  title: Negative number
+  summary: real number that is strictly less than zero
+  difficulty: intermediate
+- id: odd_number
+  type: Topic
+  title: Odd number
+  summary: integer not divisible by two
+  difficulty: advanced
+- id: preferred_number
+  type: Topic
+  title: Preferred number
+  summary: standard guidelines for choosing exact product dimensions within a given
+    set of constraints
+  difficulty: advanced
+- id: binary_number
+  type: Topic
+  title: Binary number
+  summary: system that represents numeric values using two symbols; 0 or 1
+  difficulty: beginner
+- id: boolean_function
+  type: Topic
+  title: Boolean function
+  summary: any mathematical function with Boolean arguments and result
+  difficulty: advanced
+- id: signed_number_representations
+  type: Topic
+  title: Signed number representations
+  summary: encoding of negative numbers in binary number systems
+  difficulty: advanced
+- id: square_number
+  type: Topic
+  title: Square number
+  summary: product of some integer with itself
+  difficulty: intermediate
+- id: fundamental_theorem_of_arithmetic
+  type: Topic
+  title: Fundamental theorem of arithmetic
+  summary: theorem about prime factorization of a number
+  difficulty: intermediate
+- id: matrix_decomposition
+  type: Topic
+  title: Matrix decomposition
+  summary: representation of a matrix as a product
+  difficulty: advanced
+- id: farey_sequence
+  type: Topic
+  title: Farey sequence
+  summary: Sequence of fractions
+  difficulty: advanced
+- id: rational_number
+  type: Topic
+  title: Rational number
+  summary: quotient of two integers
+  difficulty: beginner
+- id: automorphic_number
+  type: Topic
+  title: Automorphic number
+  summary: a natural number whose square "ends" in the same digits as the number itself
+  difficulty: advanced
+- id: carmichael_function
+  type: Topic
+  title: Carmichael function
+  summary: arithmetic functions
+  difficulty: advanced
+- id: carmichael_number
+  type: Topic
+  title: Carmichael number
+  summary: composite number in number theory
+  difficulty: advanced
+- id: chinese_remainder_theorem
+  type: Topic
+  title: Chinese remainder theorem
+  summary: theorem for solving simultaneous congruences
+  difficulty: intermediate
+- id: euler_s_theorem
+  type: Topic
+  title: Euler's theorem
+  summary: generalization of Fermat's little theorem, that given coprime positive
+    integers 𝑛 and 𝑎, then the φ(𝑛)-th power of 𝑎 is congruent to 1 modulo 𝑛, where
+    φ is Euler’s totient function
+  difficulty: advanced
+- id: euler_s_totient_function
+  type: Topic
+  title: Euler's totient function
+  summary: function which gives the number of integers relatively prime to and not
+    greater than its input
+  difficulty: intermediate
+- id: fermat_s_little_theorem
+  type: Topic
+  title: Fermat's little theorem
+  summary: mathematical theorem that, for any prime 𝑝, the 𝑝th power of any integer
+    𝑛 is congruent to 𝑛 modulo 𝑝
+  difficulty: intermediate
+- id: wilson_s_theorem
+  type: Topic
+  title: Wilson's theorem
+  summary: necessary and sufficient condition for a number to be prime
+  difficulty: advanced
+- id: wavenumber
+  type: Topic
+  title: Wavenumber
+  summary: inverse of the wavelength
+  difficulty: intermediate
+- id: geometric_series
+  type: Topic
+  title: Geometric series
+  summary: sum of an (infinite) geometric progression
+  difficulty: advanced
+- id: inverse_trigonometric_functions
+  type: Topic
+  title: Inverse trigonometric functions
+  summary: inverse function of the trigonometric function
+  difficulty: intermediate
+- id: trigonometric_functions
+  type: Topic
+  title: Trigonometric functions
+  summary: function of an angle
+  difficulty: intermediate
+- id: additive_identity
+  type: Topic
+  title: Additive identity
+  summary: an element which, when added to any element x in the set, yields x
+  difficulty: advanced
+- id: cubic_equation
+  type: Topic
+  title: Cubic equation
+  summary: a polynomial equation in a single variable where the highest exponent of
+    the variable is 3.
+  difficulty: intermediate
+- id: equation
+  type: Topic
+  title: Equation
+  summary: mathematical statement that asserts the equality of two expressions
+  difficulty: beginner
+- id: formula
+  type: Topic
+  title: Formula
+  summary: equation using mathematical or scientific notation
+  difficulty: intermediate
+- id: identity_mathematics
+  type: Topic
+  title: Identity (mathematics)
+  summary: equation that is satisfied for all values of the variables
+  difficulty: intermediate
+- id: inequation
+  type: Topic
+  title: Inequation
+  summary: mathematic statement that an inequality holds between two values
+  difficulty: advanced
+- id: linear_equation
+  type: Topic
+  title: Linear equation
+  summary: equation that does not involve powers or products of variables
+  difficulty: intermediate
+- id: quadratic_equation
+  type: Topic
+  title: Quadratic equation
+  summary: polynomial equation in a single variable where the highest exponent of
+    the variable is 2
+  difficulty: intermediate
+- id: quadratic_formula
+  type: Topic
+  title: Quadratic formula
+  summary: formula that provides the solution(s) to a quadratic equation
+  difficulty: advanced
+- id: quartic_equation
+  type: Topic
+  title: Quartic equation
+  summary: polynomial equation of degree four
+  difficulty: advanced
+- id: quartic_function
+  type: Topic
+  title: Quartic function
+  summary: function defined by a polynomial of degree four
+  difficulty: advanced
+- id: vieta_s_formulas
+  type: Topic
+  title: Vieta's formulas
+  summary: relations between the coefficients and the roots of a polynomial
+  difficulty: intermediate
+- id: brahmagupta_fibonacci_identity
+  type: Topic
+  title: Brahmagupta–Fibonacci identity
+  summary: expression of a product of sums of squares as a sum of squares
+  difficulty: advanced
+- id: euler_s_four_square_identity
+  type: Topic
+  title: Euler's four-square identity
+  summary: product of sums of four squares is a sum of four squares
+  difficulty: advanced
+- id: vandermonde_s_identity
+  type: Topic
+  title: Vandermonde's identity
+  summary: mathematical theorem of binomial coefficients
+  difficulty: advanced
+- id: floor_and_ceiling_functions
+  type: Topic
+  title: Floor and ceiling functions
+  summary: functions of a real returning respectively the largest smaller and the
+    smallest larger integer
+  difficulty: advanced
+- id: inverse_function
+  type: Topic
+  title: Inverse function
+  summary: 'function that "reverses" another function: if the function f applied to
+    an input x gives a result of y, then applying its inverse function g to y gives
+    the result x, and vice versa. i.e., f(x) = y if and only if g(y) = x'
+  difficulty: intermediate
+- id: sign_function
+  type: Topic
+  title: Sign function
+  summary: mathematical function that extracts the sign of a real number or complex
+    number
+  difficulty: intermediate
+- id: adjugate_matrix
+  type: Topic
+  title: Adjugate matrix
+  summary: for a square matrix, the transpose of the cofactor matrix
+  difficulty: advanced
+- id: complex_number
+  type: Topic
+  title: Complex number
+  summary: number that can be put in the form a + bi, where a and b are real numbers
+    and i is called the imaginary unit
+  difficulty: beginner
+- id: dimension_vector_space
+  type: Topic
+  title: Dimension (vector space)
+  summary: number of vectors in any basis of the vector space
+  difficulty: advanced
+- id: dual_number
+  type: Topic
+  title: Dual number
+  summary: algebra over a field
+  difficulty: advanced
+- id: eigenvalues_and_eigenvectors
+  type: Topic
+  title: Eigenvalues and eigenvectors
+  summary: vectors that map to their scalar multiples, and the associated scalars
+  difficulty: intermediate
+- id: elementary_matrix
+  type: Topic
+  title: Elementary matrix
+  summary: type of matrix
+  difficulty: advanced
+- id: euclidean_vector
+  type: Topic
+  title: Euclidean vector
+  summary: geometric object that has magnitude (or length) and direction
+  difficulty: beginner
+- id: function_space
+  type: Topic
+  title: Function space
+  summary: set of functions of a given kind from a set X to a set Y; it is called
+    a space because in many applications it is a topological space (including metric
+    spaces), a vector space, or both
+  difficulty: advanced
+- id: gershgorin_circle_theorem
+  type: Topic
+  title: Gershgorin circle theorem
+  summary: mathematical theorem about eigenvalues
+  difficulty: advanced
+- id: hahn_banach_theorem
+  type: Topic
+  title: Hahn–Banach theorem
+  summary: theorem on extension of bounded linear functionals
+  difficulty: advanced
+- id: homogeneous_function
+  type: Topic
+  title: Homogeneous function
+  summary: function with multiplicative scaling behaviour
+  difficulty: advanced
+- id: idempotent_matrix
+  type: Topic
+  title: Idempotent matrix
+  summary: matrix which, when multiplied by itself, yields itself
+  difficulty: advanced
+- id: invertible_matrix
+  type: Topic
+  title: Invertible matrix
+  summary: square matrix with non-zero determinant
+  difficulty: advanced
+- id: matrix_addition
+  type: Topic
+  title: Matrix addition
+  summary: notions of sums for matrices in linear algebra
+  difficulty: advanced
+- id: convex_set
+  type: Topic
+  title: Convex set
+  summary: subset of an affine space that is closed under convex combinations
+  difficulty: intermediate
+- id: cauchy_binet_formula
+  type: Topic
+  title: Cauchy–Binet formula
+  summary: theorem about Fibonacci numbers
+  difficulty: advanced
+- id: gram_matrix
+  type: Topic
+  title: Gram matrix
+  summary: Matrix of inner products of a set of vectors
+  difficulty: advanced
+- id: hilbert_matrix
+  type: Topic
+  title: Hilbert matrix
+  summary: square matrix whose entries are unit fractions of special form
+  difficulty: advanced
+- id: jacobian_matrix_and_determinant
+  type: Topic
+  title: Jacobian matrix and determinant
+  summary: the matrix of all first-order partial derivatives of a vector-valued function
+  difficulty: advanced
+- id: vandermonde_matrix
+  type: Topic
+  title: Vandermonde matrix
+  summary: Mathematical concept
+  difficulty: advanced
+- id: matrix_mathematics
+  type: Topic
+  title: Matrix (mathematics)
+  summary: rectangular array of numbers, symbols, or expressions, arranged in rows
+    and columns
+  difficulty: beginner
+- id: square_matrix
+  type: Topic
+  title: Square matrix
+  summary: matrix with the same number of rows and columns
+  difficulty: intermediate
+- id: adjacency_matrix
+  type: Topic
+  title: Adjacency matrix
+  summary: square matrix used to represent a graph or network
+  difficulty: advanced
+- id: augmented_matrix
+  type: Topic
+  title: Augmented matrix
+  summary: matrix obtained by appending the columns of two given matrices
+  difficulty: advanced
+- id: block_matrix
+  type: Topic
+  title: Block matrix
+  summary: matrix defined using smaller matrices called blocks
+  difficulty: advanced
+- id: cayley_hamilton_theorem
+  type: Topic
+  title: Cayley–Hamilton theorem
+  summary: theorem that a square matrix satisfies its own characteristic equation
+  difficulty: advanced
+- id: diagonally_dominant_matrix
+  type: Topic
+  title: Diagonally dominant matrix
+  summary: matrix in which the magnitude of the diagonal entry in a row is no less
+    than the sum of the magnitudes of the nondiagonal entries in that row
+  difficulty: advanced
+- id: householder_transformation
+  type: Topic
+  title: Householder transformation
+  summary: linear transformation that describes a reflection about a plane or hyperplane
+    containing the origin
+  difficulty: advanced
+- id: matrix_multiplication
+  type: Topic
+  title: Matrix multiplication
+  summary: mathematical operation in linear algebra
+  difficulty: advanced
+- id: system_of_linear_equations
+  type: Topic
+  title: System of linear equations
+  summary: collection of linear equations involving the same set of variables
+  difficulty: intermediate
+- id: triangular_matrix
+  type: Topic
+  title: Triangular matrix
+  summary: special kind of square matrix
+  difficulty: advanced
+- id: directional_derivative
+  type: Topic
+  title: Directional derivative
+  summary: instantaneous rate of change of the function
+  difficulty: advanced
+- id: normal_mode
+  type: Topic
+  title: Normal mode
+  summary: pattern of motion in which all parts of the system move sinusoidally with
+    the same frequency and with a fixed phase relation
+  difficulty: advanced
+- id: spectral_theorem
+  type: Topic
+  title: Spectral theorem
+  summary: theorem
+  difficulty: advanced
+- id: spectrum_functional_analysis
+  type: Topic
+  title: Spectrum (functional analysis)
+  summary: term used in functional analysis
+  difficulty: advanced
+- id: rank_nullity_theorem
+  type: Topic
+  title: Rank–nullity theorem
+  summary: theorem
+  difficulty: advanced
+- id: rouch_capelli_theorem
+  type: Topic
+  title: Rouché–Capelli theorem
+  summary: theorem in linear algebra that a system of linear equations with n variables
+    has solution(s) iff the rk(A) = rk([A|b]), and that if there are solutions, they
+    form an affine space of dimension n−rk(A)
+  difficulty: advanced
+- id: topological_vector_space
+  type: Topic
+  title: Topological vector space
+  summary: vector space equipped with a compatible topology
+  difficulty: advanced
+- id: banach_alaoglu_theorem
+  type: Topic
+  title: Banach–Alaoglu theorem
+  summary: theorem
+  difficulty: advanced
+- id: vector_space
+  type: Topic
+  title: Vector space
+  summary: the basic algebraic structure of linear algebra; a module over a field,
+    such that its elements can be added together or scaled by elements of the field
+  difficulty: intermediate
+- id: real_valued_function
+  type: Topic
+  title: Real-valued function
+  summary: function whose range is a subset of the real numbers
+  difficulty: advanced
+- id: vector_mathematics_and_physics
+  type: Topic
+  title: Vector (mathematics and physics)
+  summary: element of a vector space
+  difficulty: advanced
+- id: burgers_vector
+  type: Topic
+  title: Burgers vector
+  summary: vector characterising a dislocation in a crystal lattice
+  difficulty: advanced
+- id: covariance_and_contravariance_of_vectors
+  type: Topic
+  title: Covariance and contravariance of vectors
+  summary: manner in which a geometric object varies with a change of basis
+  difficulty: advanced
+- id: four_vector
+  type: Topic
+  title: Four-vector
+  summary: vector in special relativity well-behaved with respect to Lorentz transformations
+  difficulty: advanced
+- id: laplace_runge_lenz_vector
+  type: Topic
+  title: Laplace–Runge–Lenz vector
+  summary: vector used chiefly to describe the shape and orientation of the orbit
+    of one astronomical body around another, such as a planet revolving around a star
+  difficulty: advanced
+- id: poynting_vector
+  type: Topic
+  title: Poynting vector
+  summary: measure of directional energy flux
+  difficulty: advanced
+- id: pseudovector
+  type: Topic
+  title: Pseudovector
+  summary: physical quantity that changes sign with improper rotation
+  difficulty: advanced
+- id: geometric_transformation
+  type: Topic
+  title: Geometric transformation
+  summary: function from a set having some geometric structure to itself or another
+    such set
+  difficulty: advanced
+- id: de_gua_s_theorem
+  type: Topic
+  title: De Gua's theorem
+  summary: theorem
+  difficulty: advanced
+- id: de_morgan_s_laws
+  type: Topic
+  title: De Morgan's laws
+  summary: pair of transformation rules that are both valid rules of inference
+  difficulty: intermediate
+- id: dual_graph
+  type: Topic
+  title: Dual graph
+  summary: graph representing faces of another graph
+  difficulty: advanced
+- id: legendre_transformation
+  type: Topic
+  title: Legendre transformation
+  summary: involutive transformation on real-valued convex functions of one real variable
+  difficulty: advanced
+- id: riesz_representation_theorem
+  type: Topic
+  title: Riesz representation theorem
+  summary: theorem
+  difficulty: advanced
+- id: geometric_mean_theorem
+  type: Topic
+  title: Geometric mean theorem
+  summary: theorem about right triangles
+  difficulty: advanced
+- id: pythagorean_theorem
+  type: Topic
+  title: Pythagorean theorem
+  summary: relation in Euclidean geometry among the three sides of a right triangle
+  difficulty: beginner
+- id: conservation_law
+  type: Topic
+  title: Conservation law
+  summary: scientific law regarding conservation of a physical property
+  difficulty: intermediate
+- id: inversion_transformation
+  type: Topic
+  title: Inversion transformation
+  summary: mathematical operation on Euclidian spaces which reverses distances with
+    respect to a given point
+  difficulty: advanced
+- id: lorentz_covariance
+  type: Topic
+  title: Lorentz covariance
+  summary: equivalence in relativistic physics of observation with respect to change
+    of (inertial) reference frame
+  difficulty: advanced
+- id: noether_s_theorem
+  type: Topic
+  title: Noether's theorem
+  summary: physical law that differentiable symmetries correspond to conservation
+    laws
+  difficulty: advanced
+- id: symmetry_of_second_derivatives
+  type: Topic
+  title: Symmetry of second derivatives
+  summary: theorem
+  difficulty: advanced
+- id: banach_fixed_point_theorem
+  type: Topic
+  title: Banach fixed-point theorem
+  summary: theorem about metric spaces
+  difficulty: advanced
+- id: bernoulli_number
+  type: Topic
+  title: Bernoulli number
+  summary: rational number sequence 𝐵ₖ such that (𝑚+1)∑𝑛ᵐ=(ᵐ⁺¹₀)𝐵₀𝑛ᵐ⁺¹−(ᵐ⁺¹₁)𝐵₁𝑛ᵐ+(ᵐ⁺¹₂)𝐵₂𝑛ᵐ¯¹−(ᵐ⁺¹₃)𝐵₃𝑛ᵐ¯²+⋯
+  difficulty: advanced
+- id: borel_set
+  type: Topic
+  title: Borel set
+  summary: set that can be constructed from open or closed sets by repeatedly taking
+    countable unions and intersections
+  difficulty: advanced
+- id: cauchy_sequence
+  type: Topic
+  title: Cauchy sequence
+  summary: sequence whose elements become arbitrarily close to each other
+  difficulty: intermediate
+- id: transformation_function
+  type: Topic
+  title: Transformation (function)
+  summary: function mapping a set to itself
+  difficulty: advanced
+- id: affine_transformation
+  type: Topic
+  title: Affine transformation
+  summary: automorphism of an affine space
+  difficulty: advanced
+- id: homography
+  type: Topic
+  title: Homography
+  summary: isomorphism of projective spaces in geometry
+  difficulty: advanced
+- id: rotation_matrix
+  type: Topic
+  title: Rotation matrix
+  summary: matrix representing a Euclidean rotation
+  difficulty: advanced
+- id: transformation_matrix
+  type: Topic
+  title: Transformation matrix
+  summary: central object in linear algebra; mapping vectors to vectors
+  difficulty: advanced
+- id: euler_s_formula
+  type: Topic
+  title: Euler's formula
+  summary: mathematical formula in complex analysis that establishes the fundamental
+    relationship between the trigonometric functions and the complex exponential function
+  difficulty: intermediate
+- id: gudermannian_function
+  type: Topic
+  title: Gudermannian function
+  summary: function that relates the circular functions and hyperbolic functions without
+    using complex numbers
+  difficulty: advanced
+- id: law_of_cosines
+  type: Topic
+  title: Law of cosines
+  summary: property of all triangles on a Euclidean plane
+  difficulty: intermediate
+- id: law_of_cotangents
+  type: Topic
+  title: Law of cotangents
+  summary: theorem
+  difficulty: advanced
+- id: law_of_sines
+  type: Topic
+  title: Law of sines
+  summary: property of all triangles on a Euclidean plane
+  difficulty: intermediate
+- id: law_of_tangents
+  type: Topic
+  title: Law of tangents
+  summary: theorem
+  difficulty: intermediate
+- id: mollweide_s_formula
+  type: Topic
+  title: Mollweide's formula
+  summary: two equations relating the side lengths and angles of a triangle
+  difficulty: advanced
+- id: pythagorean_trigonometric_identity
+  type: Topic
+  title: Pythagorean trigonometric identity
+  summary: sin² θ + cos² θ = 1
+  difficulty: advanced
+- id: trigonometric_integral
+  type: Topic
+  title: Trigonometric integral
+  summary: special function defined by an integral
+  difficulty: advanced
+- id: angle_of_view_photography
+  type: Topic
+  title: Angle of view (photography)
+  summary: angular extent of a given scene that is imaged by a camera
+  difficulty: advanced
+- id: exterior_angle_theorem
+  type: Topic
+  title: Exterior angle theorem
+  summary: mathematical theorem
+  difficulty: advanced
+- id: selenographic_coordinate_system
+  type: Topic
+  title: Selenographic coordinate system
+  summary: coordinate system
+  difficulty: advanced
+- id: barbier_s_theorem
+  type: Topic
+  title: Barbier's theorem
+  summary: theorem that every curve of constant width has perimeter π times its width
+  difficulty: advanced
+- id: lindemann_weierstrass_theorem
+  type: Topic
+  title: Lindemann–Weierstrass theorem
+  summary: theorem of number theory
+  difficulty: advanced
+- id: continuous_function
+  type: Topic
+  title: Continuous function
+  summary: function such that the preimage of an open set is open
+  difficulty: intermediate
+- id: cubic_function
+  type: Topic
+  title: Cubic function
+  summary: a polynomial function in a single variable where the highest exponent of
+    the variable is 3
+  difficulty: advanced
+- id: even_and_odd_functions
+  type: Topic
+  title: Even and odd functions
+  summary: types of mathematical functions
+  difficulty: intermediate
+- id: linear_function_calculus
+  type: Topic
+  title: Linear function (calculus)
+  summary: function whose graph is a straight line; polynomial function of degree
+    at most one
+  difficulty: intermediate
+- id: periodic_function
+  type: Topic
+  title: Periodic function
+  summary: function that repeats its values in regular intervals or periods
+  difficulty: intermediate
+- id: series_mathematics
+  type: Topic
+  title: Series (mathematics)
+  summary: infinite sum
+  difficulty: intermediate
+- id: thomae_s_function
+  type: Topic
+  title: Thomae's function
+  summary: function that is discontinuous at rationals and continuous at irrationals
+  difficulty: advanced
+- id: derivative
+  type: Topic
+  title: Derivative
+  summary: instantaneous rate of change (mathematics)
+  difficulty: beginner
+- id: differential_of_a_function
+  type: Topic
+  title: Differential of a function
+  summary: notion in calculus
+  difficulty: advanced
+- id: differentiation_of_trigonometric_functions
+  type: Topic
+  title: Differentiation of trigonometric functions
+  summary: mathematical process of finding the derivative of a trigonometric function
+  difficulty: advanced
+- id: interior_extremum_theorem
+  type: Topic
+  title: Interior extremum theorem
+  summary: method to find local maxima and minima of differentiable functions on open
+    sets
+  difficulty: advanced
+- id: implicit_function
+  type: Topic
+  title: Implicit function
+  summary: function defined by a relation of the form 𝑅(𝑥,𝑦)=0, where 𝑅 is a function
+    of several variables and there is a unique 𝑦 that satisfies the relation for every
+    𝑥
+  difficulty: advanced
+- id: integral_symbol
+  type: Topic
+  title: Integral symbol
+  summary: mathematical symbol used to denote integrals and antiderivatives
+  difficulty: advanced
+- id: antiderivative
+  type: Topic
+  title: Antiderivative
+  summary: function whose derivative is the original function
+  difficulty: intermediate
+- id: fresnel_integral
+  type: Topic
+  title: Fresnel integral
+  summary: special function defined by an integral
+  difficulty: advanced
+- id: improper_integral
+  type: Topic
+  title: Improper integral
+  summary: limit of a definite integral with as one or both limits approach infinity
+    or values at which the integrand is undefined
+  difficulty: advanced
+- id: indicator_function
+  type: Topic
+  title: Indicator function
+  summary: function that returns 1 if an element is present in a specified subset
+    and 0 if absent; naturally isomorphic with a set's subsets
+  difficulty: advanced
+- id: integral_test_for_convergence
+  type: Topic
+  title: Integral test for convergence
+  summary: test for infinite series of monotonous terms for convergence
+  difficulty: advanced
+- id: leibniz_integral_rule
+  type: Topic
+  title: Leibniz integral rule
+  summary: differentiation under the integral sign formula
+  difficulty: advanced
+- id: differentiable_function
+  type: Topic
+  title: Differentiable function
+  summary: function whose derivative exists at each point in its domain
+  difficulty: advanced
+- id: frenet_serret_formulas
+  type: Topic
+  title: Frenet–Serret formulas
+  summary: formulas in differential geometry
+  difficulty: advanced
+- id: hessian_matrix
+  type: Topic
+  title: Hessian matrix
+  summary: (Mathematical) matrix of second derivatives
+  difficulty: advanced
+- id: inverse_function_theorem
+  type: Topic
+  title: Inverse function theorem
+  summary: theorem that, if a function is continuously differentiable with nonzero
+    Jacobian determinant at a given point, then it is locally invertible near that
+    point
+  difficulty: advanced
+- id: level_set
+  type: Topic
+  title: Level set
+  summary: subset of a function's domain on which its value is equal
+  difficulty: advanced
+- id: material_derivative
+  type: Topic
+  title: Material derivative
+  summary: time rate of change of a physical quantity in a moving medium
+  difficulty: advanced
+- id: multiple_integral
+  type: Topic
+  title: Multiple integral
+  summary: integral over a multi-dimensional region of a function of several variables
+  difficulty: intermediate
+- id: parametric_equation
+  type: Topic
+  title: Parametric equation
+  summary: parametric system of coordinates
+  difficulty: advanced
+- id: partial_derivative
+  type: Topic
+  title: Partial derivative
+  summary: derivative of a function of several variables with respect to one variable,
+    with the others held constant
+  difficulty: intermediate
+- id: black_scholes_model
+  type: Topic
+  title: Black–Scholes model
+  summary: mathematical model of a financial market with options
+  difficulty: advanced
+- id: geometric_mean
+  type: Topic
+  title: Geometric mean
+  summary: the n-th root of the product of n numbers
+  difficulty: intermediate
+- id: log_normal_distribution
+  type: Topic
+  title: Log-normal distribution
+  summary: probability distribution
+  difficulty: advanced
+- id: abel_s_theorem
+  type: Topic
+  title: Abel's theorem
+  summary: theorem
+  difficulty: advanced
+- id: alternating_series
+  type: Topic
+  title: Alternating series
+  summary: infinite series in which the signs of the general terms alternate between
+    positive and negative
+  difficulty: advanced
+- id: binomial_series
+  type: Topic
+  title: Binomial series
+  summary: Taylor series
+  difficulty: advanced
+- id: cauchy_hadamard_theorem
+  type: Topic
+  title: Cauchy–Hadamard theorem
+  summary: theorem
+  difficulty: advanced
+- id: convergent_series
+  type: Topic
+  title: Convergent series
+  summary: infinite series that produces a finite sum
+  difficulty: advanced
+- id: dirichlet_series
+  type: Topic
+  title: Dirichlet series
+  summary: mathematical series
+  difficulty: advanced
+- id: divergent_series
+  type: Topic
+  title: Divergent series
+  summary: infinite series that is not convergent
+  difficulty: advanced
+- id: eisenstein_series
+  type: Topic
+  title: Eisenstein series
+  summary: series representing modular forms
+  difficulty: advanced
+- id: formal_power_series
+  type: Topic
+  title: Formal power series
+  summary: generalization of a polynomial, where the number of terms is allowed to
+    be infinite, defined algebraically without consideration of convergence (so that
+    e.g. evaluation is not always defined)
+  difficulty: advanced
+- id: divergence_theorem
+  type: Topic
+  title: Divergence theorem
+  summary: generalization of the fundamental theorem in vector calculus
+  difficulty: advanced
+- id: extreme_value_theorem
+  type: Topic
+  title: Extreme value theorem
+  summary: theorem that states that the image of real function having real closed
+    interval as domain, has maximum and minimum
+  difficulty: advanced
+- id: fubini_s_theorem
+  type: Topic
+  title: Fubini's theorem
+  summary: theorem
+  difficulty: advanced
+- id: fundamental_theorem_of_calculus
+  type: Topic
+  title: Fundamental theorem of calculus
+  summary: calculus theorem describing the duality of differentiation and integration
+  difficulty: intermediate
+- id: green_s_theorem
+  type: Topic
+  title: Green's theorem
+  summary: theorem
+  difficulty: intermediate
+- id: implicit_function_theorem
+  type: Topic
+  title: Implicit function theorem
+  summary: theorem that, under a mild condition on the partial derivatives, the set
+    of zeros of a system of equations is locally the graph of a function
+  difficulty: advanced
+- id: intermediate_value_theorem
+  type: Topic
+  title: Intermediate value theorem
+  summary: theorem
+  difficulty: intermediate
+- id: mean_value_theorem
+  type: Topic
+  title: Mean value theorem
+  summary: on the existence of a tangent to an arc parallel to the line through its
+    endpoints
+  difficulty: intermediate
+- id: probability_theory
+  type: Topic
+  title: Probability theory
+  summary: branch of mathematics concerning probability
+  difficulty: intermediate
+- id: probability_axioms
+  type: Topic
+  title: Probability axioms
+  summary: axioms that are relevant to the probability theory
+  difficulty: advanced
+- id: probability_density_function
+  type: Topic
+  title: Probability density function
+  summary: function whose integral over a region describes the probability of an event
+    occurring in that region
+  difficulty: intermediate
+- id: random_matrix
+  type: Topic
+  title: Random matrix
+  summary: matrix-valued random variable
+  difficulty: advanced
+- id: conditional_probability
+  type: Topic
+  title: Conditional probability
+  summary: measure of likelihood of an event when another event is known to have occurred
+  difficulty: advanced
+- id: conditional_probability_distribution
+  type: Topic
+  title: Conditional probability distribution
+  summary: probability distribution restricted to a subspace of the sample space,
+    normalize to a total probability of one
+  difficulty: advanced
+- id: garbage_can_model
+  type: Topic
+  title: Garbage can model
+  summary: theory of organizational decison-making
+  difficulty: advanced
+- id: rational_choice_model
+  type: Topic
+  title: Rational choice model
+  summary: Sociological theory
+  difficulty: advanced
+- id: experiment_probability_theory
+  type: Topic
+  title: Experiment (probability theory)
+  summary: in probability theory, procedure that can be infinitely repeated, with
+    a well-defined set of outcomes
+  difficulty: advanced
+- id: event_probability_theory
+  type: Topic
+  title: Event (probability theory)
+  summary: in statistics and probability theory, set of outcomes to which a probability
+    is assigned
+  difficulty: intermediate
+- id: independence_probability_theory
+  type: Topic
+  title: Independence (probability theory)
+  summary: term in probability theory
+  difficulty: advanced
+- id: probability_space
+  type: Topic
+  title: Probability space
+  summary: mathematical concept
+  difficulty: advanced
+- id: tree_diagram_probability_theory
+  type: Topic
+  title: Tree diagram (probability theory)
+  summary: diagram to represent a probability space in probability theory
+  difficulty: advanced
+- id: gutenberg_richter_law
+  type: Topic
+  title: Gutenberg–Richter law
+  summary: in seismology
+  difficulty: advanced
+- id: burden_of_proof_law
+  type: Topic
+  title: Burden of proof (law)
+  summary: in law, the obligation on a party in a trial to produce evidence
+  difficulty: advanced
+- id: generative_model
+  type: Topic
+  title: Generative model
+  summary: model for randomly generating observable data in probability and statistics
+  difficulty: advanced
+- id: probability
+  type: Topic
+  title: Probability
+  summary: measure of the expectation that an event will occur or a statement is true
+  difficulty: beginner
+- id: probability_distribution
+  type: Topic
+  title: Probability distribution
+  summary: mathematical function that describes the probability of occurrence of different
+    possible outcomes in an experiment
+  difficulty: intermediate
+- id: bayesian_probability
+  type: Topic
+  title: Bayesian probability
+  summary: interpretation of probability as a measure of the degree of belief of an
+    individual assessing the uncertainty of a particular situation
+  difficulty: advanced
+- id: frequentist_probability
+  type: Topic
+  title: Frequentist probability
+  summary: interpretation of probability as limiting values of relative frequencies
+  difficulty: advanced
+- id: bertrand_paradox_probability
+  type: Topic
+  title: Bertrand paradox (probability)
+  summary: 'problem within the classical interpretation of probability theory: what
+    is the probability that a randomly chosen chord on a circle is longer than a side
+    of an equilateral triangle inscribed in the circle?'
+  difficulty: advanced
+- id: infinite_monkey_theorem
+  type: Topic
+  title: Infinite monkey theorem
+  summary: humorously stated theorem that a monkey hitting keys at random on a typewriter
+    keyboard for an infinite amount of time will surely type a given text, such as
+    the complete works of William Shakespeare.
+  difficulty: intermediate
+- id: bayes_theorem
+  type: Topic
+  title: Bayes' theorem
+  summary: theorem describing the probability of an event based on prior knowledge
+    of conditions that might be related to the event
+  difficulty: intermediate
+- id: borel_cantelli_lemma
+  type: Topic
+  title: Borel–Cantelli lemma
+  summary: mathematical sentence
+  difficulty: advanced
+- id: central_limit_theorem
+  type: Topic
+  title: Central limit theorem
+  summary: key theorem in probability theory
+  difficulty: intermediate
+- id: set_theory
+  type: Topic
+  title: Set theory
+  summary: branch of mathematics that studies sets, which are collections of objects
+  difficulty: beginner
+- id: set_mathematics
+  type: Topic
+  title: Set (mathematics)
+  summary: well-defined mathematical collection of distinct objects
+  difficulty: beginner
+- id: cantor_s_theorem
+  type: Topic
+  title: Cantor's theorem
+  summary: theorem in set theory
+  difficulty: intermediate
+- id: class_set_theory
+  type: Topic
+  title: Class (set theory)
+  summary: mathematical collection of sets that can be defined based on a property
+    of its members (set theory)
+  difficulty: advanced
+- id: naive_set_theory
+  type: Topic
+  title: Naive set theory
+  summary: one of several theories of sets used in the discussion of the foundations
+    of mathematics; defined informally, in natural language
+  difficulty: advanced
+- id: algebra_of_sets
+  type: Topic
+  title: Algebra of sets
+  summary: mathematical identities and relationships involving sets
+  difficulty: advanced
+- id: complement_set_theory
+  type: Topic
+  title: Complement (set theory)
+  summary: 'unary operation on sets: the set of non-elements of the argument set'
+  difficulty: intermediate
+- id: disjoint_sets
+  type: Topic
+  title: Disjoint sets
+  summary: sets with no element in common
+  difficulty: intermediate
+- id: domain_of_a_function
+  type: Topic
+  title: Domain of a function
+  summary: set of "input" or argument values for which a function is defined
+  difficulty: intermediate
+- id: empty_set
+  type: Topic
+  title: Empty set
+  summary: mathematical set containing no elements
+  difficulty: intermediate
+- id: family_of_sets
+  type: Topic
+  title: Family of sets
+  summary: collection of some of the subsets of a set; collection of any sets whatsoever
+  difficulty: advanced
+- id: finite_set
+  type: Topic
+  title: Finite set
+  summary: set that has a finite number of elements
+  difficulty: intermediate
+- id: function_mathematics
+  type: Topic
+  title: Function (mathematics)
+  summary: association of a single output to each input
+  difficulty: beginner
+- id: function_composition
+  type: Topic
+  title: Function composition
+  summary: operation which takes two mathematical functions and makes one function
+    of these
+  difficulty: intermediate
+- id: identity_function
+  type: Topic
+  title: Identity function
+  summary: function that always returns the same value that was used as its argument
+  difficulty: intermediate
+- id: injective_function
+  type: Topic
+  title: Injective function
+  summary: mathematical function that preserves distinctness
+  difficulty: intermediate
+- id: intersection_set_theory
+  type: Topic
+  title: Intersection (set theory)
+  summary: concept in set theory (for the term in geometry, see Q1364910)
+  difficulty: intermediate
+- id: axiom_of_empty_set
+  type: Topic
+  title: Axiom of empty set
+  summary: statement in set theory that asserts that the empty set exists
+  difficulty: advanced
+- id: axiom_of_power_set
+  type: Topic
+  title: Axiom of power set
+  summary: axiom guaranteeing the existence of power sets
+  difficulty: advanced
+- id: well_ordering_theorem
+  type: Topic
+  title: Well-ordering theorem
+  summary: set-theoretic theorem or principle, equivalent to the axiom of choice
+  difficulty: advanced
+- id: cardinal_number
+  type: Topic
+  title: Cardinal number
+  summary: finite or infinite number that measures cardinality (size) of sets
+  difficulty: intermediate
+- id: aleph_number
+  type: Topic
+  title: Aleph number
+  summary: alef symbol (U+2135) or aleph, written left-to-right as the mathemical
+    symbol ‹ℵ› for the first transfinite cardinal (countable); ordered sequence of
+    transfinite numbers used to represent the cardinality (or size) of infinite countable
+    sets
+  difficulty: advanced
+- id: beth_number
+  type: Topic
+  title: Beth number
+  summary: ordered sequence of transfinite numbers used to represent the cardinality
+    (or size) of continuous sets
+  difficulty: advanced
+- id: countable_set
+  type: Topic
+  title: Countable set
+  summary: set with the same cardinality as some subset of the set of natural numbers
+  difficulty: intermediate
+- id: infinite_set
+  type: Topic
+  title: Infinite set
+  summary: set with infinite cardinality
+  difficulty: advanced
+- id: natural_number
+  type: Topic
+  title: Natural number
+  summary: ambiguous mathematical term used either for non-negative or for strictly
+    positive integers, depending on usage
+  difficulty: beginner
+- id: schr_der_bernstein_theorem
+  type: Topic
+  title: Schröder–Bernstein theorem
+  summary: theorem that, if there exist injective functions in both directions between
+    two sets, then there exists a bijection between them
+  difficulty: advanced
+- id: meagre_set
+  type: Topic
+  title: Meagre set
+  summary: in topology, a countable union of nowhere dense subsets
+  difficulty: advanced
+- id: zorn_s_lemma
+  type: Topic
+  title: Zorn's lemma
+  summary: statement equivalent to the axiom of choice, about the existence of a maximal
+    element in a poset with a maximal chain condition
+  difficulty: advanced
+- id: ordinal_number
+  type: Topic
+  title: Ordinal number
+  summary: mathematical concept generalizing ordinal numerals to extend enumeration
+    to infinite sets
+  difficulty: intermediate
+- id: transfinite_number
+  type: Topic
+  title: Transfinite number
+  summary: number larger than all finite numbers
+  difficulty: advanced
+- id: fuzzy_set
+  type: Topic
+  title: Fuzzy set
+  summary: sets whose elements have degrees of membership
+  difficulty: advanced
+- id: number_theory
+  type: Topic
+  title: Number theory
+  summary: branch of pure mathematics devoted primarily to the study of the integers
+  difficulty: beginner
+- id: algebraic_number_theory
+  type: Topic
+  title: Algebraic number theory
+  summary: major branch of number theory
+  difficulty: advanced
+- id: computational_number_theory
+  type: Topic
+  title: Computational number theory
+  summary: study of algorithms for performing number theoretic computations
+  difficulty: advanced
+- id: cyclic_number
+  type: Topic
+  title: Cyclic number
+  summary: integer whose multiples are digit permutations
+  difficulty: advanced
+- id: divisor_function
+  type: Topic
+  title: Divisor function
+  summary: arithmetic function related to the divisors of an integer
+  difficulty: advanced
+- id: fermat_s_last_theorem
+  type: Topic
+  title: Fermat's Last Theorem
+  summary: theorem in number theory that there are no nontrivial integer solutions
+    of xⁿ+yⁿ=zⁿ for integer n>2
+  difficulty: intermediate
+- id: powerful_number
+  type: Topic
+  title: Powerful number
+  summary: integer where each prime number dividing it can be squared to still divide
+    it
+  difficulty: advanced
+- id: algebraic_function
+  type: Topic
+  title: Algebraic function
+  summary: function that can be defined as the root of a polynomial equation
+  difficulty: advanced
+- id: algebraic_number_field
+  type: Topic
+  title: Algebraic number field
+  summary: a finite degree (and hence algebraic) field extension of the field of rational
+    numbers
+  difficulty: advanced
+- id: dedekind_zeta_function
+  type: Topic
+  title: Dedekind zeta function
+  summary: A generalization of the Riemann zeta function for algebraic number fields
+  difficulty: advanced
+- id: heegner_number
+  type: Topic
+  title: Heegner number
+  summary: square-free positive integer such that the corresponding imaginary quadratic
+    field has unique factorization; one of 1, 2, 3, 7, 11, 19, 43, 67, or 163
+  difficulty: advanced
+- id: analytic_number_theory
+  type: Topic
+  title: Analytic number theory
+  summary: exploring properties of the integers with complex analysis
+  difficulty: intermediate
+- id: fermat_polygonal_number_theorem
+  type: Topic
+  title: Fermat polygonal number theorem
+  summary: theorem
+  difficulty: advanced
+- id: 196_number
+  type: Topic
+  title: 196 (number)
+  summary: natural number
+  difficulty: intermediate
+- id: abundant_number
+  type: Topic
+  title: Abundant number
+  summary: number for which the sum of its proper divisors is greater than the number
+    itself
+  difficulty: intermediate
+- id: aliquot_sequence
+  type: Topic
+  title: Aliquot sequence
+  summary: mathematical recursive sequence
+  difficulty: advanced
+- id: almost_perfect_number
+  type: Topic
+  title: Almost perfect number
+  summary: natural number whose proper divisors sum to one less than itself
+  difficulty: advanced
+- id: amicable_numbers
+  type: Topic
+  title: Amicable numbers
+  summary: pair of integers related by their divisors
+  difficulty: intermediate
+- id: deficient_number
+  type: Topic
+  title: Deficient number
+  summary: natural integer number for which the sum of its proper strict divisors
+    (other than itself) is less than the number itself
+  difficulty: advanced
+- id: happy_number
+  type: Topic
+  title: Happy number
+  summary: numbers with a certain property involving recursive summation
+  difficulty: advanced
+- id: kaprekar_number
+  type: Topic
+  title: Kaprekar number
+  summary: non-negative integer, the representation of whose square in that base can
+    be split into two parts that add up to the original number again
+  difficulty: advanced
+- id: keith_number
+  type: Topic
+  title: Keith number
+  summary: integer that appears as a term in a linear recurrence relation with initial
+    terms based on its own digits
+  difficulty: advanced
+- id: lychrel_number
+  type: Topic
+  title: Lychrel number
+  summary: number
+  difficulty: advanced
+- id: narcissistic_number
+  type: Topic
+  title: Narcissistic number
+  summary: integer expressible as the sum of the (number of digits)th power of each
+    of its digits
+  difficulty: advanced
+- id: quasiperfect_number
+  type: Topic
+  title: Quasiperfect number
+  summary: Numbers whose sum of divisors is twice the number plus 1
+  difficulty: advanced
+- id: self_number
+  type: Topic
+  title: Self number
+  summary: a natural number that cannot be written as the sum of any other natural
+    number n and the individual digits of n
+  difficulty: advanced
+- id: sociable_number
+  type: Topic
+  title: Sociable number
+  summary: numbers whose aliquot sums form a cyclic sequence
+  difficulty: advanced
+- id: arithmetic_function
+  type: Topic
+  title: Arithmetic function
+  summary: any function whose domain is the positive integers and whose range is a
+    subset of the complex numbers
+  difficulty: advanced
+- id: additive_function
+  type: Topic
+  title: Additive function
+  summary: arithmetic function such that the image of the product of two coprimes
+    is the sum of their images
+  difficulty: advanced
+- id: chebyshev_function
+  type: Topic
+  title: Chebyshev function
+  summary: mathematical function
+  difficulty: advanced
+- id: integer_sequence
+  type: Topic
+  title: Integer sequence
+  summary: ordered succession of integers, defined by a formula, recurrence, or property
+    of its members
+  difficulty: advanced
+- id: mertens_function
+  type: Topic
+  title: Mertens function
+  summary: summatory function of the Möbius function
+  difficulty: advanced
+- id: m_bius_inversion_formula
+  type: Topic
+  title: Möbius inversion formula
+  summary: relation between pairs of arithmetic functions
+  difficulty: advanced
+- id: prime_counting_function
+  type: Topic
+  title: Prime-counting function
+  summary: function representing the number of primes less than or equal to a given
+    number
+  difficulty: advanced
+- id: modularity_theorem
+  type: Topic
+  title: Modularity theorem
+  summary: theorem in mathematics
+  difficulty: advanced
+- id: incomplete_gamma_function
+  type: Topic
+  title: Incomplete gamma function
+  summary: types of special mathematical functions
+  difficulty: advanced
+- id: pell_s_equation
+  type: Topic
+  title: Pell's equation
+  summary: mathematical equation, specifically a kind of Diophantine equation
+  difficulty: advanced
+- id: liouville_number
+  type: Topic
+  title: Liouville number
+  summary: transcendental number possessing an excellent sequence of rational number
+    approximations
+  difficulty: advanced
+- id: markov_number
+  type: Topic
+  title: Markov number
+  summary: an integer x, y, or z that can solve the Markov equation x^2 + y^2 + z^2
+    = 3xyz
+  difficulty: advanced
+- id: diophantine_equation
+  type: Topic
+  title: Diophantine equation
+  summary: polynomial equation with integer solutions
+  difficulty: intermediate
+- id: b_zout_s_identity
+  type: Topic
+  title: Bézout's identity
+  summary: formula relating two numbers and their greatest common divisor
+  difficulty: advanced
+- id: geometry_of_numbers
+  type: Topic
+  title: Geometry of numbers
+  summary: mathematical theory of convex bodies in integer lattices
+  difficulty: advanced
+- id: on_line_encyclopedia_of_integer_sequences
+  type: Topic
+  title: On-Line Encyclopedia of Integer Sequences
+  summary: online database of integer sequences
+  difficulty: advanced
+- id: achilles_number
+  type: Topic
+  title: Achilles number
+  summary: a number that is powerful but not a perfect power
+  difficulty: advanced
+- id: bell_number
+  type: Topic
+  title: Bell number
+  summary: integer sequence counting the possible partitions of a set
+  difficulty: advanced
+- id: pick_s_theorem
+  type: Topic
+  title: Pick's theorem
+  summary: formula that the area of a planar polygon whose vertices all have integer
+    coordinates equals the number of interior integer points plus half the number
+    of boundary integer points minus one
+  difficulty: advanced
+- id: multiplicative_function
+  type: Topic
+  title: Multiplicative function
+  summary: arithmetic function that is multiplicative for every pair of coprime integers
+  difficulty: advanced
+- id: liouville_function
+  type: Topic
+  title: Liouville function
+  summary: arithmetic function
+  difficulty: advanced
+- id: m_bius_function
+  type: Topic
+  title: Möbius function
+  summary: multiplicative function in number theory
+  difficulty: advanced
+- id: p_adic_number
+  type: Topic
+  title: P-adic number
+  summary: number system for a prime p which extends the ordinary arithmetic of the
+    rational numbers in a different way from the extension of the rational number
+    system to the real and complex number systems
+  difficulty: advanced
+- id: perfect_number
+  type: Topic
+  title: Perfect number
+  summary: positive integer which equals the sum of all its divisors
+  difficulty: intermediate
+- id: semiperfect_number
+  type: Topic
+  title: Semiperfect number
+  summary: positive integer that equals the sum of some of its proper divisors
+  difficulty: advanced
+- id: prime_number
+  type: Topic
+  title: Prime number
+  summary: positive integer with exactly two divisors, 1 and itself
+  difficulty: beginner
+- id: largest_known_prime_number
+  type: Topic
+  title: Largest known prime number
+  summary: largest prime number that is currently known
+  difficulty: advanced
+- id: sierpi_ski_number
+  type: Topic
+  title: Sierpiński number
+  summary: number k which k*2^n+1 is composite with all n
+  difficulty: advanced
+- id: sphenic_number
+  type: Topic
+  title: Sphenic number
+  summary: positive integer that is the product of three distinct prime numbers
+  difficulty: advanced
+- id: sylvester_s_law_of_inertia
+  type: Topic
+  title: Sylvester's law of inertia
+  summary: theorem of matrix algebra of invariance properties under basis transformations
+  difficulty: advanced
+- id: fermat_s_theorem_on_sums_of_two_squares
+  type: Topic
+  title: Fermat's theorem on sums of two squares
+  summary: theorem that an odd prime is a sum of two squares iff it is of the form
+    4𝑛+1
+  difficulty: advanced
+- id: lagrange_s_four_square_theorem
+  type: Topic
+  title: Lagrange's four-square theorem
+  summary: theorem
+  difficulty: advanced
+- id: triangular_number
+  type: Topic
+  title: Triangular number
+  summary: figurate number
+  difficulty: intermediate
+- id: cullen_number
+  type: Topic
+  title: Cullen number
+  summary: number of the form n*(2^n)+1
+  difficulty: advanced
+- id: double_mersenne_number
+  type: Topic
+  title: Double Mersenne number
+  summary: numbers of the form 2^{2^p-1}-1, where p and 2^p-1 are prime numbers
+  difficulty: advanced
+- id: fermat_number
+  type: Topic
+  title: Fermat number
+  summary: positive integer of the form (2^(2^n))+1
+  difficulty: intermediate
+- id: lucas_number
+  type: Topic
+  title: Lucas number
+  summary: entire infinite integer series where the next number is the sum of the
+    two preceding it (2, 1, 3, 4, 7, 11, ...)
+  difficulty: advanced
+- id: pell_number
+  type: Topic
+  title: Pell number
+  summary: denominator of close rational approximation to the square root of 2
+  difficulty: advanced
+- id: borsuk_ulam_theorem
+  type: Topic
+  title: Borsuk–Ulam theorem
+  summary: theorem
+  difficulty: advanced
+- id: incidence_matrix
+  type: Topic
+  title: Incidence matrix
+  summary: matrix that shows the relationship between two classes of objects
+  difficulty: advanced
+- id: longest_common_subsequence
+  type: Topic
+  title: Longest common subsequence
+  summary: the problem of finding a sequence that is a subsequence of each of a given
+    set of sequences and is as long as possible
+  difficulty: advanced
+- id: multinomial_theorem
+  type: Topic
+  title: Multinomial theorem
+  summary: theorem about how to expand a power of a sum in terms of powers of the
+    terms in that sum. It is the generalization of the binomial theorem to polynomials
+  difficulty: advanced
+- id: partition_of_a_set
+  type: Topic
+  title: Partition of a set
+  summary: mathematical ways to group elements of a set
+  difficulty: advanced
+- id: hall_s_marriage_theorem
+  type: Topic
+  title: Hall's marriage theorem
+  summary: theorem that a finite bipartite graph has a perfect matching iff any subset
+    of vertices from one group has a neighbourhood of equal or greater size
+  difficulty: advanced
+- id: green_tao_theorem
+  type: Topic
+  title: Green–Tao theorem
+  summary: theorem
+  difficulty: advanced
+- id: hadamard_matrix
+  type: Topic
+  title: Hadamard matrix
+  summary: real square matrix whose all columns (rows) are mutually orthogonal and
+    which only 1 or −1 as entries
+  difficulty: advanced
+- id: shannon_number
+  type: Topic
+  title: Shannon number
+  summary: lower bound on the game-tree complexity for chess
+  difficulty: advanced
+- id: surreal_number
+  type: Topic
+  title: Surreal number
+  summary: a totally ordered proper class containing the real numbers as well as hyperreal
+    numbers such as infinity and infinitesimals.
+  difficulty: advanced
+- id: catalan_number
+  type: Topic
+  title: Catalan number
+  summary: recursive integer sequence
+  difficulty: intermediate
+- id: motzkin_number
+  type: Topic
+  title: Motzkin number
+  summary: number of patterns of non-intersecting chords with a given number of endpoints
+    on a circle
+  difficulty: advanced
+- id: beta_distribution
+  type: Topic
+  title: Beta distribution
+  summary: probability distribution
+  difficulty: advanced
+- id: binomial_distribution
+  type: Topic
+  title: Binomial distribution
+  summary: probability distribution
+  difficulty: intermediate
+- id: binomial_theorem
+  type: Topic
+  title: Binomial theorem
+  summary: algebraic expansion of powers of a binomial
+  difficulty: intermediate
+- id: field_of_sets
+  type: Topic
+  title: Field of sets
+  summary: mathematical structure of sets in an abstract space
+  difficulty: advanced
+- id: hypergraph
+  type: Topic
+  title: Hypergraph
+  summary: generalized undirected graph in which generalized edges connect one, two,
+    or more nodes
+  difficulty: advanced
+- id: set_cover_problem
+  type: Topic
+  title: Set cover problem
+  summary: classical problem in combinatorics
+  difficulty: advanced
+- id: graph_theory
+  type: Topic
+  title: Graph theory
+  summary: study of graphs, which are mathematical structures used to model pairwise
+    relations between objects
+  difficulty: intermediate
+- id: graph_coloring
+  type: Topic
+  title: Graph coloring
+  summary: assignment of colors to elements of a graph subject to certain constraints
+  difficulty: advanced
+- id: degree_graph_theory
+  type: Topic
+  title: Degree (graph theory)
+  summary: number of edges incident to a given vertex in a node-link graph
+  difficulty: advanced
+- id: distance_graph_theory
+  type: Topic
+  title: Distance (graph theory)
+  summary: in graph theory, the minimum number of edges in a path connecting two vertices
+  difficulty: advanced
+- id: graph_abstract_data_type
+  type: Topic
+  title: Graph (abstract data type)
+  summary: abstract data type in computer science
+  difficulty: advanced
+- id: graph_discrete_mathematics
+  type: Topic
+  title: Graph (discrete mathematics)
+  summary: mathematical structure made of vertices connected in pairs by edges
+  difficulty: intermediate
+- id: b_zout_s_theorem
+  type: Topic
+  title: Bézout's theorem
+  summary: theorem calculating the number of intersection points of two algebraic
+    curves in terms of their degrees
+  difficulty: advanced
+- id: sylvester_gallai_theorem
+  type: Topic
+  title: Sylvester–Gallai theorem
+  summary: theorem that every finite set of points in the plane, not all collinear,
+    has a line through exactly two points
+  difficulty: advanced
+- id: cayley_s_theorem
+  type: Topic
+  title: Cayley's theorem
+  summary: theorem in group theory
+  difficulty: advanced
+- id: permutation_matrix
+  type: Topic
+  title: Permutation matrix
+  summary: matrices representing permutation of vector elements; with exactly one
+    1 per row and column
+  difficulty: advanced
+- id: random_number
+  type: Topic
+  title: Random number
+  summary: numbers that cannot be reasonably predicted
+  difficulty: advanced
+- id: stirling_number
+  type: Topic
+  title: Stirling number
+  summary: important functions in combinatorics
+  difficulty: advanced
+- id: graham_s_number
+  type: Topic
+  title: Graham's number
+  summary: enormously large number, the upper bound solution to a Ramsey theory problem
+  difficulty: advanced
+- id: ramsey_s_theorem
+  type: Topic
+  title: Ramsey's theorem
+  summary: combinatorics theorem that any edge labeling of a sufficiently large complete
+    graph contains monochromatic cliques
+  difficulty: advanced
+- id: sparse_matrix
+  type: Topic
+  title: Sparse matrix
+  summary: matrix in which most of the elements are zero
+  difficulty: advanced
+- id: diagonal_matrix
+  type: Topic
+  title: Diagonal matrix
+  summary: matrix whose only nonzero elements are on its main diagonal
+  difficulty: advanced
+- id: identity_matrix
+  type: Topic
+  title: Identity matrix
+  summary: square matrix with ones on the main diagonal and zeros elsewhere
+  difficulty: intermediate
+- id: tridiagonal_matrix
+  type: Topic
+  title: Tridiagonal matrix
+  summary: square matrix that has nonzero elements on the main diagonal, the first
+    diagonal below this, and the first diagonal above the main diagonal only
+  difficulty: advanced
+- id: zero_matrix
+  type: Topic
+  title: Zero matrix
+  summary: matrix whose entries are all 0
+  difficulty: advanced
+- id: special_functions
+  type: Topic
+  title: Special functions
+  summary: functions which have established names and notations due to their importance
+    in mathematics
+  difficulty: advanced
+- id: airy_function
+  type: Topic
+  title: Airy function
+  summary: special function in the physical sciences
+  difficulty: advanced
+- id: arithmetic_geometric_mean
+  type: Topic
+  title: Arithmetic–geometric mean
+  summary: term in mathematics
+  difficulty: advanced
+- id: cantor_function
+  type: Topic
+  title: Cantor function
+  summary: continuous function that is not absolutely continuous
+  difficulty: advanced
+- id: graph_isomorphism
+  type: Topic
+  title: Graph isomorphism
+  summary: bijection between the vertex set of two graphs
+  difficulty: advanced
+- id: five_color_theorem
+  type: Topic
+  title: Five color theorem
+  summary: theorem
+  difficulty: advanced
+- id: four_color_theorem
+  type: Topic
+  title: Four color theorem
+  summary: statement in mathematics
+  difficulty: intermediate
+- id: dominating_set
+  type: Topic
+  title: Dominating set
+  summary: a set of vertices in a node-link graph such that every vertex is either
+    in the set or adjacent to it
+  difficulty: advanced
+- id: independent_set_graph_theory
+  type: Topic
+  title: Independent set (graph theory)
+  summary: set of vertices in a graph, no two of which are adjacent
+  difficulty: advanced
+- id: matching_graph_theory
+  type: Topic
+  title: Matching (graph theory)
+  summary: set of edges without common vertices
+  difficulty: advanced
+- id: connectivity_graph_theory
+  type: Topic
+  title: Connectivity (graph theory)
+  summary: any measure of how connected a graph is
+  difficulty: advanced
+- id: bridge_graph_theory
+  type: Topic
+  title: Bridge (graph theory)
+  summary: edge of a graph whose deletion increases the graph’s number of connected
+    components; equivalently, an edge not contained in any cycle
+  difficulty: advanced
+- id: component_graph_theory
+  type: Topic
+  title: Component (graph theory)
+  summary: maximal subgraph of a given node-link graph within which every two vertices
+    may be connected by a path
+  difficulty: advanced
+- id: path_graph_theory
+  type: Topic
+  title: Path (graph theory)
+  summary: sequence of edges connecting a sequence of vertices in a graph, with no
+    repeating vertices
+  difficulty: advanced
+- id: graph_database
+  type: Topic
+  title: Graph database
+  summary: database which utilizes structure of discrete mathematical graphs to store
+    and search data
+  difficulty: advanced
+- id: directed_graph
+  type: Topic
+  title: Directed graph
+  summary: graph with oriented edges
+  difficulty: advanced
+- id: multigraph
+  type: Topic
+  title: Multigraph
+  summary: undirected graph which is permitted to have multiple edges but no loops
+  difficulty: advanced
+- id: dot_graph_description_language
+  type: Topic
+  title: DOT (graph description language)
+  summary: file format for Graphviz graphs
+  difficulty: advanced
+- id: chromatic_number
+  type: Topic
+  title: Chromatic number
+  summary: characteristic of a graph
+  difficulty: advanced
+- id: metcalfe_s_law
+  type: Topic
+  title: Metcalfe's law
+  summary: empirical rule that the value of a telecommunications network is proportional
+    to the square of its number of users
+  difficulty: advanced
+- id: clique_graph_theory
+  type: Topic
+  title: Clique (graph theory)
+  summary: subset of the vertices of a node-link graph that are all adjacent to each
+    other
+  difficulty: advanced
+- id: cycle_graph_theory
+  type: Topic
+  title: Cycle (graph theory)
+  summary: in graph theory, non-empty trail in which only the first and last vertices
+    are equal
+  difficulty: advanced
+- id: induced_subgraph
+  type: Topic
+  title: Induced subgraph
+  summary: another graph, formed from a subset of the vertices of the graph and all
+    of the edges connecting pairs of vertices in that subset
+  difficulty: advanced
+- id: loop_graph_theory
+  type: Topic
+  title: Loop (graph theory)
+  summary: edge connecting a vertex to itself
+  difficulty: advanced
+- id: complement_graph
+  type: Topic
+  title: Complement graph
+  summary: graph with same nodes but opposite connections as another
+  difficulty: advanced
+- id: line_graph
+  type: Topic
+  title: Line graph
+  summary: concept in graph theory
+  difficulty: advanced
+- id: y_transform
+  type: Topic
+  title: Y-Δ transform
+  summary: mathematical technique to simplify the analysis of an electrical network
+  difficulty: advanced
+- id: random_graph
+  type: Topic
+  title: Random graph
+  summary: graph generated by a random process
+  difficulty: advanced
+edges:
+- type: related_to
+  from: ackermann_function
+  to: composite_number
+- type: on_path
+  from: ackermann_function
+  to: algebraic_function
+- type: related_to
+  from: ackermann_function
+  to: special_functions
+- type: related_to
+  from: ackermann_function
+  to: airy_function
+- type: related_to
+  from: ackermann_function
+  to: arithmetic_geometric_mean
+- type: related_to
+  from: ackermann_function
+  to: cantor_function
+- type: on_path
+  from: composite_number
+  to: euler_s_four_square_identity
+- type: on_path
+  from: composite_number
+  to: prime_counting_function
+- type: related_to
+  from: composite_number
+  to: prime_number
+- type: related_to
+  from: composite_number
+  to: largest_known_prime_number
+- type: related_to
+  from: composite_number
+  to: sierpi_ski_number
+- type: related_to
+  from: composite_number
+  to: sphenic_number
+- type: related_to
+  from: number
+  to: 279_number
+- type: related_to
+  from: number
+  to: atomic_number
+- type: related_to
+  from: number
+  to: even_number
+- type: related_to
+  from: number
+  to: hyperreal_number
+- type: related_to
+  from: number
+  to: illegal_number
+- type: related_to
+  from: number
+  to: names_of_large_numbers
+- type: on_path
+  from: number
+  to: negative_number
+- type: related_to
+  from: number
+  to: odd_number
+- type: related_to
+  from: number
+  to: preferred_number
+- type: related_to
+  from: 279_number
+  to: atomic_number
+- type: related_to
+  from: 279_number
+  to: even_number
+- type: related_to
+  from: 279_number
+  to: hyperreal_number
+- type: related_to
+  from: 279_number
+  to: illegal_number
+- type: related_to
+  from: 279_number
+  to: names_of_large_numbers
+- type: on_path
+  from: 279_number
+  to: negative_number
+- type: related_to
+  from: 279_number
+  to: odd_number
+- type: related_to
+  from: 279_number
+  to: preferred_number
+- type: related_to
+  from: atomic_number
+  to: even_number
+- type: related_to
+  from: atomic_number
+  to: hyperreal_number
+- type: related_to
+  from: atomic_number
+  to: illegal_number
+- type: related_to
+  from: atomic_number
+  to: names_of_large_numbers
+- type: related_to
+  from: atomic_number
+  to: negative_number
+- type: related_to
+  from: atomic_number
+  to: odd_number
+- type: related_to
+  from: atomic_number
+  to: preferred_number
+- type: related_to
+  from: even_number
+  to: hyperreal_number
+- type: related_to
+  from: even_number
+  to: illegal_number
+- type: related_to
+  from: even_number
+  to: names_of_large_numbers
+- type: related_to
+  from: even_number
+  to: negative_number
+- type: related_to
+  from: even_number
+  to: odd_number
+- type: related_to
+  from: even_number
+  to: preferred_number
+- type: related_to
+  from: hyperreal_number
+  to: illegal_number
+- type: related_to
+  from: hyperreal_number
+  to: names_of_large_numbers
+- type: related_to
+  from: hyperreal_number
+  to: negative_number
+- type: related_to
+  from: hyperreal_number
+  to: odd_number
+- type: related_to
+  from: hyperreal_number
+  to: preferred_number
+- type: related_to
+  from: illegal_number
+  to: names_of_large_numbers
+- type: related_to
+  from: illegal_number
+  to: negative_number
+- type: related_to
+  from: illegal_number
+  to: odd_number
+- type: related_to
+  from: illegal_number
+  to: preferred_number
+- type: related_to
+  from: names_of_large_numbers
+  to: negative_number
+- type: related_to
+  from: names_of_large_numbers
+  to: odd_number
+- type: related_to
+  from: names_of_large_numbers
+  to: preferred_number
+- type: related_to
+  from: negative_number
+  to: odd_number
+- type: related_to
+  from: negative_number
+  to: preferred_number
+- type: related_to
+  from: negative_number
+  to: binary_number
+- type: on_path
+  from: negative_number
+  to: square_number
+- type: related_to
+  from: odd_number
+  to: preferred_number
+- type: on_path
+  from: binary_number
+  to: square_number
+- type: on_path
+  from: binary_number
+  to: boolean_function
+- type: related_to
+  from: binary_number
+  to: signed_number_representations
+- type: related_to
+  from: square_number
+  to: brahmagupta_fibonacci_identity
+- type: on_path
+  from: square_number
+  to: euler_s_four_square_identity
+- type: related_to
+  from: square_number
+  to: fermat_s_theorem_on_sums_of_two_squares
+- type: related_to
+  from: square_number
+  to: lagrange_s_four_square_theorem
+- type: related_to
+  from: square_number
+  to: triangular_number
+- type: related_to
+  from: fundamental_theorem_of_arithmetic
+  to: matrix_decomposition
+- type: related_to
+  from: farey_sequence
+  to: automorphic_number
+- type: related_to
+  from: farey_sequence
+  to: euler_s_totient_function
+- type: related_to
+  from: farey_sequence
+  to: bernoulli_number
+- type: related_to
+  from: farey_sequence
+  to: number_theory
+- type: related_to
+  from: farey_sequence
+  to: algebraic_number_theory
+- type: related_to
+  from: farey_sequence
+  to: computational_number_theory
+- type: related_to
+  from: farey_sequence
+  to: cyclic_number
+- type: related_to
+  from: farey_sequence
+  to: divisor_function
+- type: related_to
+  from: farey_sequence
+  to: rational_number
+- type: related_to
+  from: automorphic_number
+  to: euler_s_totient_function
+- type: related_to
+  from: automorphic_number
+  to: bernoulli_number
+- type: related_to
+  from: automorphic_number
+  to: number_theory
+- type: related_to
+  from: automorphic_number
+  to: algebraic_number_theory
+- type: related_to
+  from: automorphic_number
+  to: computational_number_theory
+- type: on_path
+  from: automorphic_number
+  to: cyclic_number
+- type: related_to
+  from: automorphic_number
+  to: divisor_function
+- type: related_to
+  from: automorphic_number
+  to: carmichael_function
+- type: on_path
+  from: automorphic_number
+  to: carmichael_number
+- type: on_path
+  from: automorphic_number
+  to: chinese_remainder_theorem
+- type: on_path
+  from: automorphic_number
+  to: euler_s_theorem
+- type: related_to
+  from: automorphic_number
+  to: fermat_s_little_theorem
+- type: related_to
+  from: automorphic_number
+  to: wilson_s_theorem
+- type: on_path
+  from: automorphic_number
+  to: p_adic_number
+- type: on_path
+  from: automorphic_number
+  to: 196_number
+- type: on_path
+  from: automorphic_number
+  to: abundant_number
+- type: on_path
+  from: automorphic_number
+  to: aliquot_sequence
+- type: related_to
+  from: automorphic_number
+  to: almost_perfect_number
+- type: on_path
+  from: automorphic_number
+  to: amicable_numbers
+- type: related_to
+  from: automorphic_number
+  to: deficient_number
+- type: related_to
+  from: automorphic_number
+  to: happy_number
+- type: on_path
+  from: automorphic_number
+  to: kaprekar_number
+- type: related_to
+  from: automorphic_number
+  to: keith_number
+- type: on_path
+  from: automorphic_number
+  to: lychrel_number
+- type: related_to
+  from: automorphic_number
+  to: narcissistic_number
+- type: related_to
+  from: automorphic_number
+  to: quasiperfect_number
+- type: related_to
+  from: automorphic_number
+  to: self_number
+- type: related_to
+  from: automorphic_number
+  to: sociable_number
+- type: related_to
+  from: carmichael_function
+  to: carmichael_number
+- type: related_to
+  from: carmichael_function
+  to: chinese_remainder_theorem
+- type: related_to
+  from: carmichael_function
+  to: euler_s_theorem
+- type: related_to
+  from: carmichael_function
+  to: euler_s_totient_function
+- type: related_to
+  from: carmichael_function
+  to: fermat_s_little_theorem
+- type: related_to
+  from: carmichael_function
+  to: wilson_s_theorem
+- type: related_to
+  from: carmichael_number
+  to: chinese_remainder_theorem
+- type: related_to
+  from: carmichael_number
+  to: euler_s_theorem
+- type: related_to
+  from: carmichael_number
+  to: euler_s_totient_function
+- type: related_to
+  from: carmichael_number
+  to: fermat_s_little_theorem
+- type: related_to
+  from: carmichael_number
+  to: wilson_s_theorem
+- type: related_to
+  from: carmichael_number
+  to: bernoulli_number
+- type: related_to
+  from: carmichael_number
+  to: abundant_number
+- type: related_to
+  from: carmichael_number
+  to: almost_perfect_number
+- type: related_to
+  from: carmichael_number
+  to: amicable_numbers
+- type: related_to
+  from: carmichael_number
+  to: integer_sequence
+- type: related_to
+  from: carmichael_number
+  to: on_line_encyclopedia_of_integer_sequences
+- type: related_to
+  from: carmichael_number
+  to: achilles_number
+- type: related_to
+  from: carmichael_number
+  to: bell_number
+- type: related_to
+  from: chinese_remainder_theorem
+  to: euler_s_theorem
+- type: related_to
+  from: chinese_remainder_theorem
+  to: euler_s_totient_function
+- type: related_to
+  from: chinese_remainder_theorem
+  to: fermat_s_little_theorem
+- type: related_to
+  from: chinese_remainder_theorem
+  to: wilson_s_theorem
+- type: related_to
+  from: euler_s_theorem
+  to: euler_s_totient_function
+- type: related_to
+  from: euler_s_theorem
+  to: fermat_s_little_theorem
+- type: related_to
+  from: euler_s_theorem
+  to: wilson_s_theorem
+- type: related_to
+  from: euler_s_totient_function
+  to: bernoulli_number
+- type: related_to
+  from: euler_s_totient_function
+  to: number_theory
+- type: related_to
+  from: euler_s_totient_function
+  to: algebraic_number_theory
+- type: related_to
+  from: euler_s_totient_function
+  to: computational_number_theory
+- type: on_path
+  from: euler_s_totient_function
+  to: cyclic_number
+- type: related_to
+  from: euler_s_totient_function
+  to: divisor_function
+- type: related_to
+  from: euler_s_totient_function
+  to: fermat_s_little_theorem
+- type: related_to
+  from: euler_s_totient_function
+  to: wilson_s_theorem
+- type: related_to
+  from: euler_s_totient_function
+  to: multiplicative_function
+- type: on_path
+  from: euler_s_totient_function
+  to: liouville_function
+- type: on_path
+  from: euler_s_totient_function
+  to: m_bius_function
+- type: related_to
+  from: fermat_s_little_theorem
+  to: wilson_s_theorem
+- type: related_to
+  from: geometric_series
+  to: inverse_trigonometric_functions
+- type: related_to
+  from: geometric_series
+  to: trigonometric_functions
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: trigonometric_functions
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: euler_s_formula
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: gudermannian_function
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: law_of_cosines
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: law_of_cotangents
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: law_of_sines
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: law_of_tangents
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: mollweide_s_formula
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: pythagorean_trigonometric_identity
+- type: related_to
+  from: inverse_trigonometric_functions
+  to: trigonometric_integral
+- type: related_to
+  from: trigonometric_functions
+  to: pythagorean_theorem
+- type: related_to
+  from: trigonometric_functions
+  to: law_of_cosines
+- type: related_to
+  from: trigonometric_functions
+  to: law_of_cotangents
+- type: related_to
+  from: trigonometric_functions
+  to: law_of_sines
+- type: related_to
+  from: trigonometric_functions
+  to: law_of_tangents
+- type: related_to
+  from: trigonometric_functions
+  to: angle_of_view_photography
+- type: related_to
+  from: trigonometric_functions
+  to: exterior_angle_theorem
+- type: related_to
+  from: trigonometric_functions
+  to: selenographic_coordinate_system
+- type: related_to
+  from: additive_identity
+  to: cubic_equation
+- type: related_to
+  from: additive_identity
+  to: equation
+- type: related_to
+  from: additive_identity
+  to: formula
+- type: related_to
+  from: additive_identity
+  to: identity_mathematics
+- type: related_to
+  from: additive_identity
+  to: inequation
+- type: related_to
+  from: additive_identity
+  to: linear_equation
+- type: related_to
+  from: additive_identity
+  to: quadratic_equation
+- type: related_to
+  from: additive_identity
+  to: quadratic_formula
+- type: related_to
+  from: additive_identity
+  to: quartic_equation
+- type: related_to
+  from: additive_identity
+  to: quartic_function
+- type: related_to
+  from: additive_identity
+  to: vieta_s_formulas
+- type: related_to
+  from: cubic_equation
+  to: equation
+- type: related_to
+  from: cubic_equation
+  to: formula
+- type: related_to
+  from: cubic_equation
+  to: identity_mathematics
+- type: related_to
+  from: cubic_equation
+  to: inequation
+- type: related_to
+  from: cubic_equation
+  to: linear_equation
+- type: related_to
+  from: cubic_equation
+  to: quadratic_equation
+- type: related_to
+  from: cubic_equation
+  to: quadratic_formula
+- type: related_to
+  from: cubic_equation
+  to: quartic_equation
+- type: related_to
+  from: cubic_equation
+  to: quartic_function
+- type: related_to
+  from: cubic_equation
+  to: vieta_s_formulas
+- type: related_to
+  from: equation
+  to: formula
+- type: related_to
+  from: equation
+  to: identity_mathematics
+- type: related_to
+  from: equation
+  to: inequation
+- type: related_to
+  from: equation
+  to: linear_equation
+- type: related_to
+  from: equation
+  to: quadratic_equation
+- type: related_to
+  from: equation
+  to: quadratic_formula
+- type: related_to
+  from: equation
+  to: quartic_equation
+- type: related_to
+  from: equation
+  to: quartic_function
+- type: related_to
+  from: equation
+  to: vieta_s_formulas
+- type: related_to
+  from: formula
+  to: identity_mathematics
+- type: related_to
+  from: formula
+  to: inequation
+- type: related_to
+  from: formula
+  to: linear_equation
+- type: related_to
+  from: formula
+  to: quadratic_equation
+- type: related_to
+  from: formula
+  to: quadratic_formula
+- type: related_to
+  from: formula
+  to: quartic_equation
+- type: related_to
+  from: formula
+  to: quartic_function
+- type: related_to
+  from: formula
+  to: vieta_s_formulas
+- type: related_to
+  from: identity_mathematics
+  to: inequation
+- type: related_to
+  from: identity_mathematics
+  to: linear_equation
+- type: related_to
+  from: identity_mathematics
+  to: quadratic_equation
+- type: related_to
+  from: identity_mathematics
+  to: quadratic_formula
+- type: related_to
+  from: identity_mathematics
+  to: quartic_equation
+- type: related_to
+  from: identity_mathematics
+  to: quartic_function
+- type: related_to
+  from: identity_mathematics
+  to: vieta_s_formulas
+- type: related_to
+  from: inequation
+  to: linear_equation
+- type: related_to
+  from: inequation
+  to: quadratic_equation
+- type: related_to
+  from: inequation
+  to: quadratic_formula
+- type: related_to
+  from: inequation
+  to: quartic_equation
+- type: related_to
+  from: inequation
+  to: quartic_function
+- type: related_to
+  from: inequation
+  to: vieta_s_formulas
+- type: related_to
+  from: linear_equation
+  to: quadratic_equation
+- type: related_to
+  from: linear_equation
+  to: quadratic_formula
+- type: related_to
+  from: linear_equation
+  to: quartic_equation
+- type: related_to
+  from: linear_equation
+  to: quartic_function
+- type: related_to
+  from: linear_equation
+  to: vieta_s_formulas
+- type: related_to
+  from: quadratic_equation
+  to: quadratic_formula
+- type: related_to
+  from: quadratic_equation
+  to: quartic_equation
+- type: related_to
+  from: quadratic_equation
+  to: quartic_function
+- type: related_to
+  from: quadratic_equation
+  to: vieta_s_formulas
+- type: related_to
+  from: quadratic_formula
+  to: quartic_equation
+- type: related_to
+  from: quadratic_formula
+  to: quartic_function
+- type: related_to
+  from: quadratic_formula
+  to: vieta_s_formulas
+- type: related_to
+  from: quartic_equation
+  to: quartic_function
+- type: related_to
+  from: quartic_equation
+  to: vieta_s_formulas
+- type: related_to
+  from: quartic_function
+  to: vieta_s_formulas
+- type: on_path
+  from: brahmagupta_fibonacci_identity
+  to: euler_s_four_square_identity
+- type: related_to
+  from: brahmagupta_fibonacci_identity
+  to: fermat_s_theorem_on_sums_of_two_squares
+- type: related_to
+  from: brahmagupta_fibonacci_identity
+  to: lagrange_s_four_square_theorem
+- type: related_to
+  from: brahmagupta_fibonacci_identity
+  to: triangular_number
+- type: related_to
+  from: brahmagupta_fibonacci_identity
+  to: vandermonde_s_identity
+- type: on_path
+  from: euler_s_four_square_identity
+  to: fermat_s_theorem_on_sums_of_two_squares
+- type: related_to
+  from: euler_s_four_square_identity
+  to: lagrange_s_four_square_theorem
+- type: related_to
+  from: euler_s_four_square_identity
+  to: triangular_number
+- type: on_path
+  from: euler_s_four_square_identity
+  to: vandermonde_s_identity
+- type: on_path
+  from: floor_and_ceiling_functions
+  to: inverse_function
+- type: related_to
+  from: floor_and_ceiling_functions
+  to: sign_function
+- type: on_path
+  from: inverse_function
+  to: sign_function
+- type: on_path
+  from: inverse_function
+  to: indicator_function
+- type: related_to
+  from: inverse_function
+  to: algebra_of_sets
+- type: related_to
+  from: inverse_function
+  to: complement_set_theory
+- type: related_to
+  from: inverse_function
+  to: disjoint_sets
+- type: related_to
+  from: inverse_function
+  to: domain_of_a_function
+- type: related_to
+  from: inverse_function
+  to: empty_set
+- type: related_to
+  from: inverse_function
+  to: family_of_sets
+- type: related_to
+  from: inverse_function
+  to: finite_set
+- type: related_to
+  from: inverse_function
+  to: function_mathematics
+- type: related_to
+  from: inverse_function
+  to: function_composition
+- type: related_to
+  from: inverse_function
+  to: identity_function
+- type: related_to
+  from: inverse_function
+  to: injective_function
+- type: related_to
+  from: inverse_function
+  to: intersection_set_theory
+- type: related_to
+  from: adjugate_matrix
+  to: eigenvalues_and_eigenvectors
+- type: related_to
+  from: adjugate_matrix
+  to: gershgorin_circle_theorem
+- type: related_to
+  from: adjugate_matrix
+  to: invertible_matrix
+- type: related_to
+  from: adjugate_matrix
+  to: cayley_hamilton_theorem
+- type: related_to
+  from: adjugate_matrix
+  to: complex_number
+- type: related_to
+  from: adjugate_matrix
+  to: dimension_vector_space
+- type: related_to
+  from: adjugate_matrix
+  to: dual_number
+- type: related_to
+  from: adjugate_matrix
+  to: elementary_matrix
+- type: related_to
+  from: adjugate_matrix
+  to: euclidean_vector
+- type: related_to
+  from: adjugate_matrix
+  to: function_space
+- type: related_to
+  from: adjugate_matrix
+  to: hahn_banach_theorem
+- type: related_to
+  from: adjugate_matrix
+  to: homogeneous_function
+- type: related_to
+  from: adjugate_matrix
+  to: idempotent_matrix
+- type: related_to
+  from: adjugate_matrix
+  to: matrix_addition
+- type: related_to
+  from: complex_number
+  to: dimension_vector_space
+- type: related_to
+  from: complex_number
+  to: dual_number
+- type: on_path
+  from: complex_number
+  to: eigenvalues_and_eigenvectors
+- type: related_to
+  from: complex_number
+  to: elementary_matrix
+- type: related_to
+  from: complex_number
+  to: euclidean_vector
+- type: related_to
+  from: complex_number
+  to: function_space
+- type: related_to
+  from: complex_number
+  to: gershgorin_circle_theorem
+- type: related_to
+  from: complex_number
+  to: hahn_banach_theorem
+- type: related_to
+  from: complex_number
+  to: homogeneous_function
+- type: related_to
+  from: complex_number
+  to: idempotent_matrix
+- type: related_to
+  from: complex_number
+  to: invertible_matrix
+- type: related_to
+  from: complex_number
+  to: matrix_addition
+- type: related_to
+  from: dimension_vector_space
+  to: dual_number
+- type: on_path
+  from: dimension_vector_space
+  to: eigenvalues_and_eigenvectors
+- type: related_to
+  from: dimension_vector_space
+  to: elementary_matrix
+- type: related_to
+  from: dimension_vector_space
+  to: euclidean_vector
+- type: related_to
+  from: dimension_vector_space
+  to: function_space
+- type: related_to
+  from: dimension_vector_space
+  to: gershgorin_circle_theorem
+- type: related_to
+  from: dimension_vector_space
+  to: hahn_banach_theorem
+- type: related_to
+  from: dimension_vector_space
+  to: homogeneous_function
+- type: related_to
+  from: dimension_vector_space
+  to: idempotent_matrix
+- type: related_to
+  from: dimension_vector_space
+  to: invertible_matrix
+- type: related_to
+  from: dimension_vector_space
+  to: matrix_addition
+- type: related_to
+  from: dimension_vector_space
+  to: topological_vector_space
+- type: related_to
+  from: dimension_vector_space
+  to: vector_space
+- type: related_to
+  from: dimension_vector_space
+  to: real_valued_function
+- type: related_to
+  from: dimension_vector_space
+  to: vector_mathematics_and_physics
+- type: related_to
+  from: dimension_vector_space
+  to: burgers_vector
+- type: related_to
+  from: dimension_vector_space
+  to: covariance_and_contravariance_of_vectors
+- type: related_to
+  from: dimension_vector_space
+  to: four_vector
+- type: related_to
+  from: dimension_vector_space
+  to: laplace_runge_lenz_vector
+- type: related_to
+  from: dimension_vector_space
+  to: poynting_vector
+- type: related_to
+  from: dimension_vector_space
+  to: pseudovector
+- type: related_to
+  from: dual_number
+  to: eigenvalues_and_eigenvectors
+- type: related_to
+  from: dual_number
+  to: elementary_matrix
+- type: related_to
+  from: dual_number
+  to: euclidean_vector
+- type: related_to
+  from: dual_number
+  to: function_space
+- type: related_to
+  from: dual_number
+  to: gershgorin_circle_theorem
+- type: related_to
+  from: dual_number
+  to: hahn_banach_theorem
+- type: related_to
+  from: dual_number
+  to: homogeneous_function
+- type: related_to
+  from: dual_number
+  to: idempotent_matrix
+- type: related_to
+  from: dual_number
+  to: invertible_matrix
+- type: related_to
+  from: dual_number
+  to: matrix_addition
+- type: related_to
+  from: eigenvalues_and_eigenvectors
+  to: gershgorin_circle_theorem
+- type: on_path
+  from: eigenvalues_and_eigenvectors
+  to: invertible_matrix
+- type: related_to
+  from: eigenvalues_and_eigenvectors
+  to: cayley_hamilton_theorem
+- type: related_to
+  from: eigenvalues_and_eigenvectors
+  to: elementary_matrix
+- type: on_path
+  from: eigenvalues_and_eigenvectors
+  to: euclidean_vector
+- type: on_path
+  from: eigenvalues_and_eigenvectors
+  to: function_space
+- type: on_path
+  from: eigenvalues_and_eigenvectors
+  to: hahn_banach_theorem
+- type: related_to
+  from: eigenvalues_and_eigenvectors
+  to: homogeneous_function
+- type: related_to
+  from: eigenvalues_and_eigenvectors
+  to: idempotent_matrix
+- type: on_path
+  from: eigenvalues_and_eigenvectors
+  to: matrix_addition
+- type: related_to
+  from: eigenvalues_and_eigenvectors
+  to: normal_mode
+- type: on_path
+  from: eigenvalues_and_eigenvectors
+  to: spectral_theorem
+- type: related_to
+  from: elementary_matrix
+  to: euclidean_vector
+- type: related_to
+  from: elementary_matrix
+  to: function_space
+- type: related_to
+  from: elementary_matrix
+  to: gershgorin_circle_theorem
+- type: related_to
+  from: elementary_matrix
+  to: hahn_banach_theorem
+- type: related_to
+  from: elementary_matrix
+  to: homogeneous_function
+- type: related_to
+  from: elementary_matrix
+  to: idempotent_matrix
+- type: related_to
+  from: elementary_matrix
+  to: invertible_matrix
+- type: related_to
+  from: elementary_matrix
+  to: matrix_addition
+- type: related_to
+  from: euclidean_vector
+  to: function_space
+- type: related_to
+  from: euclidean_vector
+  to: gershgorin_circle_theorem
+- type: related_to
+  from: euclidean_vector
+  to: hahn_banach_theorem
+- type: related_to
+  from: euclidean_vector
+  to: homogeneous_function
+- type: related_to
+  from: euclidean_vector
+  to: idempotent_matrix
+- type: related_to
+  from: euclidean_vector
+  to: invertible_matrix
+- type: related_to
+  from: euclidean_vector
+  to: matrix_addition
+- type: related_to
+  from: euclidean_vector
+  to: vector_mathematics_and_physics
+- type: related_to
+  from: euclidean_vector
+  to: burgers_vector
+- type: related_to
+  from: euclidean_vector
+  to: covariance_and_contravariance_of_vectors
+- type: related_to
+  from: euclidean_vector
+  to: four_vector
+- type: related_to
+  from: euclidean_vector
+  to: laplace_runge_lenz_vector
+- type: related_to
+  from: euclidean_vector
+  to: poynting_vector
+- type: related_to
+  from: euclidean_vector
+  to: pseudovector
+- type: related_to
+  from: function_space
+  to: gershgorin_circle_theorem
+- type: related_to
+  from: function_space
+  to: hahn_banach_theorem
+- type: related_to
+  from: function_space
+  to: homogeneous_function
+- type: related_to
+  from: function_space
+  to: idempotent_matrix
+- type: related_to
+  from: function_space
+  to: invertible_matrix
+- type: related_to
+  from: function_space
+  to: matrix_addition
+- type: related_to
+  from: gershgorin_circle_theorem
+  to: invertible_matrix
+- type: related_to
+  from: gershgorin_circle_theorem
+  to: cayley_hamilton_theorem
+- type: related_to
+  from: gershgorin_circle_theorem
+  to: hahn_banach_theorem
+- type: related_to
+  from: gershgorin_circle_theorem
+  to: homogeneous_function
+- type: related_to
+  from: gershgorin_circle_theorem
+  to: idempotent_matrix
+- type: related_to
+  from: gershgorin_circle_theorem
+  to: matrix_addition
+- type: related_to
+  from: hahn_banach_theorem
+  to: homogeneous_function
+- type: related_to
+  from: hahn_banach_theorem
+  to: idempotent_matrix
+- type: related_to
+  from: hahn_banach_theorem
+  to: invertible_matrix
+- type: related_to
+  from: hahn_banach_theorem
+  to: matrix_addition
+- type: related_to
+  from: hahn_banach_theorem
+  to: topological_vector_space
+- type: on_path
+  from: hahn_banach_theorem
+  to: banach_alaoglu_theorem
+- type: related_to
+  from: homogeneous_function
+  to: idempotent_matrix
+- type: related_to
+  from: homogeneous_function
+  to: invertible_matrix
+- type: related_to
+  from: homogeneous_function
+  to: matrix_addition
+- type: related_to
+  from: idempotent_matrix
+  to: invertible_matrix
+- type: related_to
+  from: idempotent_matrix
+  to: matrix_addition
+- type: related_to
+  from: invertible_matrix
+  to: cayley_hamilton_theorem
+- type: related_to
+  from: invertible_matrix
+  to: matrix_addition
+- type: related_to
+  from: invertible_matrix
+  to: cauchy_binet_formula
+- type: related_to
+  from: invertible_matrix
+  to: gram_matrix
+- type: on_path
+  from: invertible_matrix
+  to: hilbert_matrix
+- type: on_path
+  from: invertible_matrix
+  to: jacobian_matrix_and_determinant
+- type: related_to
+  from: invertible_matrix
+  to: vandermonde_matrix
+- type: related_to
+  from: cauchy_binet_formula
+  to: gram_matrix
+- type: related_to
+  from: cauchy_binet_formula
+  to: hilbert_matrix
+- type: related_to
+  from: cauchy_binet_formula
+  to: jacobian_matrix_and_determinant
+- type: related_to
+  from: cauchy_binet_formula
+  to: vandermonde_matrix
+- type: related_to
+  from: gram_matrix
+  to: hilbert_matrix
+- type: related_to
+  from: gram_matrix
+  to: jacobian_matrix_and_determinant
+- type: related_to
+  from: gram_matrix
+  to: vandermonde_matrix
+- type: related_to
+  from: hilbert_matrix
+  to: jacobian_matrix_and_determinant
+- type: related_to
+  from: hilbert_matrix
+  to: vandermonde_matrix
+- type: related_to
+  from: hilbert_matrix
+  to: diagonally_dominant_matrix
+- type: on_path
+  from: hilbert_matrix
+  to: householder_transformation
+- type: on_path
+  from: hilbert_matrix
+  to: matrix_multiplication
+- type: on_path
+  from: hilbert_matrix
+  to: system_of_linear_equations
+- type: related_to
+  from: hilbert_matrix
+  to: triangular_matrix
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: vandermonde_matrix
+- type: on_path
+  from: jacobian_matrix_and_determinant
+  to: directional_derivative
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: implicit_function
+- type: on_path
+  from: jacobian_matrix_and_determinant
+  to: leibniz_integral_rule
+- type: on_path
+  from: jacobian_matrix_and_determinant
+  to: differentiable_function
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: frenet_serret_formulas
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: hessian_matrix
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: inverse_function_theorem
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: level_set
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: material_derivative
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: multiple_integral
+- type: related_to
+  from: jacobian_matrix_and_determinant
+  to: parametric_equation
+- type: on_path
+  from: jacobian_matrix_and_determinant
+  to: partial_derivative
+- type: related_to
+  from: matrix_mathematics
+  to: square_matrix
+- type: on_path
+  from: matrix_mathematics
+  to: adjacency_matrix
+- type: related_to
+  from: matrix_mathematics
+  to: augmented_matrix
+- type: related_to
+  from: matrix_mathematics
+  to: block_matrix
+- type: on_path
+  from: square_matrix
+  to: adjacency_matrix
+- type: related_to
+  from: square_matrix
+  to: augmented_matrix
+- type: related_to
+  from: square_matrix
+  to: block_matrix
+- type: on_path
+  from: adjacency_matrix
+  to: augmented_matrix
+- type: on_path
+  from: adjacency_matrix
+  to: block_matrix
+- type: related_to
+  from: adjacency_matrix
+  to: dual_graph
+- type: on_path
+  from: adjacency_matrix
+  to: incidence_matrix
+- type: related_to
+  from: augmented_matrix
+  to: block_matrix
+- type: on_path
+  from: block_matrix
+  to: permutation_matrix
+- type: related_to
+  from: block_matrix
+  to: sparse_matrix
+- type: related_to
+  from: block_matrix
+  to: diagonal_matrix
+- type: related_to
+  from: block_matrix
+  to: identity_matrix
+- type: on_path
+  from: block_matrix
+  to: tridiagonal_matrix
+- type: related_to
+  from: block_matrix
+  to: zero_matrix
+- type: on_path
+  from: cayley_hamilton_theorem
+  to: spectral_theorem
+- type: related_to
+  from: cayley_hamilton_theorem
+  to: rank_nullity_theorem
+- type: related_to
+  from: cayley_hamilton_theorem
+  to: rouch_capelli_theorem
+- type: related_to
+  from: diagonally_dominant_matrix
+  to: householder_transformation
+- type: related_to
+  from: diagonally_dominant_matrix
+  to: matrix_multiplication
+- type: related_to
+  from: diagonally_dominant_matrix
+  to: system_of_linear_equations
+- type: related_to
+  from: diagonally_dominant_matrix
+  to: triangular_matrix
+- type: related_to
+  from: householder_transformation
+  to: matrix_multiplication
+- type: related_to
+  from: householder_transformation
+  to: system_of_linear_equations
+- type: related_to
+  from: householder_transformation
+  to: triangular_matrix
+- type: on_path
+  from: householder_transformation
+  to: geometric_transformation
+- type: on_path
+  from: householder_transformation
+  to: transformation_function
+- type: related_to
+  from: householder_transformation
+  to: affine_transformation
+- type: on_path
+  from: householder_transformation
+  to: homography
+- type: on_path
+  from: householder_transformation
+  to: rotation_matrix
+- type: related_to
+  from: householder_transformation
+  to: transformation_matrix
+- type: related_to
+  from: matrix_multiplication
+  to: system_of_linear_equations
+- type: related_to
+  from: matrix_multiplication
+  to: triangular_matrix
+- type: related_to
+  from: system_of_linear_equations
+  to: triangular_matrix
+- type: related_to
+  from: directional_derivative
+  to: implicit_function
+- type: related_to
+  from: directional_derivative
+  to: leibniz_integral_rule
+- type: related_to
+  from: directional_derivative
+  to: differentiable_function
+- type: related_to
+  from: directional_derivative
+  to: frenet_serret_formulas
+- type: related_to
+  from: directional_derivative
+  to: hessian_matrix
+- type: related_to
+  from: directional_derivative
+  to: inverse_function_theorem
+- type: related_to
+  from: directional_derivative
+  to: level_set
+- type: related_to
+  from: directional_derivative
+  to: material_derivative
+- type: related_to
+  from: directional_derivative
+  to: multiple_integral
+- type: related_to
+  from: directional_derivative
+  to: parametric_equation
+- type: related_to
+  from: directional_derivative
+  to: partial_derivative
+- type: on_path
+  from: directional_derivative
+  to: derivative
+- type: on_path
+  from: directional_derivative
+  to: differential_of_a_function
+- type: on_path
+  from: directional_derivative
+  to: differentiation_of_trigonometric_functions
+- type: related_to
+  from: directional_derivative
+  to: interior_extremum_theorem
+- type: related_to
+  from: normal_mode
+  to: spectral_theorem
+- type: related_to
+  from: spectral_theorem
+  to: rank_nullity_theorem
+- type: related_to
+  from: spectral_theorem
+  to: rouch_capelli_theorem
+- type: on_path
+  from: spectral_theorem
+  to: spectrum_functional_analysis
+- type: related_to
+  from: rank_nullity_theorem
+  to: rouch_capelli_theorem
+- type: related_to
+  from: topological_vector_space
+  to: vector_space
+- type: related_to
+  from: topological_vector_space
+  to: real_valued_function
+- type: related_to
+  from: topological_vector_space
+  to: banach_alaoglu_theorem
+- type: related_to
+  from: vector_space
+  to: real_valued_function
+- type: related_to
+  from: vector_mathematics_and_physics
+  to: burgers_vector
+- type: related_to
+  from: vector_mathematics_and_physics
+  to: covariance_and_contravariance_of_vectors
+- type: related_to
+  from: vector_mathematics_and_physics
+  to: four_vector
+- type: related_to
+  from: vector_mathematics_and_physics
+  to: laplace_runge_lenz_vector
+- type: related_to
+  from: vector_mathematics_and_physics
+  to: poynting_vector
+- type: related_to
+  from: vector_mathematics_and_physics
+  to: pseudovector
+- type: related_to
+  from: burgers_vector
+  to: covariance_and_contravariance_of_vectors
+- type: related_to
+  from: burgers_vector
+  to: four_vector
+- type: related_to
+  from: burgers_vector
+  to: laplace_runge_lenz_vector
+- type: related_to
+  from: burgers_vector
+  to: poynting_vector
+- type: related_to
+  from: burgers_vector
+  to: pseudovector
+- type: related_to
+  from: covariance_and_contravariance_of_vectors
+  to: four_vector
+- type: related_to
+  from: covariance_and_contravariance_of_vectors
+  to: laplace_runge_lenz_vector
+- type: related_to
+  from: covariance_and_contravariance_of_vectors
+  to: poynting_vector
+- type: related_to
+  from: covariance_and_contravariance_of_vectors
+  to: pseudovector
+- type: related_to
+  from: four_vector
+  to: laplace_runge_lenz_vector
+- type: related_to
+  from: four_vector
+  to: poynting_vector
+- type: related_to
+  from: four_vector
+  to: pseudovector
+- type: related_to
+  from: laplace_runge_lenz_vector
+  to: poynting_vector
+- type: related_to
+  from: laplace_runge_lenz_vector
+  to: pseudovector
+- type: related_to
+  from: poynting_vector
+  to: pseudovector
+- type: related_to
+  from: geometric_transformation
+  to: transformation_function
+- type: related_to
+  from: geometric_transformation
+  to: affine_transformation
+- type: related_to
+  from: geometric_transformation
+  to: homography
+- type: related_to
+  from: geometric_transformation
+  to: rotation_matrix
+- type: related_to
+  from: geometric_transformation
+  to: transformation_matrix
+- type: related_to
+  from: geometric_transformation
+  to: conservation_law
+- type: related_to
+  from: geometric_transformation
+  to: inversion_transformation
+- type: on_path
+  from: geometric_transformation
+  to: lorentz_covariance
+- type: on_path
+  from: geometric_transformation
+  to: noether_s_theorem
+- type: related_to
+  from: geometric_transformation
+  to: symmetry_of_second_derivatives
+- type: related_to
+  from: de_morgan_s_laws
+  to: dual_graph
+- type: related_to
+  from: de_morgan_s_laws
+  to: legendre_transformation
+- type: related_to
+  from: de_morgan_s_laws
+  to: riesz_representation_theorem
+- type: on_path
+  from: dual_graph
+  to: incidence_matrix
+- type: on_path
+  from: dual_graph
+  to: legendre_transformation
+- type: related_to
+  from: dual_graph
+  to: riesz_representation_theorem
+- type: related_to
+  from: dual_graph
+  to: induced_subgraph
+- type: related_to
+  from: dual_graph
+  to: complement_graph
+- type: related_to
+  from: dual_graph
+  to: line_graph
+- type: related_to
+  from: dual_graph
+  to: y_transform
+- type: related_to
+  from: legendre_transformation
+  to: riesz_representation_theorem
+- type: related_to
+  from: geometric_mean_theorem
+  to: pythagorean_theorem
+- type: related_to
+  from: pythagorean_theorem
+  to: law_of_cosines
+- type: related_to
+  from: pythagorean_theorem
+  to: law_of_cotangents
+- type: related_to
+  from: pythagorean_theorem
+  to: law_of_sines
+- type: related_to
+  from: pythagorean_theorem
+  to: law_of_tangents
+- type: related_to
+  from: pythagorean_theorem
+  to: angle_of_view_photography
+- type: related_to
+  from: pythagorean_theorem
+  to: exterior_angle_theorem
+- type: related_to
+  from: pythagorean_theorem
+  to: selenographic_coordinate_system
+- type: related_to
+  from: conservation_law
+  to: inversion_transformation
+- type: related_to
+  from: conservation_law
+  to: lorentz_covariance
+- type: related_to
+  from: conservation_law
+  to: noether_s_theorem
+- type: related_to
+  from: conservation_law
+  to: symmetry_of_second_derivatives
+- type: related_to
+  from: inversion_transformation
+  to: lorentz_covariance
+- type: related_to
+  from: inversion_transformation
+  to: noether_s_theorem
+- type: related_to
+  from: inversion_transformation
+  to: symmetry_of_second_derivatives
+- type: related_to
+  from: lorentz_covariance
+  to: noether_s_theorem
+- type: related_to
+  from: lorentz_covariance
+  to: symmetry_of_second_derivatives
+- type: related_to
+  from: noether_s_theorem
+  to: symmetry_of_second_derivatives
+- type: on_path
+  from: banach_fixed_point_theorem
+  to: bernoulli_number
+- type: related_to
+  from: banach_fixed_point_theorem
+  to: borel_set
+- type: related_to
+  from: banach_fixed_point_theorem
+  to: cauchy_sequence
+- type: related_to
+  from: bernoulli_number
+  to: number_theory
+- type: related_to
+  from: bernoulli_number
+  to: algebraic_number_theory
+- type: related_to
+  from: bernoulli_number
+  to: computational_number_theory
+- type: on_path
+  from: bernoulli_number
+  to: cyclic_number
+- type: related_to
+  from: bernoulli_number
+  to: divisor_function
+- type: related_to
+  from: bernoulli_number
+  to: abundant_number
+- type: related_to
+  from: bernoulli_number
+  to: almost_perfect_number
+- type: related_to
+  from: bernoulli_number
+  to: amicable_numbers
+- type: related_to
+  from: bernoulli_number
+  to: integer_sequence
+- type: on_path
+  from: bernoulli_number
+  to: on_line_encyclopedia_of_integer_sequences
+- type: on_path
+  from: bernoulli_number
+  to: achilles_number
+- type: on_path
+  from: bernoulli_number
+  to: bell_number
+- type: on_path
+  from: bernoulli_number
+  to: borel_set
+- type: related_to
+  from: bernoulli_number
+  to: cauchy_sequence
+- type: related_to
+  from: borel_set
+  to: cauchy_sequence
+- type: related_to
+  from: borel_set
+  to: meagre_set
+- type: related_to
+  from: transformation_function
+  to: affine_transformation
+- type: related_to
+  from: transformation_function
+  to: homography
+- type: related_to
+  from: transformation_function
+  to: rotation_matrix
+- type: related_to
+  from: transformation_function
+  to: transformation_matrix
+- type: related_to
+  from: affine_transformation
+  to: homography
+- type: related_to
+  from: affine_transformation
+  to: rotation_matrix
+- type: related_to
+  from: affine_transformation
+  to: transformation_matrix
+- type: related_to
+  from: homography
+  to: rotation_matrix
+- type: related_to
+  from: homography
+  to: transformation_matrix
+- type: related_to
+  from: rotation_matrix
+  to: transformation_matrix
+- type: related_to
+  from: euler_s_formula
+  to: gudermannian_function
+- type: related_to
+  from: euler_s_formula
+  to: law_of_cosines
+- type: related_to
+  from: euler_s_formula
+  to: law_of_cotangents
+- type: related_to
+  from: euler_s_formula
+  to: law_of_sines
+- type: related_to
+  from: euler_s_formula
+  to: law_of_tangents
+- type: related_to
+  from: euler_s_formula
+  to: mollweide_s_formula
+- type: related_to
+  from: euler_s_formula
+  to: pythagorean_trigonometric_identity
+- type: related_to
+  from: euler_s_formula
+  to: trigonometric_integral
+- type: related_to
+  from: gudermannian_function
+  to: law_of_cosines
+- type: related_to
+  from: gudermannian_function
+  to: law_of_cotangents
+- type: related_to
+  from: gudermannian_function
+  to: law_of_sines
+- type: related_to
+  from: gudermannian_function
+  to: law_of_tangents
+- type: related_to
+  from: gudermannian_function
+  to: mollweide_s_formula
+- type: related_to
+  from: gudermannian_function
+  to: pythagorean_trigonometric_identity
+- type: related_to
+  from: gudermannian_function
+  to: trigonometric_integral
+- type: related_to
+  from: law_of_cosines
+  to: law_of_cotangents
+- type: related_to
+  from: law_of_cosines
+  to: law_of_sines
+- type: related_to
+  from: law_of_cosines
+  to: law_of_tangents
+- type: related_to
+  from: law_of_cosines
+  to: mollweide_s_formula
+- type: related_to
+  from: law_of_cosines
+  to: pythagorean_trigonometric_identity
+- type: related_to
+  from: law_of_cosines
+  to: trigonometric_integral
+- type: related_to
+  from: law_of_cosines
+  to: angle_of_view_photography
+- type: related_to
+  from: law_of_cosines
+  to: exterior_angle_theorem
+- type: related_to
+  from: law_of_cosines
+  to: selenographic_coordinate_system
+- type: related_to
+  from: law_of_cotangents
+  to: law_of_sines
+- type: related_to
+  from: law_of_cotangents
+  to: law_of_tangents
+- type: related_to
+  from: law_of_cotangents
+  to: mollweide_s_formula
+- type: related_to
+  from: law_of_cotangents
+  to: pythagorean_trigonometric_identity
+- type: related_to
+  from: law_of_cotangents
+  to: trigonometric_integral
+- type: related_to
+  from: law_of_cotangents
+  to: angle_of_view_photography
+- type: related_to
+  from: law_of_cotangents
+  to: exterior_angle_theorem
+- type: related_to
+  from: law_of_cotangents
+  to: selenographic_coordinate_system
+- type: related_to
+  from: law_of_sines
+  to: law_of_tangents
+- type: related_to
+  from: law_of_sines
+  to: mollweide_s_formula
+- type: related_to
+  from: law_of_sines
+  to: pythagorean_trigonometric_identity
+- type: related_to
+  from: law_of_sines
+  to: trigonometric_integral
+- type: related_to
+  from: law_of_sines
+  to: angle_of_view_photography
+- type: related_to
+  from: law_of_sines
+  to: exterior_angle_theorem
+- type: related_to
+  from: law_of_sines
+  to: selenographic_coordinate_system
+- type: related_to
+  from: law_of_tangents
+  to: mollweide_s_formula
+- type: related_to
+  from: law_of_tangents
+  to: pythagorean_trigonometric_identity
+- type: related_to
+  from: law_of_tangents
+  to: trigonometric_integral
+- type: related_to
+  from: law_of_tangents
+  to: angle_of_view_photography
+- type: related_to
+  from: law_of_tangents
+  to: exterior_angle_theorem
+- type: related_to
+  from: law_of_tangents
+  to: selenographic_coordinate_system
+- type: related_to
+  from: mollweide_s_formula
+  to: pythagorean_trigonometric_identity
+- type: related_to
+  from: mollweide_s_formula
+  to: trigonometric_integral
+- type: related_to
+  from: pythagorean_trigonometric_identity
+  to: trigonometric_integral
+- type: related_to
+  from: angle_of_view_photography
+  to: exterior_angle_theorem
+- type: related_to
+  from: angle_of_view_photography
+  to: selenographic_coordinate_system
+- type: related_to
+  from: exterior_angle_theorem
+  to: selenographic_coordinate_system
+- type: related_to
+  from: barbier_s_theorem
+  to: lindemann_weierstrass_theorem
+- type: related_to
+  from: continuous_function
+  to: cubic_function
+- type: related_to
+  from: continuous_function
+  to: even_and_odd_functions
+- type: related_to
+  from: continuous_function
+  to: linear_function_calculus
+- type: related_to
+  from: continuous_function
+  to: periodic_function
+- type: related_to
+  from: continuous_function
+  to: series_mathematics
+- type: related_to
+  from: continuous_function
+  to: thomae_s_function
+- type: related_to
+  from: cubic_function
+  to: even_and_odd_functions
+- type: related_to
+  from: cubic_function
+  to: linear_function_calculus
+- type: related_to
+  from: cubic_function
+  to: periodic_function
+- type: on_path
+  from: cubic_function
+  to: series_mathematics
+- type: related_to
+  from: cubic_function
+  to: thomae_s_function
+- type: related_to
+  from: even_and_odd_functions
+  to: linear_function_calculus
+- type: related_to
+  from: even_and_odd_functions
+  to: periodic_function
+- type: on_path
+  from: even_and_odd_functions
+  to: series_mathematics
+- type: related_to
+  from: even_and_odd_functions
+  to: thomae_s_function
+- type: related_to
+  from: linear_function_calculus
+  to: periodic_function
+- type: on_path
+  from: linear_function_calculus
+  to: series_mathematics
+- type: related_to
+  from: linear_function_calculus
+  to: thomae_s_function
+- type: on_path
+  from: periodic_function
+  to: series_mathematics
+- type: related_to
+  from: periodic_function
+  to: thomae_s_function
+- type: related_to
+  from: series_mathematics
+  to: thomae_s_function
+- type: related_to
+  from: series_mathematics
+  to: abel_s_theorem
+- type: related_to
+  from: series_mathematics
+  to: alternating_series
+- type: related_to
+  from: series_mathematics
+  to: binomial_series
+- type: related_to
+  from: series_mathematics
+  to: cauchy_hadamard_theorem
+- type: related_to
+  from: series_mathematics
+  to: convergent_series
+- type: related_to
+  from: series_mathematics
+  to: dirichlet_series
+- type: related_to
+  from: series_mathematics
+  to: divergent_series
+- type: on_path
+  from: series_mathematics
+  to: eisenstein_series
+- type: related_to
+  from: series_mathematics
+  to: formal_power_series
+- type: related_to
+  from: derivative
+  to: differential_of_a_function
+- type: related_to
+  from: derivative
+  to: differentiation_of_trigonometric_functions
+- type: related_to
+  from: derivative
+  to: interior_extremum_theorem
+- type: related_to
+  from: derivative
+  to: implicit_function
+- type: related_to
+  from: differential_of_a_function
+  to: differentiation_of_trigonometric_functions
+- type: related_to
+  from: differential_of_a_function
+  to: interior_extremum_theorem
+- type: related_to
+  from: differential_of_a_function
+  to: implicit_function
+- type: related_to
+  from: differentiation_of_trigonometric_functions
+  to: interior_extremum_theorem
+- type: related_to
+  from: differentiation_of_trigonometric_functions
+  to: implicit_function
+- type: related_to
+  from: interior_extremum_theorem
+  to: implicit_function
+- type: related_to
+  from: interior_extremum_theorem
+  to: leibniz_integral_rule
+- type: related_to
+  from: interior_extremum_theorem
+  to: inverse_function_theorem
+- type: related_to
+  from: interior_extremum_theorem
+  to: divergence_theorem
+- type: related_to
+  from: interior_extremum_theorem
+  to: extreme_value_theorem
+- type: related_to
+  from: interior_extremum_theorem
+  to: fubini_s_theorem
+- type: related_to
+  from: interior_extremum_theorem
+  to: fundamental_theorem_of_calculus
+- type: related_to
+  from: interior_extremum_theorem
+  to: green_s_theorem
+- type: related_to
+  from: interior_extremum_theorem
+  to: implicit_function_theorem
+- type: related_to
+  from: interior_extremum_theorem
+  to: intermediate_value_theorem
+- type: related_to
+  from: interior_extremum_theorem
+  to: mean_value_theorem
+- type: related_to
+  from: implicit_function
+  to: leibniz_integral_rule
+- type: related_to
+  from: implicit_function
+  to: differentiable_function
+- type: related_to
+  from: implicit_function
+  to: frenet_serret_formulas
+- type: related_to
+  from: implicit_function
+  to: hessian_matrix
+- type: related_to
+  from: implicit_function
+  to: inverse_function_theorem
+- type: related_to
+  from: implicit_function
+  to: level_set
+- type: related_to
+  from: implicit_function
+  to: material_derivative
+- type: related_to
+  from: implicit_function
+  to: multiple_integral
+- type: related_to
+  from: implicit_function
+  to: parametric_equation
+- type: related_to
+  from: implicit_function
+  to: partial_derivative
+- type: related_to
+  from: antiderivative
+  to: fresnel_integral
+- type: related_to
+  from: antiderivative
+  to: improper_integral
+- type: related_to
+  from: antiderivative
+  to: indicator_function
+- type: related_to
+  from: antiderivative
+  to: integral_test_for_convergence
+- type: related_to
+  from: antiderivative
+  to: leibniz_integral_rule
+- type: related_to
+  from: fresnel_integral
+  to: improper_integral
+- type: related_to
+  from: fresnel_integral
+  to: indicator_function
+- type: related_to
+  from: fresnel_integral
+  to: integral_test_for_convergence
+- type: related_to
+  from: fresnel_integral
+  to: leibniz_integral_rule
+- type: related_to
+  from: improper_integral
+  to: indicator_function
+- type: related_to
+  from: improper_integral
+  to: integral_test_for_convergence
+- type: on_path
+  from: improper_integral
+  to: leibniz_integral_rule
+- type: related_to
+  from: indicator_function
+  to: algebra_of_sets
+- type: related_to
+  from: indicator_function
+  to: complement_set_theory
+- type: on_path
+  from: indicator_function
+  to: disjoint_sets
+- type: on_path
+  from: indicator_function
+  to: domain_of_a_function
+- type: related_to
+  from: indicator_function
+  to: empty_set
+- type: on_path
+  from: indicator_function
+  to: family_of_sets
+- type: on_path
+  from: indicator_function
+  to: finite_set
+- type: related_to
+  from: indicator_function
+  to: function_mathematics
+- type: on_path
+  from: indicator_function
+  to: function_composition
+- type: on_path
+  from: indicator_function
+  to: identity_function
+- type: on_path
+  from: indicator_function
+  to: injective_function
+- type: related_to
+  from: indicator_function
+  to: intersection_set_theory
+- type: related_to
+  from: indicator_function
+  to: integral_test_for_convergence
+- type: on_path
+  from: indicator_function
+  to: leibniz_integral_rule
+- type: on_path
+  from: indicator_function
+  to: probability_theory
+- type: related_to
+  from: indicator_function
+  to: probability_axioms
+- type: on_path
+  from: indicator_function
+  to: probability_density_function
+- type: on_path
+  from: indicator_function
+  to: random_matrix
+- type: on_path
+  from: integral_test_for_convergence
+  to: leibniz_integral_rule
+- type: related_to
+  from: leibniz_integral_rule
+  to: differentiable_function
+- type: related_to
+  from: leibniz_integral_rule
+  to: frenet_serret_formulas
+- type: related_to
+  from: leibniz_integral_rule
+  to: hessian_matrix
+- type: related_to
+  from: leibniz_integral_rule
+  to: inverse_function_theorem
+- type: related_to
+  from: leibniz_integral_rule
+  to: level_set
+- type: related_to
+  from: leibniz_integral_rule
+  to: material_derivative
+- type: related_to
+  from: leibniz_integral_rule
+  to: multiple_integral
+- type: related_to
+  from: leibniz_integral_rule
+  to: parametric_equation
+- type: related_to
+  from: leibniz_integral_rule
+  to: partial_derivative
+- type: related_to
+  from: leibniz_integral_rule
+  to: divergence_theorem
+- type: on_path
+  from: leibniz_integral_rule
+  to: extreme_value_theorem
+- type: related_to
+  from: leibniz_integral_rule
+  to: fubini_s_theorem
+- type: on_path
+  from: leibniz_integral_rule
+  to: fundamental_theorem_of_calculus
+- type: related_to
+  from: leibniz_integral_rule
+  to: green_s_theorem
+- type: related_to
+  from: leibniz_integral_rule
+  to: implicit_function_theorem
+- type: related_to
+  from: leibniz_integral_rule
+  to: intermediate_value_theorem
+- type: related_to
+  from: leibniz_integral_rule
+  to: mean_value_theorem
+- type: related_to
+  from: differentiable_function
+  to: frenet_serret_formulas
+- type: related_to
+  from: differentiable_function
+  to: hessian_matrix
+- type: related_to
+  from: differentiable_function
+  to: inverse_function_theorem
+- type: related_to
+  from: differentiable_function
+  to: level_set
+- type: related_to
+  from: differentiable_function
+  to: material_derivative
+- type: related_to
+  from: differentiable_function
+  to: multiple_integral
+- type: related_to
+  from: differentiable_function
+  to: parametric_equation
+- type: related_to
+  from: differentiable_function
+  to: partial_derivative
+- type: related_to
+  from: frenet_serret_formulas
+  to: hessian_matrix
+- type: related_to
+  from: frenet_serret_formulas
+  to: inverse_function_theorem
+- type: related_to
+  from: frenet_serret_formulas
+  to: level_set
+- type: related_to
+  from: frenet_serret_formulas
+  to: material_derivative
+- type: related_to
+  from: frenet_serret_formulas
+  to: multiple_integral
+- type: related_to
+  from: frenet_serret_formulas
+  to: parametric_equation
+- type: related_to
+  from: frenet_serret_formulas
+  to: partial_derivative
+- type: related_to
+  from: hessian_matrix
+  to: inverse_function_theorem
+- type: related_to
+  from: hessian_matrix
+  to: level_set
+- type: related_to
+  from: hessian_matrix
+  to: material_derivative
+- type: related_to
+  from: hessian_matrix
+  to: multiple_integral
+- type: related_to
+  from: hessian_matrix
+  to: parametric_equation
+- type: related_to
+  from: hessian_matrix
+  to: partial_derivative
+- type: related_to
+  from: inverse_function_theorem
+  to: level_set
+- type: related_to
+  from: inverse_function_theorem
+  to: material_derivative
+- type: related_to
+  from: inverse_function_theorem
+  to: multiple_integral
+- type: related_to
+  from: inverse_function_theorem
+  to: parametric_equation
+- type: related_to
+  from: inverse_function_theorem
+  to: partial_derivative
+- type: related_to
+  from: inverse_function_theorem
+  to: divergence_theorem
+- type: related_to
+  from: inverse_function_theorem
+  to: extreme_value_theorem
+- type: related_to
+  from: inverse_function_theorem
+  to: fubini_s_theorem
+- type: related_to
+  from: inverse_function_theorem
+  to: fundamental_theorem_of_calculus
+- type: related_to
+  from: inverse_function_theorem
+  to: green_s_theorem
+- type: related_to
+  from: inverse_function_theorem
+  to: implicit_function_theorem
+- type: related_to
+  from: inverse_function_theorem
+  to: intermediate_value_theorem
+- type: related_to
+  from: inverse_function_theorem
+  to: mean_value_theorem
+- type: related_to
+  from: level_set
+  to: material_derivative
+- type: related_to
+  from: level_set
+  to: multiple_integral
+- type: related_to
+  from: level_set
+  to: parametric_equation
+- type: related_to
+  from: level_set
+  to: partial_derivative
+- type: related_to
+  from: material_derivative
+  to: multiple_integral
+- type: related_to
+  from: material_derivative
+  to: parametric_equation
+- type: related_to
+  from: material_derivative
+  to: partial_derivative
+- type: related_to
+  from: multiple_integral
+  to: parametric_equation
+- type: related_to
+  from: multiple_integral
+  to: partial_derivative
+- type: related_to
+  from: parametric_equation
+  to: partial_derivative
+- type: related_to
+  from: black_scholes_model
+  to: geometric_mean
+- type: related_to
+  from: black_scholes_model
+  to: log_normal_distribution
+- type: related_to
+  from: geometric_mean
+  to: log_normal_distribution
+- type: related_to
+  from: abel_s_theorem
+  to: alternating_series
+- type: related_to
+  from: abel_s_theorem
+  to: binomial_series
+- type: related_to
+  from: abel_s_theorem
+  to: cauchy_hadamard_theorem
+- type: related_to
+  from: abel_s_theorem
+  to: convergent_series
+- type: related_to
+  from: abel_s_theorem
+  to: dirichlet_series
+- type: related_to
+  from: abel_s_theorem
+  to: divergent_series
+- type: on_path
+  from: abel_s_theorem
+  to: eisenstein_series
+- type: related_to
+  from: abel_s_theorem
+  to: formal_power_series
+- type: related_to
+  from: alternating_series
+  to: binomial_series
+- type: related_to
+  from: alternating_series
+  to: cauchy_hadamard_theorem
+- type: related_to
+  from: alternating_series
+  to: convergent_series
+- type: related_to
+  from: alternating_series
+  to: dirichlet_series
+- type: related_to
+  from: alternating_series
+  to: divergent_series
+- type: related_to
+  from: alternating_series
+  to: eisenstein_series
+- type: related_to
+  from: alternating_series
+  to: formal_power_series
+- type: related_to
+  from: binomial_series
+  to: cauchy_hadamard_theorem
+- type: related_to
+  from: binomial_series
+  to: convergent_series
+- type: related_to
+  from: binomial_series
+  to: dirichlet_series
+- type: related_to
+  from: binomial_series
+  to: divergent_series
+- type: on_path
+  from: binomial_series
+  to: eisenstein_series
+- type: related_to
+  from: binomial_series
+  to: formal_power_series
+- type: related_to
+  from: binomial_series
+  to: catalan_number
+- type: related_to
+  from: binomial_series
+  to: beta_distribution
+- type: on_path
+  from: binomial_series
+  to: binomial_distribution
+- type: related_to
+  from: binomial_series
+  to: binomial_theorem
+- type: related_to
+  from: cauchy_hadamard_theorem
+  to: convergent_series
+- type: related_to
+  from: cauchy_hadamard_theorem
+  to: dirichlet_series
+- type: related_to
+  from: cauchy_hadamard_theorem
+  to: divergent_series
+- type: related_to
+  from: cauchy_hadamard_theorem
+  to: eisenstein_series
+- type: related_to
+  from: cauchy_hadamard_theorem
+  to: formal_power_series
+- type: related_to
+  from: convergent_series
+  to: dirichlet_series
+- type: related_to
+  from: convergent_series
+  to: divergent_series
+- type: related_to
+  from: convergent_series
+  to: eisenstein_series
+- type: related_to
+  from: convergent_series
+  to: formal_power_series
+- type: related_to
+  from: dirichlet_series
+  to: divergent_series
+- type: related_to
+  from: dirichlet_series
+  to: eisenstein_series
+- type: related_to
+  from: dirichlet_series
+  to: formal_power_series
+- type: related_to
+  from: divergent_series
+  to: eisenstein_series
+- type: related_to
+  from: divergent_series
+  to: formal_power_series
+- type: on_path
+  from: eisenstein_series
+  to: formal_power_series
+- type: on_path
+  from: eisenstein_series
+  to: modularity_theorem
+- type: on_path
+  from: eisenstein_series
+  to: divisor_function
+- type: related_to
+  from: eisenstein_series
+  to: analytic_number_theory
+- type: related_to
+  from: eisenstein_series
+  to: fermat_polygonal_number_theorem
+- type: related_to
+  from: formal_power_series
+  to: m_bius_inversion_formula
+- type: related_to
+  from: formal_power_series
+  to: catalan_number
+- type: related_to
+  from: formal_power_series
+  to: motzkin_number
+- type: related_to
+  from: divergence_theorem
+  to: extreme_value_theorem
+- type: related_to
+  from: divergence_theorem
+  to: fubini_s_theorem
+- type: related_to
+  from: divergence_theorem
+  to: fundamental_theorem_of_calculus
+- type: related_to
+  from: divergence_theorem
+  to: green_s_theorem
+- type: related_to
+  from: divergence_theorem
+  to: implicit_function_theorem
+- type: related_to
+  from: divergence_theorem
+  to: intermediate_value_theorem
+- type: related_to
+  from: divergence_theorem
+  to: mean_value_theorem
+- type: related_to
+  from: extreme_value_theorem
+  to: fubini_s_theorem
+- type: related_to
+  from: extreme_value_theorem
+  to: fundamental_theorem_of_calculus
+- type: related_to
+  from: extreme_value_theorem
+  to: green_s_theorem
+- type: related_to
+  from: extreme_value_theorem
+  to: implicit_function_theorem
+- type: related_to
+  from: extreme_value_theorem
+  to: intermediate_value_theorem
+- type: related_to
+  from: extreme_value_theorem
+  to: mean_value_theorem
+- type: related_to
+  from: fubini_s_theorem
+  to: fundamental_theorem_of_calculus
+- type: related_to
+  from: fubini_s_theorem
+  to: green_s_theorem
+- type: related_to
+  from: fubini_s_theorem
+  to: implicit_function_theorem
+- type: related_to
+  from: fubini_s_theorem
+  to: intermediate_value_theorem
+- type: related_to
+  from: fubini_s_theorem
+  to: mean_value_theorem
+- type: related_to
+  from: fundamental_theorem_of_calculus
+  to: green_s_theorem
+- type: related_to
+  from: fundamental_theorem_of_calculus
+  to: implicit_function_theorem
+- type: related_to
+  from: fundamental_theorem_of_calculus
+  to: intermediate_value_theorem
+- type: related_to
+  from: fundamental_theorem_of_calculus
+  to: mean_value_theorem
+- type: related_to
+  from: green_s_theorem
+  to: implicit_function_theorem
+- type: related_to
+  from: green_s_theorem
+  to: intermediate_value_theorem
+- type: related_to
+  from: green_s_theorem
+  to: mean_value_theorem
+- type: related_to
+  from: implicit_function_theorem
+  to: intermediate_value_theorem
+- type: related_to
+  from: implicit_function_theorem
+  to: mean_value_theorem
+- type: related_to
+  from: intermediate_value_theorem
+  to: mean_value_theorem
+- type: related_to
+  from: probability_theory
+  to: probability_axioms
+- type: related_to
+  from: probability_theory
+  to: probability_density_function
+- type: related_to
+  from: probability_theory
+  to: random_matrix
+- type: related_to
+  from: probability_axioms
+  to: probability_density_function
+- type: related_to
+  from: probability_axioms
+  to: random_matrix
+- type: related_to
+  from: probability_density_function
+  to: random_matrix
+- type: related_to
+  from: conditional_probability
+  to: conditional_probability_distribution
+- type: related_to
+  from: garbage_can_model
+  to: rational_choice_model
+- type: related_to
+  from: experiment_probability_theory
+  to: event_probability_theory
+- type: related_to
+  from: experiment_probability_theory
+  to: independence_probability_theory
+- type: related_to
+  from: experiment_probability_theory
+  to: probability_space
+- type: related_to
+  from: experiment_probability_theory
+  to: tree_diagram_probability_theory
+- type: related_to
+  from: event_probability_theory
+  to: independence_probability_theory
+- type: related_to
+  from: event_probability_theory
+  to: probability_space
+- type: related_to
+  from: event_probability_theory
+  to: tree_diagram_probability_theory
+- type: related_to
+  from: independence_probability_theory
+  to: probability_space
+- type: related_to
+  from: independence_probability_theory
+  to: tree_diagram_probability_theory
+- type: related_to
+  from: independence_probability_theory
+  to: gutenberg_richter_law
+- type: related_to
+  from: probability_space
+  to: tree_diagram_probability_theory
+- type: related_to
+  from: gutenberg_richter_law
+  to: generative_model
+- type: related_to
+  from: bayesian_probability
+  to: frequentist_probability
+- type: related_to
+  from: bayes_theorem
+  to: borel_cantelli_lemma
+- type: related_to
+  from: bayes_theorem
+  to: central_limit_theorem
+- type: related_to
+  from: borel_cantelli_lemma
+  to: central_limit_theorem
+- type: related_to
+  from: set_theory
+  to: set_mathematics
+- type: related_to
+  from: set_theory
+  to: cantor_s_theorem
+- type: related_to
+  from: set_theory
+  to: class_set_theory
+- type: related_to
+  from: set_theory
+  to: naive_set_theory
+- type: related_to
+  from: set_mathematics
+  to: cantor_s_theorem
+- type: related_to
+  from: set_mathematics
+  to: class_set_theory
+- type: related_to
+  from: set_mathematics
+  to: naive_set_theory
+- type: related_to
+  from: cantor_s_theorem
+  to: class_set_theory
+- type: on_path
+  from: cantor_s_theorem
+  to: naive_set_theory
+- type: on_path
+  from: cantor_s_theorem
+  to: finite_set
+- type: related_to
+  from: cantor_s_theorem
+  to: cardinal_number
+- type: related_to
+  from: cantor_s_theorem
+  to: aleph_number
+- type: related_to
+  from: cantor_s_theorem
+  to: beth_number
+- type: related_to
+  from: cantor_s_theorem
+  to: countable_set
+- type: related_to
+  from: cantor_s_theorem
+  to: infinite_set
+- type: related_to
+  from: cantor_s_theorem
+  to: natural_number
+- type: related_to
+  from: cantor_s_theorem
+  to: schr_der_bernstein_theorem
+- type: related_to
+  from: class_set_theory
+  to: naive_set_theory
+- type: on_path
+  from: naive_set_theory
+  to: fuzzy_set
+- type: related_to
+  from: algebra_of_sets
+  to: complement_set_theory
+- type: related_to
+  from: algebra_of_sets
+  to: disjoint_sets
+- type: related_to
+  from: algebra_of_sets
+  to: domain_of_a_function
+- type: related_to
+  from: algebra_of_sets
+  to: empty_set
+- type: related_to
+  from: algebra_of_sets
+  to: family_of_sets
+- type: related_to
+  from: algebra_of_sets
+  to: finite_set
+- type: related_to
+  from: algebra_of_sets
+  to: function_mathematics
+- type: related_to
+  from: algebra_of_sets
+  to: function_composition
+- type: related_to
+  from: algebra_of_sets
+  to: identity_function
+- type: related_to
+  from: algebra_of_sets
+  to: injective_function
+- type: related_to
+  from: algebra_of_sets
+  to: intersection_set_theory
+- type: related_to
+  from: complement_set_theory
+  to: disjoint_sets
+- type: related_to
+  from: complement_set_theory
+  to: domain_of_a_function
+- type: related_to
+  from: complement_set_theory
+  to: empty_set
+- type: related_to
+  from: complement_set_theory
+  to: family_of_sets
+- type: related_to
+  from: complement_set_theory
+  to: finite_set
+- type: related_to
+  from: complement_set_theory
+  to: function_mathematics
+- type: related_to
+  from: complement_set_theory
+  to: function_composition
+- type: related_to
+  from: complement_set_theory
+  to: identity_function
+- type: related_to
+  from: complement_set_theory
+  to: injective_function
+- type: related_to
+  from: complement_set_theory
+  to: intersection_set_theory
+- type: related_to
+  from: disjoint_sets
+  to: domain_of_a_function
+- type: related_to
+  from: disjoint_sets
+  to: empty_set
+- type: related_to
+  from: disjoint_sets
+  to: family_of_sets
+- type: related_to
+  from: disjoint_sets
+  to: finite_set
+- type: related_to
+  from: disjoint_sets
+  to: function_mathematics
+- type: related_to
+  from: disjoint_sets
+  to: function_composition
+- type: related_to
+  from: disjoint_sets
+  to: identity_function
+- type: related_to
+  from: disjoint_sets
+  to: injective_function
+- type: related_to
+  from: disjoint_sets
+  to: intersection_set_theory
+- type: on_path
+  from: disjoint_sets
+  to: partition_of_a_set
+- type: related_to
+  from: disjoint_sets
+  to: field_of_sets
+- type: on_path
+  from: disjoint_sets
+  to: hypergraph
+- type: related_to
+  from: disjoint_sets
+  to: set_cover_problem
+- type: related_to
+  from: domain_of_a_function
+  to: empty_set
+- type: related_to
+  from: domain_of_a_function
+  to: family_of_sets
+- type: related_to
+  from: domain_of_a_function
+  to: finite_set
+- type: related_to
+  from: domain_of_a_function
+  to: function_mathematics
+- type: related_to
+  from: domain_of_a_function
+  to: function_composition
+- type: related_to
+  from: domain_of_a_function
+  to: identity_function
+- type: related_to
+  from: domain_of_a_function
+  to: injective_function
+- type: related_to
+  from: domain_of_a_function
+  to: intersection_set_theory
+- type: related_to
+  from: empty_set
+  to: family_of_sets
+- type: related_to
+  from: empty_set
+  to: finite_set
+- type: related_to
+  from: empty_set
+  to: function_mathematics
+- type: related_to
+  from: empty_set
+  to: function_composition
+- type: related_to
+  from: empty_set
+  to: identity_function
+- type: related_to
+  from: empty_set
+  to: injective_function
+- type: related_to
+  from: empty_set
+  to: intersection_set_theory
+- type: related_to
+  from: family_of_sets
+  to: finite_set
+- type: related_to
+  from: family_of_sets
+  to: function_mathematics
+- type: related_to
+  from: family_of_sets
+  to: function_composition
+- type: related_to
+  from: family_of_sets
+  to: identity_function
+- type: related_to
+  from: family_of_sets
+  to: injective_function
+- type: related_to
+  from: family_of_sets
+  to: intersection_set_theory
+- type: related_to
+  from: family_of_sets
+  to: partition_of_a_set
+- type: related_to
+  from: family_of_sets
+  to: field_of_sets
+- type: related_to
+  from: family_of_sets
+  to: hypergraph
+- type: related_to
+  from: family_of_sets
+  to: set_cover_problem
+- type: related_to
+  from: finite_set
+  to: function_mathematics
+- type: related_to
+  from: finite_set
+  to: function_composition
+- type: related_to
+  from: finite_set
+  to: identity_function
+- type: related_to
+  from: finite_set
+  to: injective_function
+- type: related_to
+  from: finite_set
+  to: intersection_set_theory
+- type: on_path
+  from: finite_set
+  to: cardinal_number
+- type: related_to
+  from: finite_set
+  to: aleph_number
+- type: related_to
+  from: finite_set
+  to: beth_number
+- type: on_path
+  from: finite_set
+  to: countable_set
+- type: related_to
+  from: finite_set
+  to: infinite_set
+- type: related_to
+  from: finite_set
+  to: natural_number
+- type: on_path
+  from: finite_set
+  to: schr_der_bernstein_theorem
+- type: related_to
+  from: function_mathematics
+  to: function_composition
+- type: related_to
+  from: function_mathematics
+  to: identity_function
+- type: related_to
+  from: function_mathematics
+  to: injective_function
+- type: related_to
+  from: function_mathematics
+  to: intersection_set_theory
+- type: related_to
+  from: function_composition
+  to: identity_function
+- type: related_to
+  from: function_composition
+  to: injective_function
+- type: related_to
+  from: function_composition
+  to: intersection_set_theory
+- type: related_to
+  from: identity_function
+  to: injective_function
+- type: related_to
+  from: identity_function
+  to: intersection_set_theory
+- type: related_to
+  from: injective_function
+  to: intersection_set_theory
+- type: related_to
+  from: axiom_of_empty_set
+  to: axiom_of_power_set
+- type: related_to
+  from: axiom_of_empty_set
+  to: well_ordering_theorem
+- type: related_to
+  from: axiom_of_power_set
+  to: well_ordering_theorem
+- type: related_to
+  from: cardinal_number
+  to: aleph_number
+- type: related_to
+  from: cardinal_number
+  to: beth_number
+- type: related_to
+  from: cardinal_number
+  to: countable_set
+- type: related_to
+  from: cardinal_number
+  to: infinite_set
+- type: related_to
+  from: cardinal_number
+  to: natural_number
+- type: related_to
+  from: cardinal_number
+  to: schr_der_bernstein_theorem
+- type: related_to
+  from: aleph_number
+  to: beth_number
+- type: related_to
+  from: aleph_number
+  to: countable_set
+- type: related_to
+  from: aleph_number
+  to: infinite_set
+- type: related_to
+  from: aleph_number
+  to: natural_number
+- type: related_to
+  from: aleph_number
+  to: schr_der_bernstein_theorem
+- type: related_to
+  from: beth_number
+  to: countable_set
+- type: related_to
+  from: beth_number
+  to: infinite_set
+- type: related_to
+  from: beth_number
+  to: natural_number
+- type: related_to
+  from: beth_number
+  to: schr_der_bernstein_theorem
+- type: related_to
+  from: countable_set
+  to: infinite_set
+- type: related_to
+  from: countable_set
+  to: natural_number
+- type: related_to
+  from: countable_set
+  to: schr_der_bernstein_theorem
+- type: related_to
+  from: infinite_set
+  to: natural_number
+- type: related_to
+  from: infinite_set
+  to: schr_der_bernstein_theorem
+- type: related_to
+  from: natural_number
+  to: schr_der_bernstein_theorem
+- type: related_to
+  from: ordinal_number
+  to: transfinite_number
+- type: related_to
+  from: number_theory
+  to: algebraic_number_theory
+- type: related_to
+  from: number_theory
+  to: computational_number_theory
+- type: on_path
+  from: number_theory
+  to: cyclic_number
+- type: related_to
+  from: number_theory
+  to: divisor_function
+- type: related_to
+  from: algebraic_number_theory
+  to: computational_number_theory
+- type: on_path
+  from: algebraic_number_theory
+  to: cyclic_number
+- type: related_to
+  from: algebraic_number_theory
+  to: divisor_function
+- type: on_path
+  from: algebraic_number_theory
+  to: algebraic_function
+- type: related_to
+  from: algebraic_number_theory
+  to: algebraic_number_field
+- type: related_to
+  from: algebraic_number_theory
+  to: dedekind_zeta_function
+- type: related_to
+  from: algebraic_number_theory
+  to: heegner_number
+- type: related_to
+  from: computational_number_theory
+  to: cyclic_number
+- type: related_to
+  from: computational_number_theory
+  to: divisor_function
+- type: on_path
+  from: cyclic_number
+  to: divisor_function
+- type: related_to
+  from: cyclic_number
+  to: cayley_s_theorem
+- type: on_path
+  from: cyclic_number
+  to: permutation_matrix
+- type: related_to
+  from: cyclic_number
+  to: random_number
+- type: related_to
+  from: cyclic_number
+  to: stirling_number
+- type: on_path
+  from: divisor_function
+  to: analytic_number_theory
+- type: related_to
+  from: divisor_function
+  to: fermat_polygonal_number_theorem
+- type: related_to
+  from: fermat_s_last_theorem
+  to: powerful_number
+- type: related_to
+  from: algebraic_function
+  to: special_functions
+- type: on_path
+  from: algebraic_function
+  to: airy_function
+- type: related_to
+  from: algebraic_function
+  to: arithmetic_geometric_mean
+- type: related_to
+  from: algebraic_function
+  to: cantor_function
+- type: related_to
+  from: algebraic_function
+  to: algebraic_number_field
+- type: related_to
+  from: algebraic_function
+  to: dedekind_zeta_function
+- type: related_to
+  from: algebraic_function
+  to: heegner_number
+- type: related_to
+  from: algebraic_number_field
+  to: dedekind_zeta_function
+- type: related_to
+  from: algebraic_number_field
+  to: heegner_number
+- type: related_to
+  from: dedekind_zeta_function
+  to: heegner_number
+- type: related_to
+  from: analytic_number_theory
+  to: fermat_polygonal_number_theorem
+- type: related_to
+  from: 196_number
+  to: abundant_number
+- type: related_to
+  from: 196_number
+  to: aliquot_sequence
+- type: related_to
+  from: 196_number
+  to: almost_perfect_number
+- type: related_to
+  from: 196_number
+  to: amicable_numbers
+- type: related_to
+  from: 196_number
+  to: deficient_number
+- type: related_to
+  from: 196_number
+  to: happy_number
+- type: related_to
+  from: 196_number
+  to: kaprekar_number
+- type: related_to
+  from: 196_number
+  to: keith_number
+- type: related_to
+  from: 196_number
+  to: lychrel_number
+- type: related_to
+  from: 196_number
+  to: narcissistic_number
+- type: related_to
+  from: 196_number
+  to: quasiperfect_number
+- type: related_to
+  from: 196_number
+  to: self_number
+- type: related_to
+  from: 196_number
+  to: sociable_number
+- type: related_to
+  from: abundant_number
+  to: aliquot_sequence
+- type: related_to
+  from: abundant_number
+  to: almost_perfect_number
+- type: related_to
+  from: abundant_number
+  to: amicable_numbers
+- type: related_to
+  from: abundant_number
+  to: deficient_number
+- type: related_to
+  from: abundant_number
+  to: happy_number
+- type: related_to
+  from: abundant_number
+  to: kaprekar_number
+- type: related_to
+  from: abundant_number
+  to: keith_number
+- type: related_to
+  from: abundant_number
+  to: lychrel_number
+- type: related_to
+  from: abundant_number
+  to: narcissistic_number
+- type: related_to
+  from: abundant_number
+  to: quasiperfect_number
+- type: related_to
+  from: abundant_number
+  to: self_number
+- type: related_to
+  from: abundant_number
+  to: sociable_number
+- type: related_to
+  from: abundant_number
+  to: integer_sequence
+- type: related_to
+  from: abundant_number
+  to: on_line_encyclopedia_of_integer_sequences
+- type: related_to
+  from: abundant_number
+  to: achilles_number
+- type: related_to
+  from: abundant_number
+  to: bell_number
+- type: related_to
+  from: aliquot_sequence
+  to: almost_perfect_number
+- type: related_to
+  from: aliquot_sequence
+  to: amicable_numbers
+- type: related_to
+  from: aliquot_sequence
+  to: deficient_number
+- type: related_to
+  from: aliquot_sequence
+  to: happy_number
+- type: related_to
+  from: aliquot_sequence
+  to: kaprekar_number
+- type: related_to
+  from: aliquot_sequence
+  to: keith_number
+- type: related_to
+  from: aliquot_sequence
+  to: lychrel_number
+- type: related_to
+  from: aliquot_sequence
+  to: narcissistic_number
+- type: related_to
+  from: aliquot_sequence
+  to: quasiperfect_number
+- type: related_to
+  from: aliquot_sequence
+  to: self_number
+- type: related_to
+  from: aliquot_sequence
+  to: sociable_number
+- type: related_to
+  from: aliquot_sequence
+  to: arithmetic_function
+- type: related_to
+  from: aliquot_sequence
+  to: additive_function
+- type: related_to
+  from: aliquot_sequence
+  to: chebyshev_function
+- type: related_to
+  from: aliquot_sequence
+  to: integer_sequence
+- type: on_path
+  from: aliquot_sequence
+  to: mertens_function
+- type: on_path
+  from: aliquot_sequence
+  to: m_bius_inversion_formula
+- type: on_path
+  from: aliquot_sequence
+  to: prime_counting_function
+- type: related_to
+  from: almost_perfect_number
+  to: amicable_numbers
+- type: related_to
+  from: almost_perfect_number
+  to: deficient_number
+- type: related_to
+  from: almost_perfect_number
+  to: happy_number
+- type: related_to
+  from: almost_perfect_number
+  to: kaprekar_number
+- type: related_to
+  from: almost_perfect_number
+  to: keith_number
+- type: related_to
+  from: almost_perfect_number
+  to: lychrel_number
+- type: related_to
+  from: almost_perfect_number
+  to: narcissistic_number
+- type: related_to
+  from: almost_perfect_number
+  to: quasiperfect_number
+- type: related_to
+  from: almost_perfect_number
+  to: self_number
+- type: related_to
+  from: almost_perfect_number
+  to: sociable_number
+- type: related_to
+  from: almost_perfect_number
+  to: integer_sequence
+- type: related_to
+  from: almost_perfect_number
+  to: on_line_encyclopedia_of_integer_sequences
+- type: related_to
+  from: almost_perfect_number
+  to: achilles_number
+- type: related_to
+  from: almost_perfect_number
+  to: bell_number
+- type: related_to
+  from: amicable_numbers
+  to: deficient_number
+- type: related_to
+  from: amicable_numbers
+  to: happy_number
+- type: related_to
+  from: amicable_numbers
+  to: kaprekar_number
+- type: related_to
+  from: amicable_numbers
+  to: keith_number
+- type: related_to
+  from: amicable_numbers
+  to: lychrel_number
+- type: related_to
+  from: amicable_numbers
+  to: narcissistic_number
+- type: related_to
+  from: amicable_numbers
+  to: quasiperfect_number
+- type: related_to
+  from: amicable_numbers
+  to: self_number
+- type: related_to
+  from: amicable_numbers
+  to: sociable_number
+- type: related_to
+  from: amicable_numbers
+  to: integer_sequence
+- type: related_to
+  from: amicable_numbers
+  to: on_line_encyclopedia_of_integer_sequences
+- type: related_to
+  from: amicable_numbers
+  to: achilles_number
+- type: related_to
+  from: amicable_numbers
+  to: bell_number
+- type: related_to
+  from: deficient_number
+  to: happy_number
+- type: related_to
+  from: deficient_number
+  to: kaprekar_number
+- type: related_to
+  from: deficient_number
+  to: keith_number
+- type: related_to
+  from: deficient_number
+  to: lychrel_number
+- type: related_to
+  from: deficient_number
+  to: narcissistic_number
+- type: related_to
+  from: deficient_number
+  to: quasiperfect_number
+- type: related_to
+  from: deficient_number
+  to: self_number
+- type: related_to
+  from: deficient_number
+  to: sociable_number
+- type: related_to
+  from: happy_number
+  to: kaprekar_number
+- type: related_to
+  from: happy_number
+  to: keith_number
+- type: related_to
+  from: happy_number
+  to: lychrel_number
+- type: related_to
+  from: happy_number
+  to: narcissistic_number
+- type: related_to
+  from: happy_number
+  to: quasiperfect_number
+- type: related_to
+  from: happy_number
+  to: self_number
+- type: related_to
+  from: happy_number
+  to: sociable_number
+- type: related_to
+  from: kaprekar_number
+  to: keith_number
+- type: related_to
+  from: kaprekar_number
+  to: lychrel_number
+- type: related_to
+  from: kaprekar_number
+  to: narcissistic_number
+- type: related_to
+  from: kaprekar_number
+  to: quasiperfect_number
+- type: related_to
+  from: kaprekar_number
+  to: self_number
+- type: related_to
+  from: kaprekar_number
+  to: sociable_number
+- type: on_path
+  from: kaprekar_number
+  to: pell_s_equation
+- type: on_path
+  from: kaprekar_number
+  to: markov_number
+- type: related_to
+  from: kaprekar_number
+  to: diophantine_equation
+- type: on_path
+  from: kaprekar_number
+  to: b_zout_s_identity
+- type: related_to
+  from: keith_number
+  to: lychrel_number
+- type: related_to
+  from: keith_number
+  to: narcissistic_number
+- type: related_to
+  from: keith_number
+  to: quasiperfect_number
+- type: related_to
+  from: keith_number
+  to: self_number
+- type: related_to
+  from: keith_number
+  to: sociable_number
+- type: related_to
+  from: lychrel_number
+  to: narcissistic_number
+- type: related_to
+  from: lychrel_number
+  to: quasiperfect_number
+- type: related_to
+  from: lychrel_number
+  to: self_number
+- type: related_to
+  from: lychrel_number
+  to: sociable_number
+- type: related_to
+  from: lychrel_number
+  to: perfect_number
+- type: related_to
+  from: lychrel_number
+  to: cullen_number
+- type: on_path
+  from: lychrel_number
+  to: double_mersenne_number
+- type: related_to
+  from: lychrel_number
+  to: fermat_number
+- type: on_path
+  from: lychrel_number
+  to: lucas_number
+- type: on_path
+  from: lychrel_number
+  to: pell_number
+- type: related_to
+  from: narcissistic_number
+  to: quasiperfect_number
+- type: related_to
+  from: narcissistic_number
+  to: self_number
+- type: related_to
+  from: narcissistic_number
+  to: sociable_number
+- type: related_to
+  from: quasiperfect_number
+  to: self_number
+- type: related_to
+  from: quasiperfect_number
+  to: sociable_number
+- type: related_to
+  from: self_number
+  to: sociable_number
+- type: related_to
+  from: arithmetic_function
+  to: additive_function
+- type: related_to
+  from: arithmetic_function
+  to: chebyshev_function
+- type: related_to
+  from: arithmetic_function
+  to: integer_sequence
+- type: related_to
+  from: arithmetic_function
+  to: mertens_function
+- type: related_to
+  from: arithmetic_function
+  to: m_bius_inversion_formula
+- type: related_to
+  from: arithmetic_function
+  to: prime_counting_function
+- type: related_to
+  from: additive_function
+  to: chebyshev_function
+- type: related_to
+  from: additive_function
+  to: integer_sequence
+- type: related_to
+  from: additive_function
+  to: mertens_function
+- type: related_to
+  from: additive_function
+  to: m_bius_inversion_formula
+- type: related_to
+  from: additive_function
+  to: prime_counting_function
+- type: related_to
+  from: chebyshev_function
+  to: integer_sequence
+- type: related_to
+  from: chebyshev_function
+  to: mertens_function
+- type: related_to
+  from: chebyshev_function
+  to: m_bius_inversion_formula
+- type: related_to
+  from: chebyshev_function
+  to: prime_counting_function
+- type: related_to
+  from: integer_sequence
+  to: on_line_encyclopedia_of_integer_sequences
+- type: related_to
+  from: integer_sequence
+  to: achilles_number
+- type: related_to
+  from: integer_sequence
+  to: bell_number
+- type: related_to
+  from: integer_sequence
+  to: mertens_function
+- type: related_to
+  from: integer_sequence
+  to: m_bius_inversion_formula
+- type: related_to
+  from: integer_sequence
+  to: prime_counting_function
+- type: related_to
+  from: mertens_function
+  to: m_bius_inversion_formula
+- type: related_to
+  from: mertens_function
+  to: prime_counting_function
+- type: on_path
+  from: m_bius_inversion_formula
+  to: catalan_number
+- type: related_to
+  from: m_bius_inversion_formula
+  to: motzkin_number
+- type: related_to
+  from: m_bius_inversion_formula
+  to: prime_counting_function
+- type: related_to
+  from: prime_counting_function
+  to: prime_number
+- type: related_to
+  from: prime_counting_function
+  to: largest_known_prime_number
+- type: related_to
+  from: prime_counting_function
+  to: sierpi_ski_number
+- type: on_path
+  from: prime_counting_function
+  to: sphenic_number
+- type: on_path
+  from: incomplete_gamma_function
+  to: pell_s_equation
+- type: related_to
+  from: pell_s_equation
+  to: markov_number
+- type: related_to
+  from: pell_s_equation
+  to: diophantine_equation
+- type: related_to
+  from: pell_s_equation
+  to: b_zout_s_identity
+- type: related_to
+  from: liouville_number
+  to: markov_number
+- type: related_to
+  from: markov_number
+  to: diophantine_equation
+- type: related_to
+  from: markov_number
+  to: b_zout_s_identity
+- type: related_to
+  from: diophantine_equation
+  to: b_zout_s_identity
+- type: related_to
+  from: on_line_encyclopedia_of_integer_sequences
+  to: achilles_number
+- type: related_to
+  from: on_line_encyclopedia_of_integer_sequences
+  to: bell_number
+- type: related_to
+  from: achilles_number
+  to: bell_number
+- type: related_to
+  from: multiplicative_function
+  to: liouville_function
+- type: related_to
+  from: multiplicative_function
+  to: m_bius_function
+- type: related_to
+  from: liouville_function
+  to: m_bius_function
+- type: related_to
+  from: perfect_number
+  to: cullen_number
+- type: related_to
+  from: perfect_number
+  to: double_mersenne_number
+- type: related_to
+  from: perfect_number
+  to: fermat_number
+- type: related_to
+  from: perfect_number
+  to: lucas_number
+- type: related_to
+  from: perfect_number
+  to: pell_number
+- type: related_to
+  from: perfect_number
+  to: semiperfect_number
+- type: related_to
+  from: prime_number
+  to: largest_known_prime_number
+- type: related_to
+  from: prime_number
+  to: sierpi_ski_number
+- type: related_to
+  from: prime_number
+  to: sphenic_number
+- type: related_to
+  from: largest_known_prime_number
+  to: sierpi_ski_number
+- type: related_to
+  from: largest_known_prime_number
+  to: sphenic_number
+- type: related_to
+  from: sierpi_ski_number
+  to: sphenic_number
+- type: related_to
+  from: fermat_s_theorem_on_sums_of_two_squares
+  to: lagrange_s_four_square_theorem
+- type: related_to
+  from: fermat_s_theorem_on_sums_of_two_squares
+  to: triangular_number
+- type: related_to
+  from: lagrange_s_four_square_theorem
+  to: triangular_number
+- type: related_to
+  from: cullen_number
+  to: double_mersenne_number
+- type: related_to
+  from: cullen_number
+  to: fermat_number
+- type: related_to
+  from: cullen_number
+  to: lucas_number
+- type: related_to
+  from: cullen_number
+  to: pell_number
+- type: related_to
+  from: double_mersenne_number
+  to: fermat_number
+- type: related_to
+  from: double_mersenne_number
+  to: lucas_number
+- type: related_to
+  from: double_mersenne_number
+  to: pell_number
+- type: related_to
+  from: fermat_number
+  to: lucas_number
+- type: related_to
+  from: fermat_number
+  to: pell_number
+- type: related_to
+  from: lucas_number
+  to: pell_number
+- type: related_to
+  from: borsuk_ulam_theorem
+  to: incidence_matrix
+- type: related_to
+  from: borsuk_ulam_theorem
+  to: longest_common_subsequence
+- type: related_to
+  from: borsuk_ulam_theorem
+  to: multinomial_theorem
+- type: on_path
+  from: borsuk_ulam_theorem
+  to: partition_of_a_set
+- type: related_to
+  from: incidence_matrix
+  to: longest_common_subsequence
+- type: related_to
+  from: incidence_matrix
+  to: multinomial_theorem
+- type: on_path
+  from: incidence_matrix
+  to: partition_of_a_set
+- type: related_to
+  from: longest_common_subsequence
+  to: multinomial_theorem
+- type: on_path
+  from: longest_common_subsequence
+  to: partition_of_a_set
+- type: on_path
+  from: multinomial_theorem
+  to: partition_of_a_set
+- type: related_to
+  from: partition_of_a_set
+  to: field_of_sets
+- type: related_to
+  from: partition_of_a_set
+  to: hypergraph
+- type: related_to
+  from: partition_of_a_set
+  to: set_cover_problem
+- type: on_path
+  from: hall_s_marriage_theorem
+  to: matching_graph_theory
+- type: related_to
+  from: green_tao_theorem
+  to: graham_s_number
+- type: related_to
+  from: green_tao_theorem
+  to: ramsey_s_theorem
+- type: related_to
+  from: shannon_number
+  to: surreal_number
+- type: related_to
+  from: catalan_number
+  to: beta_distribution
+- type: related_to
+  from: catalan_number
+  to: binomial_distribution
+- type: related_to
+  from: catalan_number
+  to: binomial_theorem
+- type: related_to
+  from: catalan_number
+  to: motzkin_number
+- type: related_to
+  from: beta_distribution
+  to: binomial_distribution
+- type: related_to
+  from: beta_distribution
+  to: binomial_theorem
+- type: related_to
+  from: binomial_distribution
+  to: binomial_theorem
+- type: related_to
+  from: field_of_sets
+  to: hypergraph
+- type: related_to
+  from: field_of_sets
+  to: set_cover_problem
+- type: related_to
+  from: hypergraph
+  to: set_cover_problem
+- type: on_path
+  from: hypergraph
+  to: graph_coloring
+- type: on_path
+  from: hypergraph
+  to: directed_graph
+- type: related_to
+  from: hypergraph
+  to: multigraph
+- type: related_to
+  from: graph_theory
+  to: graph_coloring
+- type: related_to
+  from: graph_theory
+  to: degree_graph_theory
+- type: related_to
+  from: graph_theory
+  to: distance_graph_theory
+- type: related_to
+  from: graph_theory
+  to: graph_abstract_data_type
+- type: related_to
+  from: graph_theory
+  to: graph_discrete_mathematics
+- type: related_to
+  from: graph_theory
+  to: graph_isomorphism
+- type: related_to
+  from: graph_coloring
+  to: directed_graph
+- type: related_to
+  from: graph_coloring
+  to: multigraph
+- type: related_to
+  from: graph_coloring
+  to: degree_graph_theory
+- type: related_to
+  from: graph_coloring
+  to: distance_graph_theory
+- type: related_to
+  from: graph_coloring
+  to: graph_abstract_data_type
+- type: related_to
+  from: graph_coloring
+  to: graph_discrete_mathematics
+- type: related_to
+  from: graph_coloring
+  to: graph_isomorphism
+- type: related_to
+  from: graph_coloring
+  to: five_color_theorem
+- type: on_path
+  from: graph_coloring
+  to: four_color_theorem
+- type: on_path
+  from: graph_coloring
+  to: dominating_set
+- type: on_path
+  from: graph_coloring
+  to: independent_set_graph_theory
+- type: on_path
+  from: graph_coloring
+  to: matching_graph_theory
+- type: related_to
+  from: degree_graph_theory
+  to: distance_graph_theory
+- type: related_to
+  from: degree_graph_theory
+  to: graph_abstract_data_type
+- type: related_to
+  from: degree_graph_theory
+  to: graph_discrete_mathematics
+- type: related_to
+  from: degree_graph_theory
+  to: graph_isomorphism
+- type: related_to
+  from: distance_graph_theory
+  to: graph_abstract_data_type
+- type: related_to
+  from: distance_graph_theory
+  to: graph_discrete_mathematics
+- type: related_to
+  from: distance_graph_theory
+  to: graph_isomorphism
+- type: related_to
+  from: graph_abstract_data_type
+  to: graph_discrete_mathematics
+- type: related_to
+  from: graph_abstract_data_type
+  to: graph_isomorphism
+- type: related_to
+  from: graph_discrete_mathematics
+  to: graph_isomorphism
+- type: related_to
+  from: cayley_s_theorem
+  to: permutation_matrix
+- type: related_to
+  from: cayley_s_theorem
+  to: random_number
+- type: related_to
+  from: cayley_s_theorem
+  to: stirling_number
+- type: related_to
+  from: permutation_matrix
+  to: sparse_matrix
+- type: related_to
+  from: permutation_matrix
+  to: diagonal_matrix
+- type: related_to
+  from: permutation_matrix
+  to: identity_matrix
+- type: related_to
+  from: permutation_matrix
+  to: tridiagonal_matrix
+- type: related_to
+  from: permutation_matrix
+  to: zero_matrix
+- type: related_to
+  from: permutation_matrix
+  to: random_number
+- type: on_path
+  from: permutation_matrix
+  to: stirling_number
+- type: related_to
+  from: random_number
+  to: stirling_number
+- type: related_to
+  from: graham_s_number
+  to: ramsey_s_theorem
+- type: related_to
+  from: sparse_matrix
+  to: diagonal_matrix
+- type: related_to
+  from: sparse_matrix
+  to: identity_matrix
+- type: related_to
+  from: sparse_matrix
+  to: tridiagonal_matrix
+- type: related_to
+  from: sparse_matrix
+  to: zero_matrix
+- type: related_to
+  from: diagonal_matrix
+  to: identity_matrix
+- type: related_to
+  from: diagonal_matrix
+  to: tridiagonal_matrix
+- type: related_to
+  from: diagonal_matrix
+  to: zero_matrix
+- type: related_to
+  from: identity_matrix
+  to: tridiagonal_matrix
+- type: related_to
+  from: identity_matrix
+  to: zero_matrix
+- type: related_to
+  from: tridiagonal_matrix
+  to: zero_matrix
+- type: related_to
+  from: special_functions
+  to: airy_function
+- type: related_to
+  from: special_functions
+  to: arithmetic_geometric_mean
+- type: related_to
+  from: special_functions
+  to: cantor_function
+- type: related_to
+  from: airy_function
+  to: arithmetic_geometric_mean
+- type: related_to
+  from: airy_function
+  to: cantor_function
+- type: related_to
+  from: arithmetic_geometric_mean
+  to: cantor_function
+- type: related_to
+  from: five_color_theorem
+  to: four_color_theorem
+- type: related_to
+  from: dominating_set
+  to: independent_set_graph_theory
+- type: related_to
+  from: dominating_set
+  to: matching_graph_theory
+- type: on_path
+  from: dominating_set
+  to: component_graph_theory
+- type: on_path
+  from: dominating_set
+  to: clique_graph_theory
+- type: on_path
+  from: dominating_set
+  to: cycle_graph_theory
+- type: related_to
+  from: dominating_set
+  to: induced_subgraph
+- type: on_path
+  from: dominating_set
+  to: loop_graph_theory
+- type: related_to
+  from: independent_set_graph_theory
+  to: matching_graph_theory
+- type: related_to
+  from: independent_set_graph_theory
+  to: component_graph_theory
+- type: related_to
+  from: independent_set_graph_theory
+  to: clique_graph_theory
+- type: related_to
+  from: independent_set_graph_theory
+  to: cycle_graph_theory
+- type: related_to
+  from: independent_set_graph_theory
+  to: induced_subgraph
+- type: related_to
+  from: independent_set_graph_theory
+  to: loop_graph_theory
+- type: related_to
+  from: connectivity_graph_theory
+  to: bridge_graph_theory
+- type: on_path
+  from: connectivity_graph_theory
+  to: component_graph_theory
+- type: related_to
+  from: connectivity_graph_theory
+  to: path_graph_theory
+- type: on_path
+  from: bridge_graph_theory
+  to: component_graph_theory
+- type: related_to
+  from: bridge_graph_theory
+  to: path_graph_theory
+- type: related_to
+  from: component_graph_theory
+  to: clique_graph_theory
+- type: related_to
+  from: component_graph_theory
+  to: cycle_graph_theory
+- type: related_to
+  from: component_graph_theory
+  to: induced_subgraph
+- type: related_to
+  from: component_graph_theory
+  to: loop_graph_theory
+- type: related_to
+  from: component_graph_theory
+  to: path_graph_theory
+- type: related_to
+  from: directed_graph
+  to: multigraph
+- type: related_to
+  from: clique_graph_theory
+  to: cycle_graph_theory
+- type: related_to
+  from: clique_graph_theory
+  to: induced_subgraph
+- type: related_to
+  from: clique_graph_theory
+  to: loop_graph_theory
+- type: related_to
+  from: cycle_graph_theory
+  to: induced_subgraph
+- type: related_to
+  from: cycle_graph_theory
+  to: loop_graph_theory
+- type: related_to
+  from: induced_subgraph
+  to: complement_graph
+- type: related_to
+  from: induced_subgraph
+  to: line_graph
+- type: related_to
+  from: induced_subgraph
+  to: y_transform
+- type: related_to
+  from: induced_subgraph
+  to: loop_graph_theory
+- type: related_to
+  from: complement_graph
+  to: line_graph
+- type: related_to
+  from: complement_graph
+  to: y_transform
+- type: related_to
+  from: line_graph
+  to: y_transform

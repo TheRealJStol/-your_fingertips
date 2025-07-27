@@ -1,0 +1,25 @@
+# Core Streamlit and web framework
+streamlit>=1.28.0
+
+# Graph processing and visualization
+networkx>=3.0
+pyvis>=0.3.2
+
+# Web scraping and HTTP requests
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+
+# Data processing and serialization
+pyyaml>=6.0
+
+# Machine Learning and NLP
+transformers>=4.30.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+torch>=2.0.0
+
+# Numerical computing
+numpy>=1.21.0
+
+# Additional dependencies for compatibility
+tokenizers>=0.13.0 
