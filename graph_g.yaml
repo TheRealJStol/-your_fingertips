@@ -180,7 +180,7 @@ topics:
     prerequisites: [Probability & Statistics II, Linear Algebra I (Vectors & Matrices)]
 
   # --- Tier 2: Core Undergraduate (Upper Division) ---
-  - topic: Ordinary Differential Equations (ODEs)
+  - topic: Ordinary Differential Equations
     description: "Equations involving an unknown function of one real or complex variable x, its derivatives, and some given functions of x."
     prerequisites: [Calculus III (Multivariable), Linear Algebra I (Vectors & Matrices)]
   - topic: Linear Algebra II (Vector Spaces)
@@ -309,7 +309,7 @@ topics:
   - topic: Riemannian Geometry
     description: "The study of Riemannian manifolds, smooth manifolds with a Riemannian metric, i.e. with an inner product on the tangent space at each point."
     prerequisites: [Differential Geometry II (Manifolds)]
-  - topic: Partial Differential Equations (PDEs)
+  - topic: Partial Differential Equations
     description: "Differential equations that contain unknown multivariable functions and their partial derivatives."
     prerequisites: [ODEs, Vector Calculus]
 
