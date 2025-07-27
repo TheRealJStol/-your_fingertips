@@ -8,14 +8,39 @@ def load_graph(path):
     
     G = nx.DiGraph()
     
-    # Add nodes with attributes
-    for node in data.get('nodes', []):
-        G.add_node(node['id'], **{k: v for k, v in node.items() if k != 'id'})
+    # Handle new structure with 'topics' and 'prerequisites'
+    if 'topics' in data:
+        # New structure: topics with prerequisites
+        for topic_data in data['topics']:
+            topic_name = topic_data['topic']
+            prerequisites = topic_data.get('prerequisites', [])
+            description = topic_data.get('description', f"Mathematical topic: {topic_name}")
+            
+            # Add node with topic name as both id and title
+            # Use description if available, otherwise create default summary
+            G.add_node(topic_name, 
+                      title=topic_name,
+                      type='Topic',
+                      summary=description,
+                      weight=0.5,  # Default weight
+                      difficulty='intermediate')
+            
+            # Add edges from prerequisites to this topic
+            for prereq in prerequisites:
+                G.add_edge(prereq, topic_name, 
+                          type='prerequisite',
+                          weight=1.0)
     
-    # Add edges with attributes
-    for edge in data.get('edges', []):
-        G.add_edge(edge['from'], edge['to'], **{k: v for k, v in edge.items() if k not in ['from', 'to']})
+    # Handle old structure with 'nodes' and 'edges' (for backward compatibility)
+    elif 'nodes' in data:
+        # Old structure: nodes with explicit edges
+        for node in data.get('nodes', []):
+            G.add_node(node['id'], **{k: v for k, v in node.items() if k != 'id'})
+        
+        for edge in data.get('edges', []):
+            G.add_edge(edge['from'], edge['to'], **{k: v for k, v in edge.items() if k not in ['from', 'to']})
     
+    print(f"📊 Loaded graph: {G.number_of_nodes()} topics, {G.number_of_edges()} prerequisite relationships")
     return G
 
 def load_excerpts(excerpts_dir):

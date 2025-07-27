@@ -685,4 +685,441 @@ def conduct_semantic_assessment(goal: str, graph: nx.Graph) -> dict:
         }
     }
 
+# =============================================================================
+# WIKIPEDIA CATEGORY EXTRACTION AND SELF-ASSESSMENT
+# =============================================================================
+
+def extract_wikipedia_categories(graph: nx.Graph) -> list:
+    """Extract foundational topics (with 0-1 prerequisites) from the graph for self-assessment."""
+    
+    categories = []
+    
+    # Use topics with 0-1 prerequisites as foundational categories
+    for node_id, node_data in graph.nodes(data=True):
+        if node_data.get('type') == 'Topic':
+            # Count prerequisites (incoming edges)
+            prerequisite_count = graph.in_degree(node_id)
+            
+            # Include topics with 0-1 prerequisites as "foundational categories"
+            if prerequisite_count <= 1:
+                categories.append({
+                    'id': node_id,
+                    'title': node_data.get('title', node_id),
+                    'weight': node_data.get('weight', 0.5),  # Default weight
+                    'prerequisite_count': prerequisite_count,
+                    'summary': node_data.get('summary', f"Mathematical topic: {node_id}")
+                })
+    
+    # Sort by prerequisite count (ascending) then by title for consistency
+    categories.sort(key=lambda x: (x['prerequisite_count'], x['title']))
+    
+    print(f"📚 Found {len(categories)} foundational topics (0-1 prerequisites) for self-assessment")
+    print("🏗️ Foundational topics by prerequisite count:")
+    
+    # Group by prerequisite count for display
+    by_prereq_count = {}
+    for cat in categories:
+        count = cat['prerequisite_count']
+        if count not in by_prereq_count:
+            by_prereq_count[count] = []
+        by_prereq_count[count].append(cat)
+    
+    for count in sorted(by_prereq_count.keys()):
+        topics = by_prereq_count[count]
+        print(f"  {count} prerequisites: {len(topics)} topics")
+        for i, cat in enumerate(topics[:3]):  # Show first 3 examples
+            print(f"    • {cat['title']}")
+        if len(topics) > 3:
+            print(f"    ... and {len(topics) - 3} more")
+    
+    return categories
+
+def map_categories_to_related_nodes(graph: nx.Graph, category_knowledge: dict) -> dict:
+    """Map Wikipedia categories to their related nodes based on graph layers (0-3 levels)."""
+    
+    print(f"\n🗺️ Mapping {len(category_knowledge)} categories to related nodes by graph layers...")
+    
+    known_nodes = set()
+    partially_known_nodes = set()
+    
+    for category_id, knowledge_level in category_knowledge.items():
+        if knowledge_level == 0:  # No knowledge
+            continue
+            
+        # Find nodes at different graph distances based on knowledge level
+        connected_nodes = set()
+        
+        # Level 1: Direct neighbors only
+        if knowledge_level >= 1:
+            for neighbor in graph.neighbors(category_id):
+                if graph.nodes.get(neighbor, {}).get('type') == 'Topic':
+                    connected_nodes.add(neighbor)
+            
+            # For directed graphs, also get predecessors
+            if graph.is_directed():
+                for neighbor in graph.predecessors(category_id):
+                    if graph.nodes.get(neighbor, {}).get('type') == 'Topic':
+                        connected_nodes.add(neighbor)
+        
+        # Level 2: 2-step connections
+        if knowledge_level >= 2:
+            # Get all direct neighbors first
+            direct_neighbors = set()
+            for neighbor in graph.neighbors(category_id):
+                direct_neighbors.add(neighbor)
+            if graph.is_directed():
+                for neighbor in graph.predecessors(category_id):
+                    direct_neighbors.add(neighbor)
+            
+            # Then get their neighbors
+            for direct_neighbor in direct_neighbors:
+                for second_neighbor in graph.neighbors(direct_neighbor):
+                    if graph.nodes.get(second_neighbor, {}).get('type') == 'Topic':
+                        connected_nodes.add(second_neighbor)
+                if graph.is_directed():
+                    for second_neighbor in graph.predecessors(direct_neighbor):
+                        if graph.nodes.get(second_neighbor, {}).get('type') == 'Topic':
+                            connected_nodes.add(second_neighbor)
+        
+        # Level 3: 3-step connections
+        if knowledge_level >= 3:
+            # Get 2-step neighbors first
+            two_step_neighbors = set()
+            direct_neighbors = set()
+            for neighbor in graph.neighbors(category_id):
+                direct_neighbors.add(neighbor)
+            if graph.is_directed():
+                for neighbor in graph.predecessors(category_id):
+                    direct_neighbors.add(neighbor)
+            
+            for direct_neighbor in direct_neighbors:
+                for second_neighbor in graph.neighbors(direct_neighbor):
+                    two_step_neighbors.add(second_neighbor)
+                if graph.is_directed():
+                    for second_neighbor in graph.predecessors(direct_neighbor):
+                        two_step_neighbors.add(second_neighbor)
+            
+            # Then get their neighbors (3-step)
+            for two_step_neighbor in two_step_neighbors:
+                for third_neighbor in graph.neighbors(two_step_neighbor):
+                    if graph.nodes.get(third_neighbor, {}).get('type') == 'Topic':
+                        connected_nodes.add(third_neighbor)
+                if graph.is_directed():
+                    for third_neighbor in graph.predecessors(two_step_neighbor):
+                        if graph.nodes.get(third_neighbor, {}).get('type') == 'Topic':
+                            connected_nodes.add(third_neighbor)
+        
+        # Categorize based on knowledge level
+        if knowledge_level >= 3:  # Expert level (3+ steps)
+            known_nodes.update(connected_nodes)
+        elif knowledge_level >= 2:  # Good knowledge (2+ steps)
+            known_nodes.update(connected_nodes)
+        elif knowledge_level >= 1:  # Basic knowledge (1+ step)
+            partially_known_nodes.update(connected_nodes)
+        
+        level_names = {1: "Basic", 2: "Good", 3: "Expert"}
+        level_name = level_names.get(int(knowledge_level), "Unknown")
+        
+        print(f"  📂 {graph.nodes.get(category_id, {}).get('title', category_id):25s} "
+              f"(level: {knowledge_level} - {level_name}) → {len(connected_nodes)} topics")
+    
+    # Remove overlaps (known takes precedence over partial)
+    partially_known_nodes = partially_known_nodes - known_nodes
+    
+    print(f"\n✅ Knowledge mapping complete:")
+    print(f"  🟢 Known topics: {len(known_nodes)}")
+    print(f"  🟡 Partially known topics: {len(partially_known_nodes)}")
+    
+    return {
+        'known_nodes': list(known_nodes),
+        'partially_known_nodes': list(partially_known_nodes),
+        'total_mapped': len(known_nodes) + len(partially_known_nodes)
+    }
+
+def generate_learning_path_from_known(graph: nx.Graph, known_nodes: list, target_topics: list, max_path_length: int = 6) -> dict:
+    """Generate comprehensive learning path that covers ALL prerequisites of the target topic."""
+    
+    print(f"\n🎯 Generating comprehensive learning path from {len(known_nodes)} known nodes...")
+    
+    # If no known nodes provided, use topics with 0 prerequisites as starting points
+    original_known_count = len(known_nodes)
+    if not known_nodes:
+        print("⚠️ No known nodes provided - using topics with 0 prerequisites as starting points")
+        zero_prereq_topics = []
+        for node_id, node_data in graph.nodes(data=True):
+            if node_data.get('type') == 'Topic' and graph.in_degree(node_id) == 0:
+                zero_prereq_topics.append(node_id)
+        
+        if zero_prereq_topics:
+            known_nodes = zero_prereq_topics
+            print(f"✅ Found {len(zero_prereq_topics)} topics with 0 prerequisites to use as starting points:")
+            for topic in zero_prereq_topics[:5]:  # Show first 5
+                print(f"    • {topic}")
+            if len(zero_prereq_topics) > 5:
+                print(f"    ... and {len(zero_prereq_topics) - 5} more")
+        else:
+            print("❌ No topics with 0 prerequisites found")
+            return {'path': [], 'message': 'No starting points found in the knowledge graph. The graph may be incomplete.'}
+    
+    if not target_topics:
+        print("❌ No target topics provided")
+        return {'path': [], 'message': 'No learning targets identified.'}
+    
+    # ONLY use the highest semantic matching score (first item in direct matches)
+    if len(target_topics) > 0 and isinstance(target_topics[0], dict) and 'similarity_score' in target_topics[0]:
+        # Sort by similarity score and take only the top one
+        sorted_targets = sorted(target_topics, key=lambda x: x.get('similarity_score', 0), reverse=True)
+        single_target = [sorted_targets[0]]  # Only the highest scoring target
+        target_title = single_target[0]['title']
+        target_id = single_target[0]['id']
+        
+        print(f"🎯 Focusing on HIGHEST semantic match only: '{target_title}' (similarity: {single_target[0]['similarity_score']:.3f})")
+    else:
+        # Fallback for non-dict targets
+        single_target = target_topics[:1]
+        target_title = single_target[0] if single_target else "Unknown"
+        target_id = target_title
+    
+    # Convert known_nodes to set for faster lookup
+    known_set = set(known_nodes)
+    
+    # If target is already known, return success message
+    if target_id in known_set:
+        if original_known_count > 0:
+            return {
+                'path': [],
+                'message': f'Great! You already know: {target_title}. No additional learning needed!'
+            }
+        else:
+            return {
+                'path': [],
+                'message': f'Target "{target_title}" is a foundational topic with no prerequisites. You can start learning it directly!'
+            }
+    
+    if target_id not in graph.nodes():
+        return {'path': [], 'message': f'Target topic "{target_title}" not found in knowledge graph.'}
+    
+    # Find ALL prerequisites for the target topic using topological traversal
+    print(f"🔍 Finding all prerequisites for '{target_title}'...")
+    
+    def find_all_prerequisites(node_id, visited=None):
+        """Recursively find all prerequisites for a given node."""
+        if visited is None:
+            visited = set()
+        
+        if node_id in visited:
+            return set()  # Avoid cycles
+        
+        visited.add(node_id)
+        all_prereqs = set()
+        
+        # Get direct prerequisites (predecessors in the graph)
+        for prereq in graph.predecessors(node_id):
+            if graph.nodes.get(prereq, {}).get('type') == 'Topic':
+                all_prereqs.add(prereq)
+                # Recursively find prerequisites of prerequisites
+                sub_prereqs = find_all_prerequisites(prereq, visited.copy())
+                all_prereqs.update(sub_prereqs)
+        
+        return all_prereqs
+    
+    # Get all prerequisites for the target
+    all_prerequisites = find_all_prerequisites(target_id)
+    print(f"📚 Found {len(all_prerequisites)} total prerequisites for '{target_title}'")
+    
+    # Filter out prerequisites that are already known
+    unknown_prerequisites = all_prerequisites - known_set
+    print(f"📖 {len(unknown_prerequisites)} prerequisites need to be learned (excluding {len(all_prerequisites - unknown_prerequisites)} already known)")
+    
+    if not unknown_prerequisites:
+        return {
+            'path': [{
+                'id': target_id,
+                'title': target_title,
+                'summary': graph.nodes.get(target_id, {}).get('summary', ''),
+                'weight': graph.nodes.get(target_id, {}).get('weight', 0.0),
+                'difficulty': graph.nodes.get(target_id, {}).get('difficulty', 'intermediate'),
+                'step_number': 1,
+                'is_target': True,
+                'is_starting_point': False,
+                'prerequisite_level': 0
+            }],
+            'message': f'All prerequisites for "{target_title}" are already known! You can learn it directly.',
+            'path_details': {
+                'total_steps': 1,
+                'target_topic': target_title,
+                'prerequisites_covered': len(all_prerequisites),
+                'already_known': len(all_prerequisites - unknown_prerequisites),
+                'path_type': 'direct_to_target'
+            }
+        }
+    
+    # Create a topological ordering of the unknown prerequisites + target
+    learning_sequence = []
+    remaining_topics = unknown_prerequisites.copy()
+    remaining_topics.add(target_id)
+    
+    # Keep track of prerequisite levels for better organization
+    topic_levels = {}
+    
+    def calculate_prerequisite_level(topic_id, known_topics):
+        """Calculate how many prerequisite layers deep a topic is."""
+        if topic_id in known_topics:
+            return 0
+        
+        max_level = 0
+        for prereq in graph.predecessors(topic_id):
+            if graph.nodes.get(prereq, {}).get('type') == 'Topic':
+                if prereq in known_topics:
+                    level = 1
+                else:
+                    level = calculate_prerequisite_level(prereq, known_topics) + 1
+                max_level = max(max_level, level)
+        
+        return max_level
+    
+    # Calculate levels for all topics
+    for topic in remaining_topics:
+        topic_levels[topic] = calculate_prerequisite_level(topic, known_set)
+    
+    print(f"📊 Prerequisite levels calculated:")
+    level_counts = {}
+    for topic, level in topic_levels.items():
+        level_counts[level] = level_counts.get(level, 0) + 1
+    for level in sorted(level_counts.keys()):
+        print(f"  Level {level}: {level_counts[level]} topics")
+    
+    # Build learning sequence by processing topics level by level
+    processed = known_set.copy()
+    current_level = 1
+    
+    while remaining_topics:
+        # Find topics at current level that have all prerequisites satisfied
+        ready_topics = []
+        for topic in remaining_topics:
+            if topic_levels[topic] == current_level:
+                # Check if all prerequisites are satisfied
+                prereqs_satisfied = True
+                for prereq in graph.predecessors(topic):
+                    if (graph.nodes.get(prereq, {}).get('type') == 'Topic' and 
+                        prereq not in processed):
+                        prereqs_satisfied = False
+                        break
+                
+                if prereqs_satisfied:
+                    ready_topics.append(topic)
+        
+        if not ready_topics:
+            # Move to next level if no topics ready at current level
+            current_level += 1
+            if current_level > max(topic_levels.values()) + 1:
+                # Safety break to avoid infinite loop
+                print("⚠️ Breaking potential infinite loop in prerequisite resolution")
+                break
+            continue
+        
+        # Sort ready topics by weight (higher weight = more important)
+        ready_topics.sort(key=lambda x: graph.nodes.get(x, {}).get('weight', 0.0), reverse=True)
+        
+        # Add ready topics to learning sequence
+        for topic in ready_topics:
+            node_data = graph.nodes.get(topic, {})
+            learning_sequence.append({
+                'id': topic,
+                'title': node_data.get('title', topic),
+                'summary': node_data.get('summary', ''),
+                'weight': node_data.get('weight', 0.0),
+                'difficulty': node_data.get('difficulty', 'intermediate'),
+                'step_number': len(learning_sequence) + 1,
+                'is_target': topic == target_id,
+                'is_starting_point': False,
+                'prerequisite_level': topic_levels[topic]
+            })
+            
+            processed.add(topic)
+            remaining_topics.remove(topic)
+    
+    print(f"🛤️ Generated comprehensive learning path with {len(learning_sequence)} steps:")
+    for i, step in enumerate(learning_sequence[:10]):  # Show first 10 steps
+        target_indicator = " 🎯" if step['is_target'] else ""
+        level_indicator = f" (L{step['prerequisite_level']})"
+        print(f"  {i+1:2d}. {step['title']:30s} (weight: {step['weight']:.3f}){level_indicator}{target_indicator}")
+    if len(learning_sequence) > 10:
+        print(f"    ... and {len(learning_sequence) - 10} more steps")
+    
+    return {
+        'path': learning_sequence,
+        'message': f'Generated comprehensive learning path with {len(learning_sequence)} steps covering all prerequisites for "{target_title}".',
+        'path_details': {
+            'total_steps': len(learning_sequence),
+            'target_topic': target_title,
+            'prerequisites_covered': len(all_prerequisites),
+            'already_known': len(all_prerequisites - unknown_prerequisites),
+            'max_prerequisite_level': max(topic_levels.values()) if topic_levels else 0,
+            'path_type': 'comprehensive_prerequisites'
+        }
+    }
+
+def conduct_slider_based_assessment(goal: str, graph: nx.Graph, category_knowledge: dict) -> dict:
+    """Conduct assessment using slider-based self-evaluation of Wikipedia categories."""
+    
+    print(f"\n🎯 Conducting slider-based assessment for goal: '{goal}'")
+    
+    # Get semantic matches for target topics (same as before)
+    topic_results = find_related_topics_by_semantic_similarity(goal, graph, max_direct=5, min_similarity=0.3)
+    direct_matches = topic_results['direct_matches']
+    graph_related = topic_results['graph_related']
+    
+    # Map categories to related nodes based on slider values (0-3 levels)
+    knowledge_mapping = map_categories_to_related_nodes(graph, category_knowledge)
+    
+    # Generate learning path from known nodes to ONLY the highest semantic match (direct matches only)
+    # Combine known and partially known nodes as starting points
+    all_starting_nodes = knowledge_mapping['known_nodes'] + knowledge_mapping['partially_known_nodes']
+    
+    print(f"🚀 Using {len(knowledge_mapping['known_nodes'])} known + {len(knowledge_mapping['partially_known_nodes'])} partially known = {len(all_starting_nodes)} total starting points")
+    
+    learning_path = generate_learning_path_from_known(
+        graph, 
+        all_starting_nodes,  # Use both known and partially known as starting points
+        direct_matches,  # Only use direct matches, not graph_related
+        max_path_length=6
+    )
+    
+    # Create enhanced intent with slider-based assessment info
+    slider_intent = {
+        'goal': goal,
+        'analysis_method': 'slider_based_self_assessment_with_graph_layers',
+        'categories_assessed': len(category_knowledge),
+        'knowledge_levels_used': {
+            'level_0': len([k for k in category_knowledge.values() if k == 0]),
+            'level_1': len([k for k in category_knowledge.values() if k == 1]),
+            'level_2': len([k for k in category_knowledge.values() if k == 2]),
+            'level_3': len([k for k in category_knowledge.values() if k == 3])
+        },
+        'mapped_nodes': {
+            'known': len(knowledge_mapping['known_nodes']),
+            'partially_known': len(knowledge_mapping['partially_known_nodes']),
+            'total_starting_points': len(all_starting_nodes),
+            'total': knowledge_mapping['total_mapped']
+        },
+        'learning_path': {
+            'steps': len(learning_path['path']),
+            'message': learning_path['message'],
+            'focused_on': 'highest_semantic_match_only'
+        }
+    }
+    
+    return {
+        'intent': slider_intent,
+        'direct_matches': direct_matches,
+        'graph_related': graph_related,  # Still return for display, but not used in path generation
+        'category_knowledge': category_knowledge,
+        'knowledge_mapping': knowledge_mapping,
+        'learning_path': learning_path,
+        'target_topic': direct_matches[0]['id'] if direct_matches else None,
+        'assessment_method': 'slider_based_discrete_levels',
+        'all_starting_nodes': all_starting_nodes  # Include for graph highlighting
+    }
+
 

@@ -1,0 +1,886 @@
+# A comprehensive, expert-curated map of mathematics in a prerequisite structure.
+# Version 3: Added one-line descriptions to all topics.
+# Designed as a strategic overview for students and researchers, particularly
+# those interested in physics, computer science, and deep technology.
+
+topics:
+  # --- Tier 0: Foundational & Pre-University ---
+  - topic: Basic Arithmetic
+    description: "The study of numbers and their basic operations: addition, subtraction, multiplication, and division."
+    prerequisites: []
+  - topic: Pre-Algebra
+    description: "Introduces variables, expressions, and equations as a bridge to abstract algebraic thinking."
+    prerequisites: [Basic Arithmetic]
+  - topic: Elementary Algebra
+    description: "Formal study of algebraic structures, variables, and the rules for manipulating them."
+    prerequisites: [Pre-Algebra]
+  - topic: Basic Geometry
+    description: "The study of shapes, sizes, positions of figures, and the properties of space."
+    prerequisites: [Pre-Algebra]
+  - topic: Polynomials
+    description: "Expressions consisting of variables and coefficients, involving only addition, subtraction, multiplication, and non-negative integer exponents."
+    prerequisites: [Elementary Algebra]
+  - topic: Rational Expressions
+    description: "Fractions where the numerator and denominator are both polynomials."
+    prerequisites: [Polynomials]
+  - topic: Euclidean Geometry
+    description: "The study of geometry based on the axioms and postulates of the Greek mathematician Euclid."
+    prerequisites: [Basic Geometry]
+  - topic: Coordinate Geometry
+    description: "The study of geometry using a coordinate system, linking algebra and geometry."
+    prerequisites: [Euclidean Geometry, Elementary Algebra]
+  - topic: Intermediate Algebra
+    description: "Expands on elementary algebra, covering topics like functions, inequalities, and logarithms."
+    prerequisites: [Elementary Algebra]
+  - topic: Trigonometry
+    description: "The study of relationships between side lengths and angles of triangles."
+    prerequisites: [Basic Geometry, Intermediate Algebra]
+  - topic: Logarithms & Exponentials
+    description: "The study of functions involving exponents and their inverse functions, logarithms."
+    prerequisites: [Intermediate Algebra]
+  - topic: Precalculus
+    description: "Advanced algebra and trigonometry designed to prepare students for the study of calculus."
+    prerequisites: [Intermediate Algebra, Trigonometry, Logarithms & Exponentials]
+
+  # --- Tier 1: Core Undergraduate (First 1-2 Years) ---
+  - topic: Calculus I (Limits & Derivatives)
+    description: "The study of change, focusing on the concepts of limits, continuity, and derivatives."
+    prerequisites: [Precalculus]
+  - topic: L'Hôpital's Rule
+    description: "A method for finding the limits of indeterminate forms."
+    prerequisites: [Calculus I (Limits & Derivatives)]
+  - topic: Calculus II (Integrals & Series)
+    description: "Continues the study of change with integration, techniques of integration, and infinite series."
+    prerequisites: [Calculus I (Limits & Derivatives)]
+  - topic: Techniques of Integration
+    description: "Methods for finding antiderivatives of functions, such as integration by parts and partial fractions."
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Improper Integrals
+    description: "The limit of a definite integral as an endpoint of the interval of integration approaches infinity or a discontinuity."
+    prerequisites: [Techniques of Integration]
+  - topic: Taylor Series
+    description: "A representation of a function as an infinite sum of terms, calculated from the values of the function's derivatives at a single point."
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Parametric Equations
+    description: "A method of defining a curve using parameters, expressing coordinates as functions of a variable."
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Polar Coordinates
+    description: "A two-dimensional coordinate system in which each point on a plane is determined by a distance from a reference point and an angle from a reference direction."
+    prerequisites: [Parametric Equations, Trigonometry]
+  - topic: Calculus III (Multivariable)
+    description: "Extends calculus to functions of several variables, including partial derivatives and multiple integrals."
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Partial Derivatives
+    description: "The derivative of a multivariable function with respect to one variable, with the others held constant."
+    prerequisites: [Calculus III (Multivariable)]
+  - topic: Multiple Integrals
+    description: "A definite integral of a function of more than one real variable, e.g., f(x, y) or f(x, y, z)."
+    prerequisites: [Partial Derivatives]
+  - topic: Vector Fields
+    description: "Assigns a vector to each point in a subset of space."
+    prerequisites: [Multiple Integrals]
+  - topic: Discrete Mathematics
+    description: "The study of mathematical structures that are fundamentally discrete rather than continuous."
+    prerequisites: [Intermediate Algebra]
+  - topic: Intro to Proofs
+    description: "An introduction to the methods and structures of mathematical proofs, such as direct proof, contradiction, and induction."
+    prerequisites: [Discrete Mathematics]
+  - topic: Set Theory
+    description: "The branch of mathematical logic that studies sets, which are collections of objects."
+    prerequisites: [Intro to Proofs]
+  - topic: Cardinality
+    description: "The measure of the number of elements of a set."
+    prerequisites: [Set Theory]
+  - topic: Ordinal Numbers
+    description: "Numbers used to denote the position in an ordered sequence: first, second, third, etc."
+    prerequisites: [Cardinality]
+  - topic: Logic
+    description: "The systematic study of valid inference and reasoning."
+    prerequisites: [Set Theory]
+  - topic: Propositional Logic
+    description: "The branch of logic that studies ways of joining and/or modifying entire propositions, statements or sentences to form more complicated ones."
+    prerequisites: [Logic]
+  - topic: Predicate Logic
+    description: "An extension of propositional logic which allows for the use of variables, quantifiers, and predicates."
+    prerequisites: [Propositional Logic]
+  - topic: Combinatorics
+    description: "An area of mathematics primarily concerned with counting, both as a means and an end in obtaining results."
+    prerequisites: [Logic]
+  - topic: Counting Principles
+    description: "Fundamental rules for counting, such as the multiplication principle and the addition principle."
+    prerequisites: [Combinatorics]
+  - topic: Permutations & Combinations
+    description: "The study of arranging and selecting objects from a set."
+    prerequisites: [Counting Principles]
+  - topic: Generating Functions
+    description: "A way of encoding an infinite sequence of numbers by treating them as the coefficients of a formal power series."
+    prerequisites: [Permutations & Combinations]
+  - topic: Linear Algebra I (Vectors & Matrices)
+    description: "The study of vectors, vector spaces, linear transformations, and systems of linear equations represented by matrices."
+    prerequisites: [Intermediate Algebra]
+  - topic: Cross Product & Dot Product
+    description: "Operations on vectors that provide geometric information about their relationship."
+    prerequisites: [Linear Algebra I (Vectors & Matrices)]
+  - topic: Systems of Linear Equations
+    description: "A collection of one or more linear equations involving the same set of variables."
+    prerequisites: [Linear Algebra I (Vectors & Matrices)]
+  - topic: Gaussian Elimination
+    description: "An algorithm for solving systems of linear equations."
+    prerequisites: [Systems of Linear Equations]
+  - topic: Matrix Operations
+    description: "The fundamental operations on matrices, including addition, subtraction, and multiplication."
+    prerequisites: [Gaussian Elimination]
+  - topic: Determinants
+    description: "A scalar value that can be computed from the elements of a square matrix and encodes certain properties of the linear transformation."
+    prerequisites: [Matrix Operations]
+  - topic: Eigenvalues & Eigenvectors
+    description: "Special vectors that are only scaled by a linear transformation, and the scalars by which they are scaled."
+    prerequisites: [Determinants]
+  - topic: Probability & Statistics I
+    description: "The study of randomness and uncertainty, including basic probability theory and descriptive statistics."
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Descriptive Statistics
+    description: "Methods for summarizing and describing the main features of a collection of data."
+    prerequisites: [Probability & Statistics I]
+  - topic: Bayes' Theorem
+    description: "Describes the probability of an event, based on prior knowledge of conditions that might be related to the event."
+    prerequisites: [Descriptive Statistics]
+  - topic: Random Variables
+    description: "A variable whose value is a numerical outcome of a random phenomenon."
+    prerequisites: [Bayes' Theorem]
+  - topic: Probability Distributions
+    description: "A mathematical function that gives the probabilities of occurrence of different possible outcomes for an experiment."
+    prerequisites: [Random Variables]
+  - topic: Binomial Distribution
+    description: "The discrete probability distribution of the number of successes in a sequence of n independent experiments."
+    prerequisites: [Probability Distributions]
+  - topic: Poisson Distribution
+    description: "A discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of time or space."
+    prerequisites: [Probability Distributions]
+  - topic: Normal Distribution
+    description: "A continuous probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence."
+    prerequisites: [Probability Distributions]
+  - topic: Central Limit Theorem
+    description: "States that the distribution of the sum (or average) of a large number of independent, identically distributed variables will be approximately normal."
+    prerequisites: [Probability Distributions]
+  - topic: Probability & Statistics II
+    description: "Advanced topics in probability and inferential statistics, including hypothesis testing and regression."
+    prerequisites: [Calculus III (Multivariable), Central Limit Theorem]
+  - topic: Hypothesis Testing
+    description: "A method of statistical inference used to decide whether the data at hand sufficiently support a particular hypothesis."
+    prerequisites: [Probability & Statistics II]
+  - topic: Regression Analysis
+    description: "A set of statistical processes for estimating the relationships between a dependent variable and one or more independent variables."
+    prerequisites: [Hypothesis Testing]
+  - topic: ANOVA
+    description: "Analysis of variance; a collection of statistical models used to analyze the differences among group means."
+    prerequisites: [Regression Analysis]
+  - topic: Markov Chains
+    description: "A stochastic model describing a sequence of possible events in which the probability of each event depends only on the state attained in the previous event."
+    prerequisites: [Probability & Statistics II, Linear Algebra I (Vectors & Matrices)]
+
+  # --- Tier 2: Core Undergraduate (Upper Division) ---
+  - topic: Ordinary Differential Equations (ODEs)
+    description: "Equations involving an unknown function of one real or complex variable x, its derivatives, and some given functions of x."
+    prerequisites: [Calculus III (Multivariable), Linear Algebra I (Vectors & Matrices)]
+  - topic: Linear Algebra II (Vector Spaces)
+    description: "A more abstract and proof-based study of vector spaces, linear transformations, and their properties."
+    prerequisites: [Linear Algebra I (Vectors & Matrices), Eigenvalues & Eigenvectors, Intro to Proofs]
+  - topic: Linear Transformations
+    description: "Functions between vector spaces that preserve the operations of vector addition and scalar multiplication."
+    prerequisites: [Linear Algebra II (Vector Spaces)]
+  - topic: Inner Product Spaces
+    description: "Vector spaces with an additional structure called an inner product, which allows the definition of geometric concepts like length and angle."
+    prerequisites: [Linear Algebra II (Vector Spaces)]
+  - topic: Orthogonality
+    description: "The generalization of the notion of perpendicularity to the linear algebra of inner product spaces."
+    prerequisites: [Inner Product Spaces]
+  - topic: Gram-Schmidt Process
+    description: "A method for orthonormalizing a set of vectors in an inner product space."
+    prerequisites: [Orthogonality]
+  - topic: Singular Value Decomposition (SVD)
+    description: "A factorization of a real or complex matrix that generalizes the eigendecomposition of a square normal matrix."
+    prerequisites: [Linear Transformations, Eigenvalues & Eigenvectors]
+  - topic: Real Analysis I (Sequences & Series)
+    description: "A rigorous, proof-based study of the real numbers, sequences, series, and the properties of real functions."
+    prerequisites: [Intro to Proofs, Calculus II (Integrals & Series)]
+  - topic: Continuity & Differentiability
+    description: "The rigorous definitions and properties of continuous and differentiable functions."
+    prerequisites: [Real Analysis I (Sequences & Series)]
+  - topic: Riemann Integral
+    description: "The first rigorous definition of the integral of a function on an interval."
+    prerequisites: [Continuity & Differentiability]
+  - topic: Sequences of Functions
+    description: "The study of sequences whose members are functions."
+    prerequisites: [Riemann Integral]
+  - topic: Uniform Convergence
+    description: "A stronger type of convergence for sequences of functions than pointwise convergence."
+    prerequisites: [Sequences of Functions]
+  - topic: Metric Spaces
+    description: "A set where a notion of distance (called a metric) between elements of the set is defined."
+    prerequisites: [Real Analysis I (Sequences & Series)]
+  - topic: Real Analysis II (Measure Theory)
+    description: "Generalizes the notion of length, area, and volume, providing a foundation for the Lebesgue integral."
+    prerequisites: [Real Analysis I (Sequences & Series), Uniform Convergence]
+  - topic: Lebesgue Measure
+    description: "The standard way of assigning a length, area, or volume to subsets of Euclidean space."
+    prerequisites: [Real Analysis II (Measure Theory)]
+  - topic: Lebesgue Integral
+    description: "An integral that extends the Riemann integral to a larger class of functions."
+    prerequisites: [Lebesgue Measure]
+  - topic: Lp Spaces
+    description: "Function spaces defined using a natural generalization of the p-norm for finite-dimensional vector spaces."
+    prerequisites: [Lebesgue Integral]
+  - topic: Abstract Algebra I (Group Theory)
+    description: "The study of algebraic structures called groups, which are sets equipped with an operation that satisfies certain axioms."
+    prerequisites: [Intro to Proofs, Set Theory]
+  - topic: Subgroups & Cosets
+    description: "Fundamental concepts in group theory related to subsets of groups."
+    prerequisites: [Abstract Algebra I (Group Theory)]
+  - topic: Normal Subgroups & Quotient Groups
+    description: "A special type of subgroup that allows for the construction of quotient groups."
+    prerequisites: [Subgroups & Cosets]
+  - topic: Group Homomorphisms
+    description: "Functions between groups that preserve the group operation."
+    prerequisites: [Normal Subgroups & Quotient Groups]
+  - topic: Sylow Theorems
+    description: "A set of theorems that give detailed information about the number of subgroups of a fixed order that a given finite group has."
+    prerequisites: [Group Homomorphisms]
+  - topic: Group Actions
+    description: "A way of describing the symmetries of objects using groups."
+    prerequisites: [Abstract Algebra I (Group Theory)]
+  - topic: Abstract Algebra II (Rings & Fields)
+    description: "The study of rings and fields, algebraic structures with two binary operations."
+    prerequisites: [Abstract Algebra I (Group Theory)]
+  - topic: Ideals & Quotient Rings
+    description: "Subsets of rings that play a role analogous to normal subgroups in group theory."
+    prerequisites: [Abstract Algebra II (Rings & Fields)]
+  - topic: Integral Domains
+    description: "A nonzero commutative ring in which the product of any two nonzero elements is nonzero."
+    prerequisites: [Ideals & Quotient Rings]
+  - topic: Polynomial Rings
+    description: "Rings formed from the set of polynomials in one or more variables with coefficients in another ring."
+    prerequisites: [Abstract Algebra II (Rings & Fields)]
+  - topic: Field Extensions
+    description: "A pair of fields such that one is a subfield of the other."
+    prerequisites: [Integral Domains]
+  - topic: Complex Analysis I (Complex Plane)
+    description: "The study of functions of complex numbers, including differentiation and integration in the complex plane."
+    prerequisites: [Calculus III (Multivariable), Real Analysis I (Sequences & Series)]
+  - topic: Cauchy-Riemann Equations
+    description: "A system of two partial differential equations which, together with certain continuity and differentiability criteria, are a necessary and sufficient condition for a complex function to be complex differentiable."
+    prerequisites: [Complex Analysis I (Complex Plane)]
+  - topic: Cauchy's Integral Formula
+    description: "A central statement in complex analysis, expressing the fact that a holomorphic function defined on a disk is completely determined by its values on the boundary of the disk."
+    prerequisites: [Cauchy-Riemann Equations]
+  - topic: Complex Analysis II (Residue Theorem)
+    description: "Advanced topics in complex analysis, focusing on the powerful residue theorem for evaluating integrals."
+    prerequisites: [Complex Analysis I (Complex Plane), Cauchy's Integral Formula]
+  - topic: Topology I (Point-Set)
+    description: "The study of topological spaces, dealing with properties that are preserved under continuous deformations."
+    prerequisites: [Intro to Proofs, Set Theory, Metric Spaces]
+  - topic: Compactness & Connectedness
+    description: "Fundamental properties of topological spaces related to covering by open sets and path-connectedness."
+    prerequisites: [Topology I (Point-Set)]
+  - topic: Topology II (Algebraic Topology)
+    description: "Uses tools from abstract algebra to study topological spaces."
+    prerequisites: [Topology I (Point-Set), Abstract Algebra I (Group Theory)]
+  - topic: Vector Calculus
+    description: "The study of differentiation and integration of vector fields, primarily in 3-dimensional Euclidean space."
+    prerequisites: [Calculus III (Multivariable), Linear Algebra I (Vectors & Matrices)]
+  - topic: Line & Surface Integrals
+    description: "Integrals of functions along curves and over surfaces."
+    prerequisites: [Vector Fields]
+  - topic: Stokes' Theorem
+    description: "Relates the integral of the curl of a vector field over a surface to the line integral of the vector field over its boundary."
+    prerequisites: [Line & Surface Integrals]
+  - topic: Divergence Theorem
+    description: "Relates the flux of a vector field through a closed surface to the divergence of the field in the volume enclosed."
+    prerequisites: [Line & Surface Integrals]
+  - topic: Differential Geometry I (Curves & Surfaces)
+    description: "The study of smooth shapes and their properties using the techniques of differential calculus, integral calculus, linear algebra and multilinear algebra."
+    prerequisites: [Vector Calculus, Linear Algebra II (Vector Spaces)]
+  - topic: Frenet-Serret Formulas
+    description: "Describe the kinematic properties of a particle moving along a continuous, differentiable curve in three-dimensional space."
+    prerequisites: [Differential Geometry I (Curves & Surfaces)]
+  - topic: Differential Geometry II (Manifolds)
+    description: "Generalizes the concepts of curves and surfaces to higher dimensions using the concept of a manifold."
+    prerequisites: [Differential Geometry I (Curves & Surfaces), Real Analysis I (Sequences & Series)]
+  - topic: Riemannian Geometry
+    description: "The study of Riemannian manifolds, smooth manifolds with a Riemannian metric, i.e. with an inner product on the tangent space at each point."
+    prerequisites: [Differential Geometry II (Manifolds)]
+  - topic: Partial Differential Equations (PDEs)
+    description: "Differential equations that contain unknown multivariable functions and their partial derivatives."
+    prerequisites: [ODEs, Vector Calculus]
+
+  # --- Tier 3: Advanced & Specialized Topics (EXPANDED) ---
+
+  # --- Analysis Branch (EXPANDED) ---
+  - topic: Functional Analysis
+    description: "The branch of mathematics concerned with the study of vector spaces endowed with some kind of limit-related structure (e.g., inner product, norm, topology)."
+    prerequisites: [Real Analysis II (Measure Theory), Linear Algebra II (Vector Spaces), Lp Spaces]
+  - topic: Hilbert Spaces
+    description: "An abstract vector space possessing the structure of an inner product that allows length and angle to be measured."
+    prerequisites: [Functional Analysis]
+  - topic: Banach Spaces
+    description: "A complete normed vector space, a central object in functional analysis."
+    prerequisites: [Hilbert Spaces]
+  - topic: Operator Theory
+    description: "The study of linear operators on function spaces."
+    prerequisites: [Functional Analysis]
+  - topic: Spectral Theory
+    description: "An extension of eigenvalue theory for matrices to a much broader class of operators."
+    prerequisites: [Operator Theory]
+  - topic: C*-algebras
+    description: "A Banach algebra together with an involution satisfying the properties of the adjoint."
+    prerequisites: [Operator Theory, Banach Spaces]
+  - topic: Von Neumann Algebras
+    description: "A special type of C*-algebra of operators on a Hilbert space, closed in the weak operator topology."
+    prerequisites: [C*-algebras]
+  - topic: Harmonic Analysis
+    description: "The study of the representation of functions or signals as the superposition of basic waves."
+    prerequisites: [Functional Analysis]
+  - topic: Fourier Series
+    description: "An expansion of a periodic function into a sum of sines and cosines."
+    prerequisites: [Harmonic Analysis, Real Analysis I (Sequences & Series)]
+  - topic: Fourier Transform
+    description: "A mathematical transform that decomposes a function into its constituent frequencies."
+    prerequisites: [Fourier Series, Lebesgue Integral]
+  - topic: Wavelet Theory
+    description: "The study of wavelets, which are wave-like oscillations with an amplitude that begins at zero, increases, and then decreases back to zero."
+    prerequisites: [Fourier Transform]
+  - topic: Distribution Theory
+    description: "A theory that generalizes the classical notion of functions in mathematical analysis."
+    prerequisites: [Functional Analysis]
+  - topic: Sobolev Spaces
+    description: "Function spaces which are particularly adapted to solving partial differential equations."
+    prerequisites: [Distribution Theory, Lp Spaces]
+  - topic: Calculus of Variations
+    description: "A field of mathematical analysis that uses variations, which are small changes in functions and functionals, to find maxima and minima of functionals."
+    prerequisites: [PDEs, Real Analysis I (Sequences & Series)]
+  - topic: Optimal Control Theory
+    description: "A branch of mathematical optimization that deals with finding a control for a dynamical system over a period of time such that an objective function is optimized."
+    prerequisites: [Calculus of Variations]
+  - topic: Stochastic Processes
+    description: "A collection of random variables, representing the evolution of some system of random values over time."
+    prerequisites: [Real Analysis II (Measure Theory), Markov Chains]
+  - topic: Brownian Motion
+    description: "The random motion of particles suspended in a medium (a liquid or a gas)."
+    prerequisites: [Stochastic Processes]
+  - topic: Martingales
+    description: "A model of a fair game where knowledge of past events never helps predict the mean of the future winnings."
+    prerequisites: [Stochastic Processes]
+  - topic: Stochastic Calculus (Itô Calculus)
+    description: "A branch of mathematics that operates on stochastic processes, allowing a consistent theory of integration to be defined for integrals of stochastic processes."
+    prerequisites: [Stochastic Processes, Martingales]
+  - topic: Ergodic Theory
+    description: "The branch of mathematics that studies dynamical systems with an invariant measure and related problems."
+    prerequisites: [Real Analysis II (Measure Theory)]
+  - topic: Dynamical Systems
+    description: "A system in which a function describes the time dependence of a point in a geometrical space."
+    prerequisites: [ODEs, Real Analysis I (Sequences & Series)]
+  - topic: Chaos Theory
+    description: "The study of dynamical systems that are highly sensitive to initial conditions."
+    prerequisites: [Dynamical Systems]
+  - topic: Fractal Geometry
+    description: "The study of fractals, which are geometric shapes containing detailed structure at arbitrarily small scales."
+    prerequisites: [Chaos Theory, Metric Spaces]
+  - topic: Non-standard Analysis
+    description: "A branch of mathematics that reformulates analysis using a rigorous notion of infinitesimal numbers."
+    prerequisites: [Model Theory, Real Analysis I (Sequences & Series)]
+  - topic: Baire Category Theorem
+    description: "A result in topology and functional analysis that gives sufficient conditions for a topological space to be a Baire space."
+    prerequisites: [Metric Spaces, Real Analysis I (Sequences & Series)]
+  - topic: Hardy Spaces
+    description: "Spaces of holomorphic functions on the unit disk or upper half plane."
+    prerequisites: [Complex Analysis I (Complex Plane), Lp Spaces]
+  - topic: Potential Theory
+    description: "The study of harmonic functions."
+    prerequisites: [Harmonic Analysis, PDEs]
+  - topic: Geometric Measure Theory
+    description: "The study of the geometric properties of sets in Euclidean space using measure theory."
+    prerequisites: [Real Analysis II (Measure Theory), Differential Geometry I (Curves & Surfaces)]
+
+  # --- Algebra Branch (EXPANDED) ---
+  - topic: Galois Theory
+    description: "Connects field theory to group theory, providing a way to understand the symmetries of the roots of a polynomial."
+    prerequisites: [Abstract Algebra II (Rings & Fields), Field Extensions]
+  - topic: Module Theory
+    description: "The study of modules, which are a generalization of vector spaces where the scalars can be elements of an arbitrary ring."
+    prerequisites: [Abstract Algebra II (Rings & Fields)]
+  - topic: Commutative Algebra
+    description: "The study of commutative rings, their ideals, and modules over such rings."
+    prerequisites: [Abstract Algebra II (Rings & Fields), Module Theory]
+  - topic: Algebraic Geometry
+    description: "Studies the zeros of multivariate polynomials, using techniques from commutative algebra."
+    prerequisites: [Commutative Algebra, Complex Analysis II (Residue Theorem)]
+  - topic: Scheme Theory
+    description: "A more general and abstract formulation of algebraic geometry introduced by Alexander Grothendieck."
+    prerequisites: [Algebraic Geometry]
+  - topic: Intersection Theory
+    description: "A branch of algebraic geometry that studies the intersections of subvarieties."
+    prerequisites: [Scheme Theory]
+  - topic: Sheaf Cohomology
+    description: "A powerful tool in algebraic geometry and topology for studying the global properties of spaces."
+    prerequisites: [Scheme Theory, Homological Algebra]
+  - topic: Stacks & Algebraic Spaces
+    description: "Generalizations of schemes in algebraic geometry, used to handle moduli problems."
+    prerequisites: [Scheme Theory, Category Theory]
+  - topic: Representation Theory
+    description: "A branch of mathematics that studies abstract algebraic structures by representing their elements as linear transformations of vector spaces."
+    prerequisites: [Abstract Algebra I (Group Theory), Linear Algebra II (Vector Spaces)]
+  - topic: Character Theory
+    description: "The branch of representation theory that studies characters, which are functions that encode information about a representation."
+    prerequisites: [Representation Theory]
+  - topic: Lie Groups & Lie Algebras
+    description: "The study of groups that are also differentiable manifolds, and their corresponding tangent spaces."
+    prerequisites: [Abstract Algebra I (Group Theory), Differential Geometry II (Manifolds)]
+  - topic: Root Systems
+    description: "Configurations of vectors in a Euclidean space used to describe the structure of Lie algebras."
+    prerequisites: [Lie Groups & Lie Algebras]
+  - topic: Homological Algebra
+    description: "The branch of mathematics that studies homology in a general algebraic setting."
+    prerequisites: [Abstract Algebra II (Rings & Fields), Topology II (Algebraic Topology)]
+  - topic: Derived Categories
+    description: "A construction in homological algebra that localizes a category at a class of quasi-isomorphisms."
+    prerequisites: [Homological Algebra]
+  - topic: Category Theory
+    description: "A general theory of mathematical structures and their relations, using a directed graph metaphor."
+    prerequisites: [Abstract Algebra I (Group Theory), Set Theory]
+  - topic: Topos Theory
+    description: "A branch of category theory that generalizes point-set topology."
+    prerequisites: [Category Theory, Logic]
+  - topic: Universal Algebra
+    description: "The field of mathematics that studies algebraic structures themselves, not examples ('models') of algebraic structures."
+    prerequisites: [Abstract Algebra I (Group Theory), Logic]
+  - topic: Lattice Theory
+    description: "The study of partially ordered sets in which every two elements have a unique supremum and a unique infimum."
+    prerequisites: [Set Theory, Abstract Algebra I (Group Theory)]
+  - topic: Non-commutative Algebra
+    description: "The study of rings where multiplication is not necessarily commutative."
+    prerequisites: [Abstract Algebra II (Rings & Fields)]
+  - topic: Quasigroups and Loops
+    description: "Algebraic structures resembling groups in that division is always possible."
+    prerequisites: [Abstract Algebra I (Group Theory)]
+  - topic: Semigroup Theory
+    description: "The study of semigroups, which are algebraic structures with an associative binary operation."
+    prerequisites: [Abstract Algebra I (Group Theory)]
+  - topic: Clifford Algebras
+    description: "A type of associative algebra that generalizes the real numbers, complex numbers, and quaternions."
+    prerequisites: [Linear Algebra II (Vector Spaces), Abstract Algebra II (Rings & Fields)]
+  - topic: Jordan Algebras
+    description: "A type of non-associative algebra used in quantum mechanics and other areas of physics."
+    prerequisites: [Non-commutative Algebra]
+  - topic: K-Theory
+    description: "A tool in algebraic topology and algebraic geometry that assigns a ring to a topological space or a scheme."
+    prerequisites: [Homological Algebra, Topology II (Algebraic Topology)]
+
+  # --- Geometry & Topology Branch (EXPANDED) ---
+  - topic: Differential Topology
+    description: "The field dealing with differentiable functions on differentiable manifolds."
+    prerequisites: [Topology II (Algebraic Topology), Differential Geometry II (Manifolds)]
+  - topic: Morse Theory
+    description: "Relates the topological properties of a manifold to the critical points of a smooth function on the manifold."
+    prerequisites: [Differential Topology]
+  - topic: Symplectic Geometry
+    description: "The study of symplectic manifolds, which are differentiable manifolds equipped with a closed, nondegenerate 2-form."
+    prerequisites: [Differential Geometry II (Manifolds)]
+  - topic: Contact Geometry
+    description: "The study of contact manifolds, which are odd-dimensional manifolds with a completely non-integrable hyperplane distribution."
+    prerequisites: [Symplectic Geometry]
+  - topic: Homotopy Theory
+    description: "The study of homotopy, which is a continuous deformation between two continuous functions."
+    prerequisites: [Topology II (Algebraic Topology)]
+  - topic: Cobordism Theory
+    description: "A fundamental tool in the classification of manifolds."
+    prerequisites: [Homotopy Theory, Differential Topology]
+  - topic: Cohomology
+    description: "A general term for a sequence of abelian groups associated with a topological space, often thought of as 'dual' to homology."
+    prerequisites: [Homological Algebra]
+  - topic: de Rham Cohomology
+    description: "A tool belonging to both algebraic topology and differential topology, capable of expressing basic topological information about smooth manifolds in a form adapted to computation and the concrete representation of cocycles."
+    prerequisites: [Cohomology, Differential Geometry II (Manifolds)]
+  - topic: Fiber Bundles
+    description: "A space that is locally a product space, but globally may have a different topological structure."
+    prerequisites: [Differential Geometry II (Manifolds), Topology I (Point-Set)]
+  - topic: Vector Bundles
+    description: "A special type of fiber bundle where the fibers are vector spaces."
+    prerequisites: [Fiber Bundles]
+  - topic: Principal Bundles
+    description: "A fiber bundle with a structure group that acts freely and transitively on the fibers."
+    prerequisites: [Fiber Bundles, Lie Groups & Lie Algebras]
+  - topic: Characteristic Classes
+    description: "Invariants of a vector bundle that measure how it is 'twisted'."
+    prerequisites: [Vector Bundles, Cohomology]
+  - topic: Knot Theory
+    description: "The study of mathematical knots, which are embeddings of a circle in 3-dimensional Euclidean space."
+    prerequisites: [Topology I (Point-Set)]
+  - topic: Braid Theory
+    description: "An algebraic-topological theory studying braids."
+    prerequisites: [Knot Theory, Abstract Algebra I (Group Theory)]
+  - topic: Algebraic Topology
+    description: "A branch of mathematics that uses tools from abstract algebra to study topological spaces."
+    prerequisites: [Algebraic Geometry, Topology II (Algebraic Topology)]
+  - topic: Low-Dimensional Topology
+    description: "The branch of topology that studies manifolds of four or fewer dimensions."
+    prerequisites: [Knot Theory, Differential Topology]
+  - topic: Geometric Group Theory
+    description: "The study of finitely generated groups by exploring the connections between algebraic properties of such groups and topological and geometric properties of spaces on which these groups act."
+    prerequisites: [Abstract Algebra I (Group Theory), Topology I (Point-Set)]
+  - topic: Hyperbolic Geometry
+    description: "A non-Euclidean geometry where the parallel postulate is replaced by its negation."
+    prerequisites: [Euclidean Geometry, Differential Geometry I (Curves & Surfaces)]
+  - topic: Projective Geometry
+    description: "The study of geometric properties that are invariant under projective transformations."
+    prerequisites: [Euclidean Geometry, Linear Algebra I (Vectors & Matrices)]
+  - topic: Convex Geometry
+    description: "The branch of geometry studying convex sets, mainly in Euclidean space."
+    prerequisites: [Euclidean Geometry, Real Analysis I (Sequences & Series)]
+
+  # --- Number Theory Branch (EXPANDED) ---
+  - topic: Elementary Number Theory
+    description: "The study of integers and integer-valued functions, including primality, divisibility, and congruences."
+    prerequisites: [Intro to Proofs, Abstract Algebra I (Group Theory)]
+  - topic: Diophantine Equations
+    description: "Polynomial equations with integer coefficients for which only integer solutions are sought."
+    prerequisites: [Elementary Number Theory]
+  - topic: Diophantine Approximation
+    description: "The approximation of real numbers by rational numbers."
+    prerequisites: [Diophantine Equations, Real Analysis I (Sequences & Series)]
+  - topic: Transcendental Number Theory
+    description: "The study of transcendental numbers, which are numbers that are not roots of any non-zero polynomial equation with rational coefficients."
+    prerequisites: [Diophantine Approximation]
+  - topic: Analytic Number Theory
+    description: "A branch of number theory that uses methods from mathematical analysis to solve problems about the integers."
+    prerequisites: [Elementary Number Theory, Complex Analysis II (Residue Theorem)]
+  - topic: Prime Number Theorem
+    description: "A theorem that describes the asymptotic distribution of the prime numbers among the positive integers."
+    prerequisites: [Analytic Number Theory]
+  - topic: Riemann Hypothesis
+    description: "A conjecture that the Riemann zeta function has its zeros only at the negative even integers and complex numbers with real part 1/2."
+    prerequisites: [Analytic Number Theory]
+  - topic: Sieve Theory
+    description: "A set of general techniques in number theory, designed to count, or more realistically to estimate the size of, sifted sets of integers."
+    prerequisites: [Analytic Number Theory]
+  - topic: Algebraic Number Theory
+    description: "A branch of number theory that uses the techniques of abstract algebra to study the integers, rational numbers, and their generalizations."
+    prerequisites: [Elementary Number Theory, Galois Theory]
+  - topic: p-adic Analysis
+    description: "A branch of number theory that deals with the analysis of functions of p-adic numbers."
+    prerequisites: [Algebraic Number Theory, Real Analysis I (Sequences & Series)]
+  - topic: Class Field Theory
+    description: "A branch of algebraic number theory that studies abelian extensions of number fields."
+    prerequisites: [Algebraic Number Theory]
+  - topic: Iwasawa Theory
+    description: "The study of objects of arithmetic interest over infinite towers of number fields."
+    prerequisites: [Class Field Theory]
+  - topic: Langlands Program
+    description: "A web of far-reaching and influential conjectures about connections between number theory and geometry."
+    prerequisites: [Class Field Theory, Representation Theory, Modular Forms]
+  - topic: Elliptic Curves
+    description: "A smooth, projective algebraic curve of genus one, on which there is a specified point O."
+    prerequisites: [Analytic Number Theory, Algebraic Number Theory, Algebraic Geometry]
+  - topic: Modular Forms
+    description: "A complex analytic function on the upper half-plane satisfying a certain kind of functional equation and growth condition."
+    prerequisites: [Elliptic Curves, Complex Analysis II (Residue Theorem)]
+  - topic: Arithmetic Geometry
+    description: "The application of techniques from algebraic geometry to problems in number theory."
+    prerequisites: [Algebraic Number Theory, Algebraic Geometry]
+
+  # --- Logic & Foundations Branch (EXPANDED) ---
+  - topic: Model Theory
+    description: "The study of the relationship between formal theories (a collection of sentences in a formal language) and their models (structures in which the sentences are true)."
+    prerequisites: [Logic, Set Theory]
+  - topic: Stability Theory
+    description: "A branch of model theory that classifies theories by the number of types they have."
+    prerequisites: [Model Theory]
+  - topic: Computability Theory
+    description: "The branch of mathematical logic and computer science that originated in the 1930s with the study of computable functions and Turing degrees."
+    prerequisites: [Logic]
+  - topic: Turing Machines
+    description: "A mathematical model of computation that defines an abstract machine which manipulates symbols on a strip of tape according to a table of rules."
+    prerequisites: [Computability Theory]
+  - topic: Lambda Calculus
+    description: "A formal system in mathematical logic for expressing computation based on function abstraction and application using variable binding and substitution."
+    prerequisites: [Computability Theory]
+  - topic: Recursion Theory
+    description: "A branch of mathematical logic, computer science, and the theory of computation that originated in the 1930s with the study of computable functions and Turing degrees."
+    prerequisites: [Computability Theory]
+  - topic: Proof Theory
+    description: "A major branch of mathematical logic that represents proofs as formal mathematical objects, facilitating their analysis by mathematical techniques."
+    prerequisites: [Logic]
+  - topic: Type Theory
+    description: "Any of a class of formal systems, some of which can serve as alternatives to set theory as a foundation for all mathematics."
+    prerequisites: [Proof Theory, Logic]
+  - topic: Homotopy Type Theory
+    description: "A new branch of mathematics that combines aspects of several fields in a surprising way. It is based on a recently discovered connection between homotopy theory and type theory."
+    prerequisites: [Type Theory, Homotopy Theory]
+  - topic: Intuitionistic Logic
+    description: "A system of symbolic logic that differs from classical logic by rejecting the law of excluded middle."
+    prerequisites: [Proof Theory]
+  - topic: Constructive Mathematics
+    description: "Mathematics in which it is required that a proof of the existence of a mathematical object specify a method of creating the object."
+    prerequisites: [Intuitionistic Logic]
+  - topic: Axiomatic Set Theory (ZFC)
+    description: "A standard formulation of axiomatic set theory, the most common foundation of mathematics."
+    prerequisites: [Set Theory, Predicate Logic]
+  - topic: Axiom of Choice
+    description: "An axiom of set theory that states that for any collection of non-empty sets, it is possible to make a selection of exactly one object from each set."
+    prerequisites: [Axiomatic Set Theory (ZFC)]
+  - topic: Continuum Hypothesis
+    description: "A hypothesis about the possible sizes of infinite sets."
+    prerequisites: [Axiomatic Set Theory (ZFC)]
+  - topic: Forcing
+    description: "A technique for proving consistency and independence results in set theory."
+    prerequisites: [Continuum Hypothesis, Model Theory]
+  - topic: Large Cardinals
+    description: "A property of transfinite cardinal numbers that entails their being very large."
+    prerequisites: [Axiomatic Set Theory (ZFC)]
+  - topic: Gödel's Incompleteness Theorems
+    description: "Two theorems of mathematical logic that demonstrate the inherent limitations of every formal axiomatic system capable of modelling basic arithmetic."
+    prerequisites: [Logic, Computability Theory]
+
+  # --- Applied & Computational Branch (Unchanged, but benefits from deeper pure math) ---
+
+  # --- Physics & The Universe ---
+  - topic: Newtonian Mechanics
+    description: "The study of the motion of objects under the action of forces, as described by Newton's laws of motion."
+    prerequisites: [Calculus I (Limits & Derivatives), Linear Algebra I (Vectors & Matrices)]
+  - topic: Classical Mechanics
+    description: "The study of the motion of bodies based on Newton's laws of motion."
+    prerequisites: [Vector Calculus, ODEs, Newtonian Mechanics]
+  - topic: Lagrangian & Hamiltonian Mechanics
+    description: "Reformulations of classical mechanics that provide a more general and powerful framework."
+    prerequisites: [Classical Mechanics, Calculus of Variations]
+  - topic: Electromagnetism
+    description: "The branch of physics involving the study of the electromagnetic force, a type of physical interaction that occurs between electrically charged particles."
+    prerequisites: [PDEs, Vector Calculus]
+  - topic: Maxwell's Equations
+    description: "A set of coupled partial differential equations that, together with the Lorentz force law, form the foundation of classical electromagnetism."
+    prerequisites: [Electromagnetism]
+  - topic: Special Relativity
+    description: "A scientific theory regarding the relationship between space and time."
+    prerequisites: [Electromagnetism, Linear Algebra I (Vectors & Matrices)]
+  - topic: Tensor Calculus
+    description: "An extension of vector calculus to tensor fields."
+    prerequisites: [Vector Calculus, Linear Algebra II (Vector Spaces)]
+  - topic: General Relativity
+    description: "The geometric theory of gravitation published by Albert Einstein in 1915."
+    prerequisites: [Differential Geometry II (Manifolds), PDEs, Tensor Calculus, Special Relativity]
+  - topic: Einstein Field Equations
+    description: "A set of 10 equations in Albert Einstein's general theory of relativity that describe the fundamental interaction of gravitation as a result of spacetime being curved by matter and energy."
+    prerequisites: [General Relativity]
+  - topic: Quantum Mechanics I (Wave Mechanics)
+    description: "A fundamental theory in physics that provides a description of the physical properties of nature at the scale of atoms and subatomic particles."
+    prerequisites: [Functional Analysis, Banach Spaces, PDEs]
+  - topic: Schrödinger Equation
+    description: "A linear partial differential equation that describes the wave function or state function of a quantum-mechanical system."
+    prerequisites: [Quantum Mechanics I (Wave Mechanics)]
+  - topic: Quantum Mechanics II (QFT)
+    description: "A theoretical framework that combines classical field theory, special relativity, and quantum mechanics."
+    prerequisites: [Quantum Mechanics I (Wave Mechanics), Representation Theory, Special Relativity]
+  - topic: Quantum Electrodynamics (QED)
+    description: "The relativistic quantum field theory of electrodynamics."
+    prerequisites: [Quantum Mechanics II (QFT)]
+  - topic: Quantum Chromodynamics (QCD)
+    description: "The theory of the strong interaction between quarks and gluons."
+    prerequisites: [Quantum Mechanics II (QFT), Lie Groups & Lie Algebras]
+  - topic: String Theory
+    description: "A theoretical framework in which the point-like particles of particle physics are replaced by one-dimensional objects called strings."
+    prerequisites: [Quantum Mechanics II (QFT), General Relativity, Differential Geometry II (Manifolds)]
+  - topic: Statistical Mechanics
+    description: "A mathematical framework that applies statistical methods and probability theory to large assemblies of microscopic entities."
+    prerequisites: [Probability & Statistics II, Lagrangian & Hamiltonian Mechanics]
+  - topic: Fluid Dynamics
+    description: "A subdiscipline of fluid mechanics that describes the flow of fluids—liquids and gases."
+    prerequisites: [Partial Differential Equations (PDEs), Vector Calculus]
+  - topic: Signal Processing
+    description: "An electrical engineering subfield that focuses on analysing, modifying, and synthesizing signals such as sound, images, and scientific measurements."
+    prerequisites: [Harmonic Analysis, Linear Algebra II (Vector Spaces)]
+  - topic: Particle Physics
+    description: "The branch of physics that studies the nature of the particles that constitute matter and radiation."
+    prerequisites: [Lie Groups & Lie Algebras, Representation Theory, Quantum Mechanics II (QFT)]
+
+  # --- Computer Science, Deep Tech & Gaming ---
+  - topic: Computer Graphics
+    description: "A sub-field of computer science which deals with generating images with the aid of computers."
+    prerequisites: [Linear Algebra I (Vectors & Matrices), Trigonometry, Differential Geometry I (Curves & Surfaces)]
+  - topic: Ray Tracing
+    description: "A rendering technique for generating an image by tracing the path of light as pixels in an image plane and simulating the effects of its encounters with virtual objects."
+    prerequisites: [Computer Graphics]
+  - topic: Physics Engines
+    description: "Computer software that provides an approximate simulation of certain physical systems, such as rigid body dynamics, soft body dynamics, and fluid dynamics."
+    prerequisites: [Computer Graphics, Classical Mechanics, ODEs, Numerical Analysis]
+  - topic: Graph Theory
+    description: "The study of graphs, which are mathematical structures used to model pairwise relations between objects."
+    prerequisites: [Combinatorics]
+  - topic: Trees & Connectivity
+    description: "Fundamental concepts in graph theory related to connected graphs without cycles."
+    prerequisites: [Graph Theory]
+  - topic: Eulerian & Hamiltonian Paths
+    description: "Paths in a graph that visit every edge or vertex exactly once."
+    prerequisites: [Graph Theory]
+  - topic: Graph Coloring
+    description: "An assignment of labels traditionally called 'colors' to elements of a graph subject to certain constraints."
+    prerequisites: [Trees & Connectivity]
+  - topic: Planar Graphs
+    description: "Graphs that can be embedded in the plane, i.e., they can be drawn on the plane in such a way that its edges intersect only at their endpoints."
+    prerequisites: [Graph Coloring]
+  - topic: Algorithm Analysis
+    description: "The determination of the computational complexity of algorithms, that is the amount of time, storage and/or other resources necessary to execute them."
+    prerequisites: [Graph Theory, Discrete Mathematics]
+  - topic: Big O Notation
+    description: "A mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity."
+    prerequisites: [Algorithm Analysis]
+  - topic: Sorting Algorithms
+    description: "Algorithms that put elements of a list in a certain order."
+    prerequisites: [Big O Notation]
+  - topic: Dynamic Programming
+    description: "A method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions."
+    prerequisites: [Algorithm Analysis]
+  - topic: Information Theory
+    description: "A mathematical study of the quantification, storage, and communication of digital information."
+    prerequisites: [Probability & Statistics I]
+  - topic: Entropy & Mutual Information
+    description: "Key concepts in information theory that measure uncertainty and the mutual dependence between two random variables."
+    prerequisites: [Information Theory]
+  - topic: Coding Theory
+    description: "The study of the properties of codes and their respective fitness for specific applications."
+    prerequisites: [Entropy & Mutual Information, Linear Algebra I (Vectors & Matrices)]
+  - topic: Cryptography
+    description: "The practice and study of techniques for secure communication in the presence of third parties called adversaries."
+    prerequisites: [Information Theory, Elementary Number Theory]
+  - topic: Public-key Cryptography (RSA)
+    description: "A cryptographic system that uses pairs of keys: public keys which may be disseminated widely, and private keys which are known only to the owner."
+    prerequisites: [Cryptography]
+  - topic: Numerical Analysis
+    description: "The study of algorithms that use numerical approximation (as opposed to symbolic manipulations) for the problems of mathematical analysis."
+    prerequisites: [Linear Algebra II (Vector Spaces), Calculus III (Multivariable)]
+  - topic: Floating-Point Arithmetic
+    description: "Arithmetic using formulaic representation of real numbers as an approximation to support a trade-off between range and precision."
+    prerequisites: [Numerical Analysis]
+  - topic: Numerical Linear Algebra
+    description: "The study of how matrix operations can be used to create computer algorithms which efficiently and accurately provide approximate answers to questions in continuous mathematics."
+    prerequisites: [Numerical Analysis]
+  - topic: Numerical Solution of ODEs
+    description: "The use of numerical methods to find approximate solutions of ordinary differential equations."
+    prerequisites: [Floating-Point Arithmetic, ODEs]
+  - topic: Finite Element Method
+    description: "A numerical method for solving problems which are described by partial differential equations or can be formulated as functional minimization."
+    prerequisites: [Numerical Solution of ODEs, PDEs]
+  - topic: Monte Carlo Methods
+    description: "A broad class of computational algorithms that rely on repeated random sampling to obtain numerical results."
+    prerequisites: [Numerical Analysis, Probability & Statistics II]
+  - topic: Scientific Computing
+    description: "A rapidly growing multidisciplinary field that uses advanced computing capabilities to understand and solve complex problems."
+    prerequisites: [Numerical Analysis, PDEs]
+  - topic: Optimization
+    description: "The selection of a best element (with regard to some criterion) from some set of available alternatives."
+    prerequisites: [Calculus III (Multivariable), Linear Algebra II (Vector Spaces)]
+  - topic: Linear Programming
+    description: "A method to achieve the best outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements are represented by linear relationships."
+    prerequisites: [Optimization]
+  - topic: Simplex Method
+    description: "A popular algorithm for linear programming."
+    prerequisites: [Linear Programming]
+  - topic: Non-linear Programming
+    description: "The process of solving an optimization problem where some of the constraints or the objective function are nonlinear."
+    prerequisites: [Optimization]
+  - topic: Convex Optimization
+    description: "A subfield of mathematical optimization that studies the problem of minimizing convex functions over convex sets."
+    prerequisites: [Non-linear Programming]
+  - topic: Stochastic Gradient Descent
+    description: "An iterative method for optimizing an objective function with suitable smoothness properties."
+    prerequisites: [Convex Optimization]
+  - topic: Interior-Point Methods
+    description: "A certain class of algorithms that solve linear and nonlinear convex optimization problems."
+    prerequisites: [Convex Optimization]
+  - topic: Machine Learning
+    description: "The study of computer algorithms that can improve automatically through experience and by the use of data."
+    prerequisites: [Optimization, Probability & Statistics II, Linear Algebra II (Vector Spaces), Convex Optimization]
+  - topic: Bayesian Statistics
+    description: "A theory in the field of statistics based on the Bayesian interpretation of probability where probability is defined as a degree of belief in a proposition."
+    prerequisites: [Statistics]
+  - topic: Frequentist Statistics
+    description: "An interpretation of probability that defines an event's probability as the limit of its relative frequency in a large number of trials."
+    prerequisites: [Statistics]
+  - topic: Support Vector Machines (SVMs)
+    description: "A set of supervised learning models with associated learning algorithms that analyze data for classification and regression analysis."
+    prerequisites: [Machine Learning]
+  - topic: Neural Networks
+    description: "A network or circuit of neurons, or in a modern sense, an artificial neural network, composed of artificial neurons or nodes."
+    prerequisites: [Machine Learning]
+  - topic: Deep Learning
+    description: "A class of machine learning algorithms that uses multiple layers to progressively extract higher-level features from the raw input."
+    prerequisites: [Neural Networks, Stochastic Gradient Descent]
+  - topic: Convolutional Neural Networks (CNNs)
+    description: "A class of artificial neural networks, most commonly applied to analyze visual imagery."
+    prerequisites: [Deep Learning]
+  - topic: Recurrent Neural Networks (RNNs)
+    description: "A class of artificial neural networks where connections between nodes form a directed graph along a temporal sequence."
+    prerequisites: [Deep Learning]
+  - topic: Transformers (AI)
+    description: "A deep learning model that adopts the mechanism of self-attention, differentially weighting the significance of each part of the input data."
+    prerequisites: [Deep Learning]
+  - topic: Graph Neural Networks (GNNs)
+    description: "A class of artificial neural networks for processing data that can be represented as graphs."
+    prerequisites: [Deep Learning, Graph Theory]
+  - topic: Generative Adversarial Networks (GANs)
+    description: "A class of machine learning frameworks designed by Ian Goodfellow and his colleagues in 2014."
+    prerequisites: [Deep Learning]
+  - topic: Bayesian Networks
+    description: "A probabilistic graphical model that represents a set of variables and their conditional dependencies via a directed acyclic graph."
+    prerequisites: [Machine Learning, Graph Theory, Bayesian Statistics]
+  - topic: Hidden Markov Models
+    description: "A statistical Markov model in which the system being modeled is assumed to be a Markov process with unobserved (i.e. hidden) states."
+    prerequisites: [Machine Learning, Markov Chains]
+  - topic: Reinforcement Learning
+    description: "An area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward."
+    prerequisites: [Deep Learning]
+  - topic: Markov Decision Processes
+    description: "A discrete-time stochastic control process. It provides a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker."
+    prerequisites: [Reinforcement Learning, Markov Chains]
+  - topic: Q-Learning
+    description: "A model-free reinforcement learning algorithm to learn a policy telling an agent what action to take under what circumstances."
+    prerequisites: [Markov Decision Processes]
+  - topic: Control Theory
+    description: "An interdisciplinary branch of engineering and mathematics that deals with the behavior of dynamical systems with inputs, and how their behavior is modified by feedback."
+    prerequisites: [ODEs, Optimization]
+  - topic: Control Systems Engineering
+    description: "An engineering discipline that applies automatic control theory to design systems with desired behaviors in control environments."
+    prerequisites: [Control Theory]
+  - topic: Kalman Filtering
+    description: "An algorithm that uses a series of measurements observed over time, containing statistical noise and other inaccuracies, and produces estimates of unknown variables that tend to be more accurate than those based on a single measurement alone."
+    prerequisites: [Control Systems Engineering, Linear Algebra II (Vector Spaces)]
+  
+  # --- Other Branches ---
+  - topic: Game Theory
+    description: "The study of mathematical models of strategic interaction among rational decision-makers."
+    prerequisites: [Optimization, Probability & Statistics I]
+  - topic: Nash Equilibrium
+    description: "A proposed solution of a non-cooperative game involving two or more players in which each player is assumed to know the equilibrium strategies of the other players, and no player has anything to gain by changing only their own strategy."
+    prerequisites: [Game Theory]
+  - topic: Combinatorial Game Theory
+    description: "A branch of mathematics and theoretical computer science that studies sequential games with perfect information."
+    prerequisites: [Game Theory, Combinatorics]
+  - topic: Financial Mathematics
+    description: "A field of applied mathematics, concerned with mathematical modeling of financial markets."
+    prerequisites: [Stochastic Calculus (Itô Calculus), Probability & Statistics II]
+  - topic: Black-Scholes Model
+    description: "A mathematical model for the dynamics of a financial market containing derivative investment instruments."
+    prerequisites: [Financial Mathematics]
+  - topic: Options Pricing Theory
+    description: "The theory of how to price financial options."
+    prerequisites: [Financial Mathematics]
+  - topic: Mathematical Biology
+    description: "A field of research that examines the mathematical representation, treatment and modeling of biological processes, using a variety of applied mathematical techniques and tools."
+    prerequisites: [ODEs, Probability & Statistics II]
+  - topic: Population Dynamics
+    description: "The study of how and why populations change in size and structure over time."
+    prerequisites: [Mathematical Biology]
+  - topic: Bioinformatics
+    description: "An interdisciplinary field that develops methods and software tools for understanding biological data."
+    prerequisites: [Statistics, Algorithm Analysis]
+  - topic: Statistics
+    description: "The discipline that concerns the collection, organization, analysis, interpretation, and presentation of data."
+    prerequisites: [Probability & Statistics I]

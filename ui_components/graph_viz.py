@@ -13,7 +13,9 @@ def draw_graph(G, highlight_info=None):
             {
                 'direct_matches': [list of node IDs],
                 'graph_related': [list of node IDs],
-                'target_topic': node_id (optional)
+                'target_topic': node_id (optional),
+                'known_topics': [list of node IDs] (optional),
+                'learning_path': [list of node IDs] (optional)
             }
     """
     net = Network(height="500px", width="100%", bgcolor="#222222", font_color="white")
@@ -22,11 +24,15 @@ def draw_graph(G, highlight_info=None):
     direct_matches = set()
     graph_related = set()
     target_topic = None
+    known_topics = set()
+    learning_path = set()
     
     if highlight_info:
         direct_matches = set(highlight_info.get('direct_matches', []))
         graph_related = set(highlight_info.get('graph_related', []))
         target_topic = highlight_info.get('target_topic')
+        known_topics = set(highlight_info.get('known_topics', []))
+        learning_path = set(highlight_info.get('learning_path', []))
     
     # Add nodes with styling and highlighting
     for node_id, node_data in G.nodes(data=True):
@@ -60,7 +66,7 @@ def draw_graph(G, highlight_info=None):
         if weight > 0:
             tooltip_parts.append(f"Weight: {weight:.3f}")
         
-        # Apply highlighting styles
+        # Apply highlighting styles (priority order: target > learning path > known > direct matches > graph related)
         if node_id == target_topic:
             # Target topic - special gold highlighting
             node_color = '#FFD700'  # Gold
@@ -69,6 +75,24 @@ def draw_graph(G, highlight_info=None):
             node_size = 20
             font_size = 14
             tooltip_parts.append("🎯 TARGET TOPIC")
+            
+        elif node_id in learning_path:
+            # Learning path - bright purple highlighting
+            node_color = '#9932CC'  # Dark orchid
+            border_color = '#8B008B'  # Dark magenta
+            border_width = 3
+            node_size = 16
+            font_size = 13
+            tooltip_parts.append("🛤️ LEARNING PATH - Recommended step in your journey")
+            
+        elif node_id in known_topics:
+            # Known topics - bright blue highlighting
+            node_color = '#1E90FF'  # Dodger blue
+            border_color = '#0000CD'  # Medium blue
+            border_width = 3
+            node_size = 14
+            font_size = 13
+            tooltip_parts.append("✅ KNOWN TOPIC - You already know this")
             
         elif node_id in direct_matches:
             # Direct matches - bright green highlighting

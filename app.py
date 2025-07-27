@@ -1,11 +1,12 @@
 import streamlit as st
 from utils.graph_loader import load_graph, load_excerpts, load_metas
 from utils.hf_llm import (
-    conduct_graph_based_assessment, 
-    conduct_semantic_assessment,
-    process_assessment_answers, 
+    conduct_semantic_assessment, 
+    generate_math_problems, 
+    assess_student_answer, 
     generate_learning_roadmap,
-    generate_enhanced_roadmap
+    extract_wikipedia_categories,
+    conduct_slider_based_assessment
 )
 from utils.retrieval import build_index, retrieve
 from ui_components.graph_viz import draw_graph
@@ -16,445 +17,371 @@ st.set_page_config(layout="wide")
 st.title("📚 Math Learning Navigator")
 st.caption("🤖 AI-Powered Graph-Based Math Assessment & Learning Roadmaps")
 
-# Initialize session state
+# Initialize session state variables
+if 'topics_found' not in st.session_state:
+    st.session_state.topics_found = False
+if 'categories_loaded' not in st.session_state:
+    st.session_state.categories_loaded = False
+if 'knowledge_assessed' not in st.session_state:
+    st.session_state.knowledge_assessed = False
+if 'learning_path_generated' not in st.session_state:
+    st.session_state.learning_path_generated = False
 if 'assessment_data' not in st.session_state:
     st.session_state.assessment_data = None
-if 'problems_generated' not in st.session_state:
-    st.session_state.problems_generated = False
+if 'wikipedia_categories' not in st.session_state:
+    st.session_state.wikipedia_categories = []
+if 'category_knowledge' not in st.session_state:
+    st.session_state.category_knowledge = {}
+if 'slider_assessment_data' not in st.session_state:
+    st.session_state.slider_assessment_data = None
+# Add persistent knowledge profile
+if 'persistent_knowledge_profile' not in st.session_state:
+    st.session_state.persistent_knowledge_profile = {}
+if 'knowledge_profile_loaded' not in st.session_state:
+    st.session_state.knowledge_profile_loaded = False
 
 # Load graph + build index once
 @st.cache_data
 def load_data():
     try:
-        G = load_graph("/Users/jiawenyang/Documents/GitHub/-your_fingertips/math_firstyear-2.yaml")  # Use the new weighted graph
+        G = load_graph("/Users/jiawenyang/Documents/GitHub/-your_fingertips/graph_g.yaml")  # Use the new graph with descriptions
         
         # Load excerpts and metas if they exist
-        excerpts_dir = "data/excerpts"
-        metas_path = "data/metas.json"
+        excerpts, metas = [], []
+        try:
+            excerpts = load_excerpts("data/excerpts")
+            metas = load_metas("data/metas.json")
+        except:
+            pass  # Files don't exist, use empty lists
         
-        texts = []
-        metas = []
-        
-        if os.path.exists(excerpts_dir) and os.listdir(excerpts_dir):
-            texts = load_excerpts(excerpts_dir)
-        
-        if os.path.exists(metas_path):
-            try:
-                metas = load_metas(metas_path)
-            except:
-                metas = []
-        
-        embed_model, idx = build_index(texts)
-        return G, texts, metas, embed_model, idx
+        return G, excerpts, metas
     except Exception as e:
         st.error(f"Error loading data: {e}")
-        return None, [], [], None, None
+        st.error("Failed to load knowledge graph. Please check your data files.")
+        return None, [], []
 
-G, texts, metas, embed_model, idx = load_data()
+G, texts, metas = load_data()
 
 if G is None:
     st.error("Failed to load math knowledge graph. Please check your data files.")
     st.stop()
 
-# --- Learning Goal Input ---
-st.header("🎯 What mathematical concept do you want to learn?")
-goal = st.text_input(
-    "Describe your learning goal", 
-    placeholder="e.g., I want to understand calculus derivatives, learn about prime numbers, master linear algebra"
-)
+# Build index for retrieval (if needed)
+embed_model, idx = None, None
+try:
+    from utils.retrieval import build_index
+    embed_model, idx = build_index(texts)
+except:
+    pass  # Retrieval not needed for core functionality
+
+# Main content
+st.header("🧮 Mathematics @your_fingertips")
+st.markdown("*AI-powered personalized learning paths through mathematics*")
+
+# Step 1: Goal Input and Topic Discovery
+st.subheader("🎯 Step 1: What do you want to learn?")
 
 # Reset assessment if goal changes
 if 'previous_goal' not in st.session_state:
     st.session_state.previous_goal = ""
 
-if goal != st.session_state.previous_goal:
+# Use a form to capture Enter key presses
+with st.form(key="goal_form", clear_on_submit=False):
+    goal = st.text_input(
+        "Describe your math learning goal:",
+        placeholder="e.g., I want to understand calculus derivatives, learn linear algebra basics, master probability theory...",
+        help="Be specific about what mathematical concepts you want to learn. Press Enter or click the button to start!",
+        key="goal_input"
+    )
+    
+    # Always show the submit button
+    submitted = st.form_submit_button("🔍 Find Related Topics")
+
+# Check if goal changed and reset states
+if goal != st.session_state.previous_goal and goal:
+    # Reset all states when goal changes
+    st.session_state.topics_found = False
+    st.session_state.categories_loaded = False
+    st.session_state.knowledge_assessed = False
+    st.session_state.learning_path_generated = False
     st.session_state.assessment_data = None
-    st.session_state.problems_generated = False
+    st.session_state.wikipedia_categories = []
+    st.session_state.category_knowledge = {}
+    st.session_state.slider_assessment_data = None
     st.session_state.previous_goal = goal
 
-if goal and not st.session_state.problems_generated:
-    if st.button("🤖 Find Topics (Semantic + Graph Traversal)"):
-        with st.spinner("🤖 Analyzing with semantic similarity + graph traversal..."):
-            # Use semantic assessment with sentence transformers
-            st.session_state.assessment_data = conduct_semantic_assessment(goal, G)
-            st.session_state.problems_generated = True
-            st.rerun()
-
-if st.session_state.problems_generated and st.session_state.assessment_data:
-    assessment_data = st.session_state.assessment_data
-    
-    st.success("✅ Related topics found using semantic similarity!")
-    
-    # Show what the semantic analysis found
-    st.subheader("🤖 Semantic Analysis + Weighted Graph Traversal Results:")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.write(f"**Analysis Method:** Semantic + Weighted Graph")
-        st.write(f"**Direct Matches:** {assessment_data['intent'].get('direct_matches_found', 0)}/5")
-    with col2:
-        st.write(f"**Graph Related:** {assessment_data['intent'].get('graph_related_found', 0)}/10")
-        st.write(f"**Total Results:** {assessment_data['intent'].get('direct_matches_found', 0) + assessment_data['intent'].get('graph_related_found', 0)}/15")
-    with col3:
-        st.write(f"**Top Similarity:** {assessment_data['intent'].get('top_similarity_score', 0):.3f}")
-        st.write(f"**Similarity Threshold:** ≥{assessment_data['intent'].get('similarity_threshold', 0.3)}")
-    
-    # Display direct matches (semantic similarity > 0.3)
-    direct_matches = assessment_data.get('direct_matches', [])
-    if direct_matches:
-        st.subheader("🎯 Direct Matches (Semantic Similarity > 0.3)")
-        st.caption("Topics with high semantic similarity to your input")
-        
-        # Show similarity range for direct matches
-        debug_info = assessment_data.get('debug_info', {})
-        similarity_range = debug_info.get('direct_similarity_range', {})
-        if similarity_range:
-            st.info(f"📈 **Direct Match Range:** {similarity_range.get('highest', 0):.3f} (highest) → {similarity_range.get('lowest', 0):.3f} (lowest)")
-        
-        for i, topic in enumerate(direct_matches, 1):
-            similarity_score = topic.get('similarity_score', 0)
-            # Create a visual indicator for similarity strength
-            if similarity_score >= 0.7:
-                similarity_icon = "🟢"
-                similarity_label = "Very High"
-            elif similarity_score >= 0.5:
-                similarity_icon = "🟡"
-                similarity_label = "High"
-            elif similarity_score >= 0.3:
-                similarity_icon = "🟠"
-                similarity_label = "Medium"
-            else:
-                similarity_icon = "🔴"
-                similarity_label = "Low"
-            
-            with st.expander(f"#{i} **{topic['title']}** {similarity_icon} {similarity_score:.3f} ({similarity_label})", expanded=i<=2):
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.write(f"**ID:** `{topic['id']}`")
-                    st.write(f"**Summary:** {topic['summary']}")
-                    st.write(f"**Difficulty:** {topic['difficulty'].title()}")
-                with col2:
-                    st.write(f"**Semantic Similarity:** {similarity_score:.3f}")
-                    st.write(f"**Topic Weight:** {topic.get('weight', 0.0):.3f}")
-                
-                # Show the full text that was used for matching
-                if 'text' in topic:
-                    with st.expander("🔍 Text used for similarity matching", expanded=False):
-                        st.code(topic['text'])
-    
-    # Display graph-related topics (weighted and prioritized)
-    graph_related = assessment_data.get('graph_related', [])
-    if graph_related:
-        st.subheader("🗺️ Graph-Related Topics (Weighted & Quality-Prioritized)")
-        st.caption("Topics discovered through graph traversal, prioritized by weight + shortest path + similarity path quality")
-        
-        # Show graph analysis summary with weight information
-        graph_analysis = debug_info.get('graph_analysis', {})
-        if graph_analysis:
-            weight_range = graph_analysis.get('weight_range', {})
-            st.info(f"🔗 **Graph Analysis:** Selected top 10 from candidates, prioritized by weight + path length + similarity quality. Weight range: {weight_range.get('lowest', 0):.3f} → {weight_range.get('highest', 0):.3f}")
-        
-        for i, topic in enumerate(graph_related, 1):
-            connection_count = topic.get('connection_count', 0)
-            topic_weight = topic.get('weight', 0.0)
-            min_distance = topic.get('min_distance', 2)
-            max_path_quality = topic.get('max_path_quality', 0.0)
-            priority_score = topic.get('priority_score', 0.0)
-            
-            # Create visual indicator for priority (weight + distance + path quality)
-            if priority_score >= 3.0:
-                priority_icon = "🏆"
-                priority_label = "High Priority"
-            elif priority_score >= 2.5:
-                priority_icon = "🥈"
-                priority_label = "Medium Priority"
-            else:
-                priority_icon = "🥉"
-                priority_label = "Lower Priority"
-            
-            # Distance indicator
-            distance_icon = "🔗" if min_distance == 1 else "🔗🔗"
-            
-            # Path quality indicator
-            if max_path_quality >= 0.7:
-                quality_icon = "⭐⭐⭐"
-            elif max_path_quality >= 0.5:
-                quality_icon = "⭐⭐"
-            else:
-                quality_icon = "⭐"
-            
-            with st.expander(f"#{i} **{topic['title']}** {priority_icon} {distance_icon} {quality_icon} (Priority: {priority_score:.2f})", expanded=i<=3):
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.write(f"**ID:** `{topic['id']}`")
-                    st.write(f"**Summary:** {topic['summary']}")
-                    st.write(f"**Difficulty:** {topic['difficulty'].title()}")
-                with col2:
-                    st.write(f"**Weight:** {topic_weight:.3f}")
-                    st.write(f"**Min Distance:** {min_distance} steps")
-                    st.write(f"**Path Quality:** {max_path_quality:.3f}")
-                    st.write(f"**Priority Score:** {priority_score:.3f}")
-                
-                st.write(f"**Connected to {connection_count} direct matches via highest-quality {min_distance}-step paths**")
-                
-                # Show enhanced connection paths with quality information
-                if topic.get('connection_paths'):
-                    st.write("**Connection Paths (ranked by quality):**")
-                    for path in topic['connection_paths']:
-                        if path.startswith("🏆 BEST:"):
-                            st.success(f"  {path}")
-                        else:
-                            st.write(f"  • {path}")
-    
-    # Show warning if no results
-    if not direct_matches and not graph_related:
-        st.warning("No matching topics found above the 0.3 similarity threshold. Try rephrasing your goal with different mathematical terms.")
-    
-    # Skip problem generation for debugging
-    if assessment_data.get('problems'):
-        st.subheader("🧮 Mathematical Assessment Problems")
-        st.caption("Problem generation temporarily disabled for debugging")
-        st.info("🔧 **Debug Mode:** Skipping problem generation to focus on semantic topic matching")
-    else:
-        st.info("🔧 **Debug Mode:** Problem generation skipped - focusing on semantic similarity analysis")
-        st.write("---")
-    
-    if st.button("📊 Submit Answers & Generate Learning Roadmap"):
-        # Check if answers are provided
-        unanswered = [topic for topic, answer in answers.items() if not answer.strip()]
-        if unanswered:
-            st.warning(f"Please provide answers for: {', '.join(unanswered)}")
-        else:
-            with st.spinner("🤖 AI is assessing your answers and determining your knowledge level..."):
-                # Process answers and determine known/unknown topics
-                assessment_results = process_assessment_answers(problems, answers)
-                
-                st.success("✅ Assessment completed!")
-                
-                # Show assessment results
-                st.header("📊 Your Assessment Results")
-                
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.subheader("✅ Topics You Know")
-                    if assessment_results['known_topics']:
-                        for topic in assessment_results['known_topics']:
-                            result = assessment_results['assessment_results'][topic]
-                            st.write(f"• **{topic}**: {result['assessment']}")
-                            st.caption(f"   {result['explanation']}")
-                    else:
-                        st.write("No topics identified as fully understood")
-                
-                with col2:
-                    st.subheader("📚 Topics to Learn")
-                    if assessment_results['unknown_topics']:
-                        for topic in assessment_results['unknown_topics']:
-                            result = assessment_results['assessment_results'][topic]
-                            st.write(f"• **{topic}**: {result['assessment']}")
-                            st.caption(f"   {result['explanation']}")
-                    else:
-                        st.write("All assessed topics understood!")
-                
-                # Generate personalized learning roadmap using graph pathfinding + LLM
-                with st.spinner("🗺️ AI is creating your personalized learning roadmap using graph pathfinding..."):
-                    roadmap_result = generate_enhanced_roadmap(
-                        G,  # Pass the graph for pathfinding
-                        assessment_data['intent'],
-                        assessment_results['assessment_results'],
-                        assessment_results['known_topics'],
-                        assessment_results['unknown_topics']
-                    )
-                    
-                    # Extract roadmap and metadata
-                    roadmap = roadmap_result.get('roadmap', roadmap_result) if isinstance(roadmap_result, dict) else roadmap_result
-                    roadmap_metadata = roadmap_result.get('metadata', {}) if isinstance(roadmap_result, dict) else {}
-                
-                # Display the learning roadmap
-                st.header("🗺️ Your Personalized Learning Roadmap")
-                st.subheader(f"From your current knowledge to: {assessment_data['target_topic']}")
-                
-                # Show pathfinding metadata if available
-                if roadmap_metadata:
-                    col1, col2, col3 = st.columns(3)
-                    with col1:
-                        st.metric("📊 Total Steps", roadmap_metadata.get('total_steps', 'N/A'))
-                    with col2:
-                        st.metric("🎯 Starting From", roadmap_metadata.get('starting_from', 'N/A'))
-                    with col3:
-                        st.metric("🔄 Alternative Paths", roadmap_metadata.get('alternative_paths', 'N/A'))
-                    
-                    if roadmap_metadata.get('path_summary'):
-                        st.info(f"🛤️ **Optimal Learning Path**: {roadmap_metadata['path_summary']}")
-                
-                st.caption("🤖 This roadmap uses graph pathfinding to find the shortest learning path combined with AI-generated activities")
-                
-                if roadmap:
-                    for step, activities in roadmap.items():
-                        with st.expander(f"**{step}**", expanded=True):
-                            for activity in activities:
-                                st.write(f"• {activity}")
-                            
-                            # Add progress tracker
-                            if st.checkbox(f"Mark {step} as completed", key=f"step_{step}"):
-                                st.success(f"✅ {step} completed!")
-                else:
-                    st.warning("Could not generate roadmap. Please try with a different learning goal.")
-                
-                # Show pathfinding details
-                if isinstance(roadmap_result, dict) and 'pathfinding_info' in roadmap_result:
-                    pathfinding_info = roadmap_result['pathfinding_info']
-                    if 'all_paths' in pathfinding_info:
-                        with st.expander("🗺️ All Possible Learning Paths", expanded=False):
-                            st.caption("Alternative routes from your known topics to the target")
-                            for path_info in pathfinding_info['all_paths']:
-                                if path_info['length'] is not None:
-                                    st.write(f"**{path_info['start']}** → **{path_info['target']}** ({path_info['length']} steps)")
-                                    st.code(path_info['path'])
-                                else:
-                                    st.write(f"**{path_info['start']}** → **{path_info['target']}**: No path available")
-                
-                # Show detailed assessment breakdown
-                with st.expander("🔍 Detailed Assessment Breakdown", expanded=False):
-                    st.caption("See how the AI assessed each of your responses")
-                    
-                    # Add option to show correct solutions
-                    show_solutions = st.checkbox("🔓 Show correct solutions (for learning)", key="show_solutions")
-                    
-                    for i, problem_data in enumerate(problems):
-                        topic = problem_data['topic']
-                        problem_text = problem_data['problem']
-                        user_answer = answers[topic]
-                        result = assessment_results['assessment_results'][topic]
-                        
-                        st.write(f"**Problem {i+1}: {topic}**")
-                        st.write(f"*Problem:* {problem_text}")
-                        st.write(f"*Your Answer:* {user_answer}")
-                        st.write(f"*AI Assessment:* {result['assessment']}")
-                        st.write(f"*Explanation:* {result['explanation']}")
-                        
-                        # Show correct solution if requested and available
-                        if show_solutions and 'correct_solution' in result:
-                            with st.expander(f"📖 Correct Solution for {topic}", expanded=False):
-                                st.write(result['correct_solution'])
-                                st.caption("Use this to understand the correct approach and learn from any mistakes.")
-                        
-                        st.write("---")
-                
-                # Get learning resources
-                st.header("📚 Personalized Learning Resources")
-                st.caption("AI-generated resources tailored to your specific assessment results")
-                
-                # Generate personalized resources based on assessment
-                from utils.scraper import generate_personalized_resources
-                
-                personalized_resources = generate_personalized_resources(
-                    target_topic=assessment_data['target_topic'],
-                    assessment_results=assessment_results['assessment_results'],
-                    known_topics=assessment_results['known_topics'],
-                    unknown_topics=assessment_results['unknown_topics'],
-                    level=assessment_data['intent'].get('current_level', 'beginner')
-                )
-                
-                # Display personalized resources
-                for i, resource in enumerate(personalized_resources, 1):
-                    with st.expander(f"📖 Resource {i}: {resource['title']}", expanded=False):
-                        st.write(f"**Type:** {resource['type']}")
-                        st.write(f"**Description:** {resource['description']}")
-                        st.write(f"**Time Needed:** {resource['time']}")
-                        if resource.get('personalized', False):
-                            st.success("🎯 Personalized for your specific needs")
-                        
-                        # Add a "completed" checkbox for tracking
-                        if st.checkbox(f"Mark as completed", key=f"resource_{i}"):
-                            st.success("✅ Resource completed!")
-                
-                # Add step-specific resources for each roadmap step
-                st.subheader("🎯 Step-by-Step Learning Resources")
-                st.caption("Specific resources for each step in your learning roadmap")
-                
-                from utils.scraper import generate_step_specific_resources
-                
-                for step_name, step_details in roadmap.items():
-                    if len(step_details) >= 3:  # Has topic, activity, skill format
-                        # Extract topic, activity, skill from formatted strings
-                        topic_line = step_details[0].replace("📚 **Topic**: ", "")
-                        activity_line = step_details[1].replace("🎯 **Activity**: ", "")
-                        skill_line = step_details[2].replace("💡 **Skill**: ", "")
-                        
-                        with st.expander(f"📚 {step_name} Resources", expanded=False):
-                            st.write(f"**Focus:** {topic_line}")
-                            st.write(f"**Activity:** {activity_line}")
-                            st.write(f"**Skill Goal:** {skill_line}")
-                            
-                            # Generate step-specific resources
-                            step_resources = generate_step_specific_resources(
-                                step_topic=topic_line,
-                                step_activity=activity_line,
-                                step_skill=skill_line,
-                                level=assessment_data['intent'].get('current_level', 'beginner')
-                            )
-                            
-                            st.write("**Recommended Resources:**")
-                            for j, step_resource in enumerate(step_resources, 1):
-                                st.write(f"{j}. **{step_resource['type']}**: {step_resource['title']}")
-                                if step_resource.get('supports_activity'):
-                                    st.write(f"   - *Supports Activity*: {step_resource['supports_activity']}")
-                                if step_resource.get('develops_skill'):
-                                    st.write(f"   - *Develops Skill*: {step_resource['develops_skill']}")
-                                st.write(f"   - *Time*: {step_resource['time']}")
-                                st.write("")
-
-    # Add a reset button
-    if st.button("🔄 Start New Assessment"):
-        st.session_state.assessment_data = None
-        st.session_state.problems_generated = False
-        st.session_state.previous_goal = ""
+# Execute analysis when form is submitted (Enter or button click)
+if submitted and goal:
+    with st.spinner("🤖 Analyzing with semantic similarity + graph traversal..."):
+        st.session_state.assessment_data = conduct_semantic_assessment(goal, G)
+        st.session_state.topics_found = True
         st.rerun()
 
-# --- Math Knowledge Graph ---
-st.header("🗺️ Comprehensive Math Knowledge Graph")
-st.write("Explore the relationships between mathematical concepts:")
-st.caption(f"📊 **Graph Statistics:** {G.number_of_nodes()} concepts, {G.number_of_edges()} relationships")
-
-# Show legend if highlighting is active
-if st.session_state.assessment_data:
-    with st.expander("🎨 Graph Legend (Node Highlighting)", expanded=False):
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.markdown("🟡 **Target Topic** - Your main learning goal")
-            st.markdown("🟢 **Direct Matches** - High semantic similarity (>0.3)")
-        with col2:
-            st.markdown("🟠 **Graph Related** - Connected via graph traversal")
-            st.markdown("⚪ **Other Topics** - Standard graph nodes")
-        with col3:
-            st.markdown("**Node Size** - Larger = more important")
-            st.markdown("**White Edges** - Connect to matched topics")
-
-# Highlight target topic if found
-if st.session_state.assessment_data and st.session_state.assessment_data['target_topic']:
-    st.info(f"🎯 **Your Target Topic:** {st.session_state.assessment_data['target_topic']}")
-    if st.session_state.assessment_data['related_topics']:
-        topic_titles = [topic['title'] if isinstance(topic, dict) else str(topic) for topic in st.session_state.assessment_data['related_topics'][:3]]
-        st.info(f"🔗 **Related Topics:** {', '.join(topic_titles)}...")
-
-try:
-    # Prepare highlighting information if assessment data is available
-    highlight_info = None
-    if st.session_state.assessment_data:
-        direct_match_ids = [topic['id'] for topic in st.session_state.assessment_data.get('direct_matches', [])]
-        graph_related_ids = [topic['id'] for topic in st.session_state.assessment_data.get('graph_related', [])]
-        target_topic_id = st.session_state.assessment_data.get('target_topic')
-        
-        highlight_info = {
-            'direct_matches': direct_match_ids,
-            'graph_related': graph_related_ids,
-            'target_topic': target_topic_id
-        }
+# Display found topics
+if st.session_state.topics_found and st.session_state.assessment_data:
+    st.success("✅ Found related topics!")
     
-    graph_html = draw_graph(G, highlight_info)
-    st.components.v1.html(graph_html, height=600)
-except Exception as e:
-    st.error(f"Error displaying graph: {e}")
-    st.write("Graph visualization temporarily unavailable.")
+    # Show direct matches
+    direct_matches = st.session_state.assessment_data.get('direct_matches', [])
+    if direct_matches:
+        st.subheader("🎯 Direct Matches (Semantic Similarity)")
+        for i, topic in enumerate(direct_matches):
+            with st.expander(f"{i+1}. **{topic['title']}** (similarity: {topic['similarity_score']:.3f})"):
+                st.write(f"**Summary:** {topic['summary']}")
+                st.write(f"**Weight:** {topic['weight']:.3f} | **Difficulty:** {topic['difficulty']}")
+    
+    # Show graph-related topics
+    graph_related = st.session_state.assessment_data.get('graph_related', [])
+    if graph_related:
+        st.subheader("🗺️ Graph-Related Topics (Connected via Knowledge Graph)")
+        for i, topic in enumerate(graph_related[:5]):  # Show top 5
+            with st.expander(f"{i+1}. **{topic['title']}** (priority: {topic['priority_score']:.2f})"):
+                st.write(f"**Summary:** {topic['summary']}")
+                st.write(f"**Weight:** {topic['weight']:.3f} | **Distance:** {topic['min_distance']} steps")
+                st.write(f"**Path Quality:** {topic['max_path_quality']:.3f}")
+                if topic.get('connection_paths'):
+                    st.write("**Connection Paths:**")
+                    for path in topic['connection_paths'][:2]:  # Show top 2 paths
+                        st.write(f"  • {path}")
+    
+    # Step 2: Load Wikipedia Categories for Self-Assessment
+    if not st.session_state.categories_loaded:
+        if st.button("📚 Load Foundational Topics for Self-Assessment"):
+            with st.spinner("📚 Loading foundational math topics..."):
+                st.session_state.wikipedia_categories = extract_wikipedia_categories(G)
+                # Initialize with persistent profile if available
+                if st.session_state.persistent_knowledge_profile:
+                    st.session_state.category_knowledge = st.session_state.persistent_knowledge_profile.copy()
+                    st.info("🧠 Using your saved knowledge profile as starting point!")
+                st.session_state.categories_loaded = True
+                st.rerun()
+
+# Step 3: Self-Assessment with Sliders
+if st.session_state.categories_loaded and st.session_state.wikipedia_categories:
+    st.subheader("📊 Step 2: Assess Your Current Knowledge")
+    st.markdown("Select your knowledge level for each foundational math topic:")
+    
+    # Show if using persistent profile
+    if st.session_state.persistent_knowledge_profile:
+        st.success("🧠 **Using your saved knowledge profile!** You can adjust these values below or update your permanent profile at the bottom of the page.")
+    
+    # Create legend for knowledge levels
+    st.markdown("""
+    **Knowledge Levels:**
+    - **0 - No Knowledge**: I don't know this area at all
+    - **1 - Basic**: I know some fundamentals (1 graph layer)
+    - **2 - Good**: I understand most concepts (2 graph layers)  
+    - **3 - Expert**: I have deep knowledge (3 graph layers)
+    """)
+    
+    st.info(f"📋 **Assessment Topics**: {len(st.session_state.wikipedia_categories)} foundational math topics (those with 0-1 prerequisites)")
+    
+    # Quick options for temporary assessment
+    st.markdown("**Quick Options:**")
+    temp_col1, temp_col2, temp_col3 = st.columns([2, 1, 1])
+    with temp_col2:
+        if st.button("🎲 Random Levels"):
+            import random
+            for category in st.session_state.wikipedia_categories:
+                # Weighted random: more likely to have lower knowledge levels
+                random_level = random.choices([0, 1, 2, 3], weights=[40, 30, 20, 10])[0]
+                st.session_state.category_knowledge[category['id']] = random_level
+            st.success("🎲 Random levels generated!")
+            st.rerun()
+    with temp_col3:
+        if st.button("🗑️ Clear All"):
+            for category in st.session_state.wikipedia_categories:
+                st.session_state.category_knowledge[category['id']] = 0
+            st.success("🗑️ All levels cleared!")
+            st.rerun()
+    
+    # Create sliders for each Wikipedia category
+    cols = st.columns(2)  # Two columns for better layout
+    
+    for i, category in enumerate(st.session_state.wikipedia_categories):
+        col = cols[i % 2]  # Alternate between columns
+        
+        with col:
+            # Create discrete level selector with category info
+            slider_key = f"knowledge_{category['id']}"
+            
+            # Options for the select slider
+            options = [0, 1, 2, 3]
+            option_labels = [
+                "0 - No Knowledge",
+                "1 - Basic", 
+                "2 - Good",
+                "3 - Expert"
+            ]
+            
+            # Get current value from category_knowledge (which may be initialized from persistent profile)
+            current_value = st.session_state.category_knowledge.get(category['id'], 0)
+            current_index = options.index(current_value) if current_value in options else 0
+            
+            knowledge_level = st.select_slider(
+                f"**{category['title']}**",
+                options=options,
+                format_func=lambda x: option_labels[x],
+                value=current_value,
+                key=slider_key,
+                help=f"Prerequisites: {category['prerequisite_count']} topics\n\n{category.get('summary', 'Mathematical topic')}\n\nEach level includes more graph connections:\n• Level 1: Direct connections\n• Level 2: 2-step connections\n• Level 3: 3-step connections"
+            )
+            st.session_state.category_knowledge[category['id']] = knowledge_level
+    
+    # Generate Learning Path Button
+    if not st.session_state.knowledge_assessed:
+        st.markdown("---")
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            if st.button("🛤️ Generate My Learning Path"):
+                with st.spinner("🛤️ Generating personalized learning path..."):
+                    st.session_state.slider_assessment_data = conduct_slider_based_assessment(
+                        goal, G, st.session_state.category_knowledge
+                    )
+                    st.session_state.knowledge_assessed = True
+                    st.session_state.learning_path_generated = True
+                    st.rerun()
+        with col2:
+            if st.button("💾 Save to Profile"):
+                st.session_state.persistent_knowledge_profile = st.session_state.category_knowledge.copy()
+                st.success("✅ Saved to your knowledge profile!")
+                st.rerun()
+
+# Step 4: Display Learning Path
+if st.session_state.learning_path_generated and st.session_state.slider_assessment_data:
+    st.subheader("🛤️ Your Personalized Learning Path")
+    
+    learning_path = st.session_state.slider_assessment_data.get('learning_path', {})
+    knowledge_mapping = st.session_state.slider_assessment_data.get('knowledge_mapping', {})
+    
+    # Show knowledge summary
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        known_count = len(knowledge_mapping.get('known_nodes', []))
+        st.metric("🟢 Known Topics", known_count)
+    with col2:
+        partial_count = len(knowledge_mapping.get('partially_known_nodes', []))
+        st.metric("🟡 Partially Known", partial_count)
+    with col3:
+        total_starting = len(st.session_state.slider_assessment_data.get('all_starting_nodes', []))
+        st.metric("🚀 Starting Points", total_starting)
+    
+    # Show explanation of starting points
+    if total_starting > 0:
+        if known_count > 0 and partial_count > 0:
+            st.info(f"🚀 **Path Generation**: Using {known_count} known + {partial_count} partially known = {total_starting} total starting points")
+        elif known_count > 0:
+            st.info(f"🚀 **Path Generation**: Using {known_count} known topics as starting points")
+        elif partial_count > 0:
+            st.info(f"🚀 **Path Generation**: Using {partial_count} partially known topics as starting points")
+    else:
+        st.info("🚀 **Path Generation**: Will use foundational topics (0 prerequisites) as starting points")
+    
+    # Display path message
+    st.info(learning_path.get('message', 'Learning path generated!'))
+    
+    # Display learning path steps
+    path_steps = learning_path.get('path', [])
+    if path_steps:
+        st.markdown("### 📋 Comprehensive Learning Path:")
+        st.caption("This path covers ALL prerequisites needed to reach your target topic")
+        
+        for i, step in enumerate(path_steps):
+            target_indicator = "🎯 " if step.get('is_target') else ""
+            prerequisite_level = step.get('prerequisite_level', 0)
+            level_badge = f"L{prerequisite_level}" if prerequisite_level > 0 else "Foundation"
+            
+            with st.expander(f"**Step {step['step_number']}: {target_indicator}{step['title']}** `{level_badge}`"):
+                st.write(f"**Summary:** {step['summary']}")
+                st.write(f"**Weight:** {step['weight']:.3f} | **Difficulty:** {step['difficulty']}")
+                
+                if prerequisite_level > 0:
+                    st.info(f"📊 **Prerequisite Level:** {prerequisite_level} (requires {prerequisite_level} layers of prior knowledge)")
+                else:
+                    st.info("🏁 **Foundation Topic** - No prerequisites required")
+                
+                if step.get('is_target'):
+                    st.success("🎯 This is your target topic!")
+        
+        # Show comprehensive path summary
+        path_details = learning_path.get('path_details', {})
+        if path_details and path_details.get('path_type') == 'comprehensive_prerequisites':
+            st.markdown("### 📊 Learning Path Summary:")
+            
+            summary_col1, summary_col2, summary_col3 = st.columns(3)
+            with summary_col1:
+                st.metric("📚 Total Steps", path_details.get('total_steps', 0))
+            with summary_col2:
+                st.metric("✅ Prerequisites Covered", path_details.get('prerequisites_covered', 0))
+            with summary_col3:
+                st.metric("📈 Max Prerequisite Level", path_details.get('max_prerequisite_level', 0))
+            
+            already_known = path_details.get('already_known', 0)
+            if already_known > 0:
+                st.success(f"🎉 Great news! You already know {already_known} prerequisite topics, so they're not included in this path.")
+        
+        # Show path details - REMOVED Path Analysis section
+
+# Graph Visualization (moved to the end)
+st.subheader("🌐 Knowledge Graph Visualization")
+
+# Prepare highlighting information
+highlight_info = None
+if st.session_state.slider_assessment_data:
+    # Use slider-based assessment data for highlighting
+    direct_match_ids = [topic['id'] for topic in st.session_state.slider_assessment_data.get('direct_matches', [])]
+    graph_related_ids = [topic['id'] for topic in st.session_state.slider_assessment_data.get('graph_related', [])]
+    target_topic_id = st.session_state.slider_assessment_data.get('target_topic')
+    
+    # Extract known topics and learning path
+    knowledge_mapping = st.session_state.slider_assessment_data.get('knowledge_mapping', {})
+    # Use combined starting nodes (known + partially known) for highlighting
+    all_starting_nodes = st.session_state.slider_assessment_data.get('all_starting_nodes', [])
+    if not all_starting_nodes:
+        # Fallback to just known nodes if all_starting_nodes not available
+        all_starting_nodes = knowledge_mapping.get('known_nodes', [])
+    
+    learning_path = st.session_state.slider_assessment_data.get('learning_path', {})
+    learning_path_ids = [step['id'] for step in learning_path.get('path', [])]
+    
+    highlight_info = {
+        'direct_matches': direct_match_ids,
+        'graph_related': graph_related_ids,
+        'target_topic': target_topic_id,
+        'known_topics': all_starting_nodes,  # Use combined starting nodes
+        'learning_path': learning_path_ids
+    }
+elif st.session_state.assessment_data:
+    # Fallback to semantic assessment data
+    direct_match_ids = [topic['id'] for topic in st.session_state.assessment_data.get('direct_matches', [])]
+    graph_related_ids = [topic['id'] for topic in st.session_state.assessment_data.get('graph_related', [])]
+    target_topic_id = st.session_state.assessment_data.get('target_topic')
+    
+    highlight_info = {
+        'direct_matches': direct_match_ids,
+        'graph_related': graph_related_ids,
+        'target_topic': target_topic_id,
+        'known_topics': [],  # No knowledge mapping in basic semantic assessment
+        'learning_path': []  # No learning path in basic semantic assessment
+    }
+
+graph_html = draw_graph(G, highlight_info)
+st.components.v1.html(graph_html, height=600)
+
+# Legend for graph colors
+if highlight_info:
+    st.markdown("### 🎨 Graph Legend:")
+    legend_col1, legend_col2, legend_col3 = st.columns(3)
+    with legend_col1:
+        st.markdown("🟡 **Target Topic** - Your main learning goal")
+        st.markdown("🟢 **Direct Matches** - Semantically similar topics")
+    with legend_col2:
+        st.markdown("🔴 **Graph Related** - Connected topics in knowledge graph")
+        st.markdown("🔵 **Known Topics** - Topics you already know")
+    with legend_col3:
+        st.markdown("🟣 **Learning Path** - Recommended learning sequence")
+        if highlight_info.get('learning_path'):
+            st.markdown(f"*Path has {len(highlight_info['learning_path'])} steps*")
 
 # --- Sidebar info ---
 st.sidebar.header("ℹ️ About Math Navigator")
@@ -492,3 +419,164 @@ st.sidebar.write("📝 Explain your reasoning")
 st.sidebar.write("❓ Don't be afraid to say 'I don't know'")
 st.sidebar.write("🔄 Practice problems regularly")
 st.sidebar.write("📈 Build from what you know")
+
+# === PERSISTENT KNOWLEDGE ASSESSMENT SECTION (Bottom of Page) ===
+st.markdown("---")
+st.header("🧠 Your Personal Knowledge Profile")
+st.markdown("*Set your knowledge levels once and they'll be remembered for all searches*")
+
+# Load foundational topics for persistent assessment
+if not st.session_state.knowledge_profile_loaded:
+    with st.spinner("Loading foundational topics for knowledge profile..."):
+        foundational_topics = extract_wikipedia_categories(G)
+        st.session_state.foundational_topics = foundational_topics
+        st.session_state.knowledge_profile_loaded = True
+
+# Display persistent knowledge assessment
+if st.session_state.knowledge_profile_loaded:
+    st.subheader("📊 Set Your Knowledge Levels")
+    st.markdown("These settings will be remembered and used for all your learning path generations.")
+    
+    # Create legend for knowledge levels
+    with st.expander("📖 Knowledge Level Guide", expanded=False):
+        st.markdown("""
+        **Knowledge Levels:**
+        - **0 - No Knowledge**: I don't know this area at all
+        - **1 - Basic**: I know some fundamentals (1 graph layer)
+        - **2 - Good**: I understand most concepts (2 graph layers)  
+        - **3 - Expert**: I have deep knowledge (3 graph layers)
+        
+        **How it works**: Each level includes topics at different distances in the knowledge graph:
+        - Level 1: Direct connections to the topic
+        - Level 2: Topics 2 steps away 
+        - Level 3: Topics 3 steps away
+        """)
+    
+    st.info(f"📋 **Profile Topics**: {len(st.session_state.foundational_topics)} foundational math topics (those with 0-1 prerequisites)")
+    
+    # Create form for persistent knowledge assessment
+    with st.form(key="knowledge_profile_form"):
+        st.markdown("### 🎚️ Adjust Your Knowledge Levels:")
+        
+        # Add random generation option
+        col1, col2, col3 = st.columns([2, 1, 1])
+        with col1:
+            st.markdown("**Quick Options:**")
+        with col2:
+            if st.form_submit_button("🎲 Generate Random Profile"):
+                import random
+                # Generate random knowledge levels for demonstration
+                for topic in st.session_state.foundational_topics:
+                    # Weighted random: more likely to have lower knowledge levels
+                    random_level = random.choices([0, 1, 2, 3], weights=[40, 30, 20, 10])[0]
+                    st.session_state.persistent_knowledge_profile[topic['id']] = random_level
+                st.success("🎲 Random knowledge profile generated!")
+                st.rerun()
+        with col3:
+            if st.form_submit_button("🗑️ Clear All"):
+                st.session_state.persistent_knowledge_profile = {}
+                st.success("🗑️ All knowledge levels cleared!")
+                st.rerun()
+        
+        # Create columns for better layout
+        cols = st.columns(3)  # Three columns for more compact display
+        
+        for i, topic in enumerate(st.session_state.foundational_topics):
+            col = cols[i % 3]  # Cycle through columns
+            
+            with col:
+                # Get current value from persistent profile or default to 0
+                current_value = st.session_state.persistent_knowledge_profile.get(topic['id'], 0)
+                
+                # Options for the select slider
+                options = [0, 1, 2, 3]
+                option_labels = [
+                    "0 - No Knowledge",
+                    "1 - Basic", 
+                    "2 - Good",
+                    "3 - Expert"
+                ]
+                
+                knowledge_level = st.select_slider(
+                    f"**{topic['title']}**",
+                    options=options,
+                    format_func=lambda x: option_labels[x],
+                    value=current_value,
+                    key=f"persistent_knowledge_{topic['id']}",
+                    help=f"Prerequisites: {topic['prerequisite_count']} topics\n\n{topic.get('summary', 'Mathematical topic')}"
+                )
+                
+                # Update persistent profile
+                st.session_state.persistent_knowledge_profile[topic['id']] = knowledge_level
+        
+        # Save button
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+            submitted = st.form_submit_button("💾 Save Knowledge Profile", use_container_width=True)
+    
+    if submitted:
+        # Update the category_knowledge to use persistent profile for current session
+        st.session_state.category_knowledge = st.session_state.persistent_knowledge_profile.copy()
+        
+        # Show confirmation
+        total_knowledge = sum(st.session_state.persistent_knowledge_profile.values())
+        topics_with_knowledge = len([k for k in st.session_state.persistent_knowledge_profile.values() if k > 0])
+        
+        st.success(f"✅ Knowledge profile saved! {topics_with_knowledge} topics with knowledge (total score: {total_knowledge})")
+        
+        # If user has an active learning goal, regenerate the path with new knowledge
+        if st.session_state.topics_found and st.session_state.assessment_data:
+            with st.spinner("🔄 Updating your learning path with new knowledge profile..."):
+                st.session_state.slider_assessment_data = conduct_slider_based_assessment(
+                    st.session_state.get('previous_goal', ''), G, st.session_state.category_knowledge
+                )
+                st.session_state.knowledge_assessed = True
+                st.session_state.learning_path_generated = True
+                st.rerun()
+    
+    # Display current profile summary
+    if st.session_state.persistent_knowledge_profile:
+        st.subheader("📈 Your Current Knowledge Profile")
+        
+        # Calculate profile statistics
+        total_topics = len(st.session_state.foundational_topics)
+        knowledge_levels = list(st.session_state.persistent_knowledge_profile.values())
+        topics_with_knowledge = len([k for k in knowledge_levels if k > 0])
+        avg_knowledge = sum(knowledge_levels) / len(knowledge_levels) if knowledge_levels else 0
+        
+        # Display stats
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("📊 Total Topics", total_topics)
+        with col2:
+            st.metric("✅ Topics Known", topics_with_knowledge)
+        with col3:
+            st.metric("📈 Average Level", f"{avg_knowledge:.1f}")
+        with col4:
+            knowledge_score = sum(knowledge_levels)
+            st.metric("🎯 Knowledge Score", knowledge_score)
+        
+        # Show knowledge distribution
+        level_counts = {0: 0, 1: 0, 2: 0, 3: 0}
+        for level in knowledge_levels:
+            level_counts[level] += 1
+        
+        st.markdown("**Knowledge Distribution:**")
+        dist_col1, dist_col2, dist_col3, dist_col4 = st.columns(4)
+        with dist_col1:
+            st.write(f"🔴 No Knowledge: {level_counts[0]}")
+        with dist_col2:
+            st.write(f"🟡 Basic: {level_counts[1]}")
+        with dist_col3:
+            st.write(f"🟠 Good: {level_counts[2]}")
+        with dist_col4:
+            st.write(f"🟢 Expert: {level_counts[3]}")
+    
+    # Reset profile option
+    with st.expander("🔄 Reset Knowledge Profile", expanded=False):
+        st.warning("This will reset all your knowledge levels to 0. This action cannot be undone.")
+        if st.button("🗑️ Reset All Knowledge Levels"):
+            st.session_state.persistent_knowledge_profile = {}
+            st.session_state.category_knowledge = {}
+            st.success("Knowledge profile reset!")
+            st.rerun()

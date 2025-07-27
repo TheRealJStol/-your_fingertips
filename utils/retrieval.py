@@ -5,7 +5,8 @@ import numpy as np
 def build_index(texts):
     """Build FAISS index from text excerpts."""
     if not texts:
-        # Return dummy model and index if no texts
+        print("No texts provided, creating dummy index")
+        # Return dummy components
         model = SentenceTransformer('all-MiniLM-L6-v2')
         dummy_emb = model.encode(["dummy text"])
         idx = faiss.IndexFlatIP(dummy_emb.shape[1])

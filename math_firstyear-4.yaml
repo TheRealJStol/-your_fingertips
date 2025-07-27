@@ -1,0 +1,510 @@
+# A comprehensive, expert-curated map of mathematics in a prerequisite structure.
+# Designed as a strategic overview for students and researchers, particularly
+# those interested in physics, computer science, and deep technology.
+
+topics:
+  # --- Tier 0: Foundational & Pre-University ---
+  - topic: Basic Arithmetic
+    prerequisites: []
+  - topic: Pre-Algebra
+    prerequisites: [Basic Arithmetic]
+  - topic: Elementary Algebra
+    prerequisites: [Pre-Algebra]
+  - topic: Basic Geometry
+    prerequisites: [Pre-Algebra]
+  - topic: Polynomials
+    prerequisites: [Elementary Algebra]
+  - topic: Rational Expressions
+    prerequisites: [Polynomials]
+  - topic: Euclidean Geometry
+    prerequisites: [Basic Geometry]
+  - topic: Coordinate Geometry
+    prerequisites: [Euclidean Geometry, Elementary Algebra]
+  - topic: Intermediate Algebra
+    prerequisites: [Elementary Algebra]
+  - topic: Trigonometry
+    prerequisites: [Basic Geometry, Intermediate Algebra]
+  - topic: Logarithms & Exponentials
+    prerequisites: [Intermediate Algebra]
+  - topic: Precalculus
+    prerequisites: [Intermediate Algebra, Trigonometry, Logarithms & Exponentials]
+
+  # --- Tier 1: Core Undergraduate (First 1-2 Years) ---
+  - topic: Calculus I (Limits & Derivatives)
+    prerequisites: [Precalculus]
+  - topic: L'Hôpital's Rule
+    prerequisites: [Calculus I (Limits & Derivatives)]
+  - topic: Calculus II (Integrals & Series)
+    prerequisites: [Calculus I (Limits & Derivatives)]
+  - topic: Techniques of Integration
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Improper Integrals
+    prerequisites: [Techniques of Integration]
+  - topic: Taylor Series
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Parametric Equations
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Polar Coordinates
+    prerequisites: [Parametric Equations, Trigonometry]
+  - topic: Calculus III (Multivariable)
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Partial Derivatives
+    prerequisites: [Calculus III (Multivariable)]
+  - topic: Multiple Integrals
+    prerequisites: [Partial Derivatives]
+  - topic: Vector Fields
+    prerequisites: [Multiple Integrals]
+  - topic: Discrete Mathematics
+    prerequisites: [Intermediate Algebra]
+  - topic: Intro to Proofs
+    prerequisites: [Discrete Mathematics]
+  - topic: Set Theory
+    prerequisites: [Intro to Proofs]
+  - topic: Cardinality
+    prerequisites: [Set Theory]
+  - topic: Ordinal Numbers
+    prerequisites: [Cardinality]
+  - topic: Logic
+    prerequisites: [Set Theory]
+  - topic: Propositional Logic
+    prerequisites: [Logic]
+  - topic: Predicate Logic
+    prerequisites: [Propositional Logic]
+  - topic: Combinatorics
+    prerequisites: [Logic]
+  - topic: Counting Principles
+    prerequisites: [Combinatorics]
+  - topic: Permutations & Combinations
+    prerequisites: [Counting Principles]
+  - topic: Generating Functions
+    prerequisites: [Permutations & Combinations]
+  - topic: Linear Algebra I (Vectors & Matrices)
+    prerequisites: [Intermediate Algebra]
+  - topic: Cross Product & Dot Product
+    prerequisites: [Linear Algebra I (Vectors & Matrices)]
+  - topic: Systems of Linear Equations
+    prerequisites: [Linear Algebra I (Vectors & Matrices)]
+  - topic: Gaussian Elimination
+    prerequisites: [Systems of Linear Equations]
+  - topic: Matrix Operations
+    prerequisites: [Gaussian Elimination]
+  - topic: Determinants
+    prerequisites: [Matrix Operations]
+  - topic: Eigenvalues & Eigenvectors
+    prerequisites: [Determinants]
+  - topic: Probability & Statistics I
+    prerequisites: [Calculus II (Integrals & Series)]
+  - topic: Descriptive Statistics
+    prerequisites: [Probability & Statistics I]
+  - topic: Bayes' Theorem
+    prerequisites: [Descriptive Statistics]
+  - topic: Random Variables
+    prerequisites: [Bayes' Theorem]
+  - topic: Probability Distributions
+    prerequisites: [Random Variables]
+  - topic: Binomial Distribution
+    prerequisites: [Probability Distributions]
+  - topic: Poisson Distribution
+    prerequisites: [Probability Distributions]
+  - topic: Normal Distribution
+    prerequisites: [Probability Distributions]
+  - topic: Central Limit Theorem
+    prerequisites: [Probability Distributions]
+  - topic: Probability & Statistics II
+    prerequisites: [Calculus III (Multivariable), Central Limit Theorem]
+  - topic: Hypothesis Testing
+    prerequisites: [Probability & Statistics II]
+  - topic: Regression Analysis
+    prerequisites: [Hypothesis Testing]
+  - topic: ANOVA
+    prerequisites: [Regression Analysis]
+  - topic: Markov Chains
+    prerequisites: [Probability & Statistics II, Linear Algebra I (Vectors & Matrices)]
+
+  # --- Tier 2: Core Undergraduate (Upper Division) ---
+  - topic: Ordinary Differential Equations (ODEs)
+    prerequisites: [Calculus III (Multivariable), Linear Algebra I (Vectors & Matrices)]
+  - topic: Linear Algebra II (Vector Spaces)
+    prerequisites: [Linear Algebra I (Vectors & Matrices), Eigenvalues & Eigenvectors, Intro to Proofs]
+  - topic: Linear Transformations
+    prerequisites: [Linear Algebra II (Vector Spaces)]
+  - topic: Inner Product Spaces
+    prerequisites: [Linear Algebra II (Vector Spaces)]
+  - topic: Orthogonality
+    prerequisites: [Inner Product Spaces]
+  - topic: Gram-Schmidt Process
+    prerequisites: [Orthogonality]
+  - topic: Singular Value Decomposition (SVD)
+    prerequisites: [Linear Transformations, Eigenvalues & Eigenvectors]
+  - topic: Real Analysis I (Sequences & Series)
+    prerequisites: [Intro to Proofs, Calculus II (Integrals & Series)]
+  - topic: Continuity & Differentiability
+    prerequisites: [Real Analysis I (Sequences & Series)]
+  - topic: Riemann Integral
+    prerequisites: [Continuity & Differentiability]
+  - topic: Sequences of Functions
+    prerequisites: [Riemann Integral]
+  - topic: Uniform Convergence
+    prerequisites: [Sequences of Functions]
+  - topic: Metric Spaces
+    prerequisites: [Real Analysis I (Sequences & Series)]
+  - topic: Real Analysis II (Measure Theory)
+    prerequisites: [Real Analysis I (Sequences & Series), Uniform Convergence]
+  - topic: Lebesgue Measure
+    prerequisites: [Real Analysis II (Measure Theory)]
+  - topic: Lebesgue Integral
+    prerequisites: [Lebesgue Measure]
+  - topic: Lp Spaces
+    prerequisites: [Lebesgue Integral]
+  - topic: Abstract Algebra I (Group Theory)
+    prerequisites: [Intro to Proofs, Set Theory]
+  - topic: Subgroups & Cosets
+    prerequisites: [Abstract Algebra I (Group Theory)]
+  - topic: Normal Subgroups & Quotient Groups
+    prerequisites: [Subgroups & Cosets]
+  - topic: Group Homomorphisms
+    prerequisites: [Normal Subgroups & Quotient Groups]
+  - topic: Sylow Theorems
+    prerequisites: [Group Homomorphisms]
+  - topic: Group Actions
+    prerequisites: [Abstract Algebra I (Group Theory)]
+  - topic: Abstract Algebra II (Rings & Fields)
+    prerequisites: [Abstract Algebra I (Group Theory)]
+  - topic: Ideals & Quotient Rings
+    prerequisites: [Abstract Algebra II (Rings & Fields)]
+  - topic: Integral Domains
+    prerequisites: [Ideals & Quotient Rings]
+  - topic: Polynomial Rings
+    prerequisites: [Abstract Algebra II (Rings & Fields)]
+  - topic: Field Extensions
+    prerequisites: [Integral Domains]
+  - topic: Complex Analysis I (Complex Plane)
+    prerequisites: [Calculus III (Multivariable), Real Analysis I (Sequences & Series)]
+  - topic: Cauchy-Riemann Equations
+    prerequisites: [Complex Analysis I (Complex Plane)]
+  - topic: Cauchy's Integral Formula
+    prerequisites: [Cauchy-Riemann Equations]
+  - topic: Complex Analysis II (Residue Theorem)
+    prerequisites: [Complex Analysis I (Complex Plane), Cauchy's Integral Formula]
+  - topic: Topology I (Point-Set)
+    prerequisites: [Intro to Proofs, Set Theory, Metric Spaces]
+  - topic: Compactness & Connectedness
+    prerequisites: [Topology I (Point-Set)]
+  - topic: Topology II (Algebraic Topology)
+    prerequisites: [Topology I (Point-Set), Abstract Algebra I (Group Theory)]
+  - topic: Vector Calculus
+    prerequisites: [Calculus III (Multivariable), Linear Algebra I (Vectors & Matrices)]
+  - topic: Line & Surface Integrals
+    prerequisites: [Vector Fields]
+  - topic: Stokes' Theorem
+    prerequisites: [Line & Surface Integrals]
+  - topic: Divergence Theorem
+    prerequisites: [Line & Surface Integrals]
+  - topic: Differential Geometry I (Curves & Surfaces)
+    prerequisites: [Vector Calculus, Linear Algebra II (Vector Spaces)]
+  - topic: Frenet-Serret Formulas
+    prerequisites: [Differential Geometry I (Curves & Surfaces)]
+  - topic: Differential Geometry II (Manifolds)
+    prerequisites: [Differential Geometry I (Curves & Surfaces), Real Analysis I (Sequences & Series)]
+  - topic: Riemannian Geometry
+    prerequisites: [Differential Geometry II (Manifolds)]
+  - topic: Partial Differential Equations (PDEs)
+    prerequisites: [ODEs, Vector Calculus]
+
+  # --- Tier 3: Advanced & Specialized Topics ---
+
+  # --- Analysis Branch ---
+  - topic: Functional Analysis
+    prerequisites: [Real Analysis II (Measure Theory), Linear Algebra II (Vector Spaces), Lp Spaces]
+  - topic: Hilbert Spaces
+    prerequisites: [Functional Analysis]
+  - topic: Banach Spaces
+    prerequisites: [Hilbert Spaces]
+  - topic: Operator Theory
+    prerequisites: [Functional Analysis]
+  - topic: Spectral Theory
+    prerequisites: [Operator Theory]
+  - topic: Harmonic Analysis
+    prerequisites: [Functional Analysis]
+  - topic: Fourier Series
+    prerequisites: [Harmonic Analysis]
+  - topic: Fourier Transform
+    prerequisites: [Fourier Series]
+  - topic: Wavelet Theory
+    prerequisites: [Fourier Transform]
+  - topic: Distribution Theory
+    prerequisites: [Functional Analysis]
+  - topic: Sobolev Spaces
+    prerequisites: [Distribution Theory, Lp Spaces]
+  - topic: Calculus of Variations
+    prerequisites: [PDEs, Real Analysis I (Sequences & Series)]
+  - topic: Stochastic Processes
+    prerequisites: [Real Analysis II (Measure Theory), Markov Chains]
+  - topic: Brownian Motion
+    prerequisites: [Stochastic Processes]
+  - topic: Stochastic Calculus (Itô Calculus)
+    prerequisites: [Stochastic Processes]
+  - topic: Ergodic Theory
+    prerequisites: [Real Analysis II (Measure Theory)]
+  - topic: Dynamical Systems
+    prerequisites: [ODEs, Real Analysis I (Sequences & Series)]
+  - topic: Chaos Theory
+    prerequisites: [Dynamical Systems]
+  - topic: Non-standard Analysis
+    prerequisites: [Model Theory, Real Analysis I (Sequences & Series)]
+
+  # --- Algebra Branch ---
+  - topic: Galois Theory
+    prerequisites: [Abstract Algebra II (Rings & Fields), Field Extensions]
+  - topic: Module Theory
+    prerequisites: [Abstract Algebra II (Rings & Fields)]
+  - topic: Commutative Algebra
+    prerequisites: [Abstract Algebra II (Rings & Fields), Module Theory]
+  - topic: Algebraic Geometry
+    prerequisites: [Commutative Algebra, Complex Analysis II (Residue Theorem)]
+  - topic: Representation Theory
+    prerequisites: [Abstract Algebra I (Group Theory), Linear Algebra II (Vector Spaces)]
+  - topic: Lie Groups & Lie Algebras
+    prerequisites: [Abstract Algebra I (Group Theory), Differential Geometry II (Manifolds)]
+  - topic: Homological Algebra
+    prerequisites: [Abstract Algebra II (Rings & Fields), Topology II (Algebraic Topology)]
+  - topic: Category Theory
+    prerequisites: [Abstract Algebra I (Group Theory), Set Theory]
+  - topic: Universal Algebra
+    prerequisites: [Abstract Algebra I (Group Theory), Logic]
+  - topic: Lattice Theory
+    prerequisites: [Set Theory, Abstract Algebra I (Group Theory)]
+  - topic: Non-commutative Algebra
+    prerequisites: [Abstract Algebra II (Rings & Fields)]
+
+  # --- Geometry & Topology Branch ---
+  - topic: Differential Topology
+    prerequisites: [Topology II (Algebraic Topology), Differential Geometry II (Manifolds)]
+  - topic: Morse Theory
+    prerequisites: [Differential Topology]
+  - topic: Symplectic Geometry
+    prerequisites: [Differential Geometry II (Manifolds)]
+  - topic: Homotopy Theory
+    prerequisites: [Topology II (Algebraic Topology)]
+  - topic: Cohomology
+    prerequisites: [Homological Algebra]
+  - topic: Fiber Bundles
+    prerequisites: [Differential Geometry II (Manifolds), Topology I (Point-Set)]
+  - topic: Characteristic Classes
+    prerequisites: [Fiber Bundles, Cohomology]
+  - topic: Knot Theory
+    prerequisites: [Topology I (Point-Set)]
+  - topic: Algebraic Topology
+    prerequisites: [Algebraic Geometry, Topology II (Algebraic Topology)]
+
+  # --- Number Theory Branch ---
+  - topic: Elementary Number Theory
+    prerequisites: [Intro to Proofs, Abstract Algebra I (Group Theory)]
+  - topic: Diophantine Equations
+    prerequisites: [Elementary Number Theory]
+  - topic: Analytic Number Theory
+    prerequisites: [Elementary Number Theory, Complex Analysis II (Residue Theorem)]
+  - topic: Algebraic Number Theory
+    prerequisites: [Elementary Number Theory, Galois Theory]
+  - topic: p-adic Analysis
+    prerequisites: [Algebraic Number Theory, Real Analysis I (Sequences & Series)]
+  - topic: Class Field Theory
+    prerequisites: [Algebraic Number Theory]
+  - topic: Iwasawa Theory
+    prerequisites: [Class Field Theory]
+  - topic: Elliptic Curves
+    prerequisites: [Analytic Number Theory, Algebraic Number Theory, Algebraic Geometry]
+  - topic: Modular Forms
+    prerequisites: [Elliptic Curves, Complex Analysis II (Residue Theorem)]
+
+  # --- Logic & Foundations Branch ---
+  - topic: Model Theory
+    prerequisites: [Logic, Set Theory]
+  - topic: Computability Theory
+    prerequisites: [Logic]
+  - topic: Turing Machines
+    prerequisites: [Computability Theory]
+  - topic: Lambda Calculus
+    prerequisites: [Computability Theory]
+  - topic: Proof Theory
+    prerequisites: [Logic]
+  - topic: Type Theory
+    prerequisites: [Proof Theory, Logic]
+  - topic: Axiomatic Set Theory (ZFC)
+    prerequisites: [Set Theory]
+  - topic: Axiom of Choice
+    prerequisites: [Axiomatic Set Theory (ZFC)]
+  - topic: Continuum Hypothesis
+    prerequisites: [Axiomatic Set Theory (ZFC)]
+  - topic: Forcing
+    prerequisites: [Continuum Hypothesis]
+  - topic: Large Cardinals
+    prerequisites: [Axiomatic Set Theory (ZFC)]
+  - topic: Gödel's Incompleteness Theorems
+    prerequisites: [Logic, Computability Theory]
+
+  # --- Applied & Computational Branch ---
+
+  # --- Physics & The Universe ---
+  - topic: Newtonian Mechanics
+    prerequisites: [Calculus I (Limits & Derivatives), Linear Algebra I (Vectors & Matrices)]
+  - topic: Classical Mechanics
+    prerequisites: [Vector Calculus, ODEs, Newtonian Mechanics]
+  - topic: Lagrangian & Hamiltonian Mechanics
+    prerequisites: [Classical Mechanics, Calculus of Variations]
+  - topic: Electromagnetism
+    prerequisites: [PDEs, Vector Calculus]
+  - topic: Maxwell's Equations
+    prerequisites: [Electromagnetism]
+  - topic: Special Relativity
+    prerequisites: [Electromagnetism, Linear Algebra I (Vectors & Matrices)]
+  - topic: Tensor Calculus
+    prerequisites: [Vector Calculus, Linear Algebra II (Vector Spaces)]
+  - topic: General Relativity
+    prerequisites: [Differential Geometry II (Manifolds), PDEs, Tensor Calculus, Special Relativity]
+  - topic: Einstein Field Equations
+    prerequisites: [General Relativity]
+  - topic: Quantum Mechanics I (Wave Mechanics)
+    prerequisites: [Functional Analysis, Banach Spaces, PDEs]
+  - topic: Schrödinger Equation
+    prerequisites: [Quantum Mechanics I (Wave Mechanics)]
+  - topic: Quantum Mechanics II (QFT)
+    prerequisites: [Quantum Mechanics I (Wave Mechanics), Representation Theory, Special Relativity]
+  - topic: Quantum Electrodynamics (QED)
+    prerequisites: [Quantum Mechanics II (QFT)]
+  - topic: Quantum Chromodynamics (QCD)
+    prerequisites: [Quantum Mechanics II (QFT), Lie Groups & Lie Algebras]
+  - topic: String Theory
+    prerequisites: [Quantum Mechanics II (QFT), General Relativity, Differential Geometry II (Manifolds)]
+  - topic: Statistical Mechanics
+    prerequisites: [Probability & Statistics II, Lagrangian & Hamiltonian Mechanics]
+  - topic: Fluid Dynamics
+    prerequisites: [Partial Differential Equations (PDEs), Vector Calculus]
+  - topic: Signal Processing
+    prerequisites: [Harmonic Analysis, Linear Algebra II (Vector Spaces)]
+  - topic: Particle Physics
+    prerequisites: [Lie Groups & Lie Algebras, Representation Theory, Quantum Mechanics II (QFT)]
+
+  # --- Computer Science, Deep Tech & Gaming ---
+  - topic: Computer Graphics
+    prerequisites: [Linear Algebra I (Vectors & Matrices), Trigonometry, Differential Geometry I (Curves & Surfaces)]
+  - topic: Ray Tracing
+    prerequisites: [Computer Graphics]
+  - topic: Physics Engines
+    prerequisites: [Computer Graphics, Classical Mechanics, ODEs, Numerical Analysis]
+  - topic: Graph Theory
+    prerequisites: [Combinatorics]
+  - topic: Trees & Connectivity
+    prerequisites: [Graph Theory]
+  - topic: Eulerian & Hamiltonian Paths
+    prerequisites: [Graph Theory]
+  - topic: Graph Coloring
+    prerequisites: [Trees & Connectivity]
+  - topic: Planar Graphs
+    prerequisites: [Graph Coloring]
+  - topic: Algorithm Analysis
+    prerequisites: [Graph Theory, Discrete Mathematics]
+  - topic: Big O Notation
+    prerequisites: [Algorithm Analysis]
+  - topic: Sorting Algorithms
+    prerequisites: [Big O Notation]
+  - topic: Dynamic Programming
+    prerequisites: [Algorithm Analysis]
+  - topic: Information Theory
+    prerequisites: [Probability & Statistics I]
+  - topic: Entropy & Mutual Information
+    prerequisites: [Information Theory]
+  - topic: Coding Theory
+    prerequisites: [Entropy & Mutual Information, Linear Algebra I (Vectors & Matrices)]
+  - topic: Cryptography
+    prerequisites: [Information Theory, Elementary Number Theory]
+  - topic: Public-key Cryptography (RSA)
+    prerequisites: [Cryptography]
+  - topic: Numerical Analysis
+    prerequisites: [Linear Algebra II (Vector Spaces), Calculus III (Multivariable)]
+  - topic: Floating-Point Arithmetic
+    prerequisites: [Numerical Analysis]
+  - topic: Numerical Linear Algebra
+    prerequisites: [Numerical Analysis]
+  - topic: Numerical Solution of ODEs
+    prerequisites: [Floating-Point Arithmetic, ODEs]
+  - topic: Finite Element Method
+    prerequisites: [Numerical Solution of ODEs, PDEs]
+  - topic: Monte Carlo Methods
+    prerequisites: [Numerical Analysis, Probability & Statistics II]
+  - topic: Scientific Computing
+    prerequisites: [Numerical Analysis, PDEs]
+  - topic: Optimization
+    prerequisites: [Calculus III (Multivariable), Linear Algebra II (Vector Spaces)]
+  - topic: Linear Programming
+    prerequisites: [Optimization]
+  - topic: Simplex Method
+    prerequisites: [Linear Programming]
+  - topic: Non-linear Programming
+    prerequisites: [Optimization]
+  - topic: Convex Optimization
+    prerequisites: [Non-linear Programming]
+  - topic: Stochastic Gradient Descent
+    prerequisites: [Convex Optimization]
+  - topic: Interior-Point Methods
+    prerequisites: [Convex Optimization]
+  - topic: Machine Learning
+    prerequisites: [Optimization, Probability & Statistics II, Linear Algebra II (Vector Spaces), Convex Optimization]
+  - topic: Bayesian Statistics
+    prerequisites: [Statistics]
+  - topic: Frequentist Statistics
+    prerequisites: [Statistics]
+  - topic: Support Vector Machines (SVMs)
+    prerequisites: [Machine Learning]
+  - topic: Neural Networks
+    prerequisites: [Machine Learning]
+  - topic: Deep Learning
+    prerequisites: [Neural Networks, Stochastic Gradient Descent]
+  - topic: Convolutional Neural Networks (CNNs)
+    prerequisites: [Deep Learning]
+  - topic: Recurrent Neural Networks (RNNs)
+    prerequisites: [Deep Learning]
+  - topic: Transformers (AI)
+    prerequisites: [Deep Learning]
+  - topic: Graph Neural Networks (GNNs)
+    prerequisites: [Deep Learning, Graph Theory]
+  - topic: Generative Adversarial Networks (GANs)
+    prerequisites: [Deep Learning]
+  - topic: Bayesian Networks
+    prerequisites: [Machine Learning, Graph Theory, Bayesian Statistics]
+  - topic: Hidden Markov Models
+    prerequisites: [Machine Learning, Markov Chains]
+  - topic: Reinforcement Learning
+    prerequisites: [Deep Learning]
+  - topic: Markov Decision Processes
+    prerequisites: [Reinforcement Learning, Markov Chains]
+  - topic: Q-Learning
+    prerequisites: [Markov Decision Processes]
+  - topic: Control Theory
+    prerequisites: [ODEs, Optimization]
+  - topic: Control Systems Engineering
+    prerequisites: [Control Theory]
+  - topic: Kalman Filtering
+    prerequisites: [Control Systems Engineering, Linear Algebra II (Vector Spaces)]
+  
+  # --- Other Branches ---
+  - topic: Game Theory
+    prerequisites: [Optimization, Probability & Statistics I]
+  - topic: Nash Equilibrium
+    prerequisites: [Game Theory]
+  - topic: Combinatorial Game Theory
+    prerequisites: [Game Theory, Combinatorics]
+  - topic: Financial Mathematics
+    prerequisites: [Stochastic Calculus (Itô Calculus), Probability & Statistics II]
+  - topic: Black-Scholes Model
+    prerequisites: [Financial Mathematics]
+  - topic: Options Pricing Theory
+    prerequisites: [Financial Mathematics]
+  - topic: Mathematical Biology
+    prerequisites: [ODEs, Probability & Statistics II]
+  - topic: Population Dynamics
+    prerequisites: [Mathematical Biology]
+  - topic: Bioinformatics
+    prerequisites: [Statistics, Algorithm Analysis]
+  - topic: Statistics
+    prerequisites: [Probability & Statistics I]
